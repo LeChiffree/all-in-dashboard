@@ -13,7 +13,7 @@ Birden fazla trade backtest reposunun sonuçlarını tek tabloda birleştiren da
 | Dosya | Açıklama |
 |---|---|
 | `index.html` | Tek sayfa dashboard. `Allinone` ve `Chosen` sekmeleri. |
-| `Allinone.xlsx` | Tek sheet: `Allinone`. Tüm satırlar ve yeni metrikler. |
+| `Allinone.xlsx` | Tek sheet: `Allinone`. Tüm satırlar ve metrikler. |
 | `allinone.csv` | `;` ayraçlı, virgül ondalıklı, UTF-8 BOM. |
 | `allinone.json` | Ham birleşik veri. |
 | `start.cmd` | Yerel HTTP sunucusunu başlatır. |
@@ -29,15 +29,15 @@ Birden fazla trade backtest reposunun sonuçlarını tek tabloda birleştiren da
 
 ## Kapsam
 
-Toplam **3.973 satır**, **6 kaynak**:
+Toplam **65.180 satır**, **6 kaynak**, **309 filtre**:
 
 | Kaynak | Satır |
 |---|---:|
 | BigPlan | 563 |
 | Book Signal | 1.738 |
-| Codex Bulut | 800 |
+| Codex Bulut | 44.730 |
 | Paper ML | 219 |
-| Indikator Akademi | 593 |
+| Indikator Akademi | 17.870 |
 | V4 Short | 60 |
 
 ## Sütunlar
@@ -56,10 +56,19 @@ Toplam **3.973 satır**, **6 kaynak**:
 | Karlı Gün | Günlük net P/L > 0 olan gün sayısı. |
 | Karsız Gün | Günlük net P/L < 0 olan gün sayısı. |
 
+## Filtre kapsamı
+
+- **BigPlan:** 184 filtre varyantı.
+- **Book Signal:** baseline + 14 filtre.
+- **Codex Bulut:** baseline + 55 filtre. Filtre satırlarında 2026 getirisi, günlük P/L ve karlı işlem süresi kaynakta ayrı export edilmediği için boş bırakılır; all-period getiri, işlem sayısı ve karlı/zararlı oranı doludur.
+- **Indikator Akademi:** 600 senaryo × 31 filtre tam olarak eklenir. `Filtresiz` yalnızca bu 31 filtrenin ilk satırıdır.
+- **Paper ML:** senaryo içindeki filtre ve threshold varyantları.
+- **V4 Short:** 12 short formasyonu × 5 kümülatif aşama (`1 → 12 → 123 → 1234 → 12345`).
+
 ## Notlar
 
 - Getiri sütunları **toplam portföy getirisi değil**, işlem başına ortalama net getiridir.
 - Farklı repolar farklı evren, dönem, komisyon, slippage ve kaldıraç kullanır.
-- V4 Short satırları 12 short formasyonu × 5 kümülatif filtre aşamasını içerir; 1x ve `resolved` işlemler kullanılmıştır.
+- V4 Short satırları 1x ve `resolved` işlemler kullanır.
 - Kaynak repolar bu repoda yer almaz; yalnızca birleşik dashboard çıktısı arşivlenir.
 - Bu tablo keşif/tarama amaçlıdır; yatırım tavsiyesi değildir.

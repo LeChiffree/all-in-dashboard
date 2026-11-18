@@ -47,20 +47,34 @@ def num(v, default=0.0):
         return default
 
 
-def gm(m, name):
-    """s_ önekli ya da düz alanı oku."""
-    return m.get("s_" + name, m.get(name))
+def gm(m, name, prefix="s_"):
+    """Önekli (varsayılan s_) ya da düz alanı oku."""
+    return m.get(prefix + name, m.get(name))
 
 
-def flat(m, scale=1.0):
+def flat(m, scale=1.0, prefix="s_"):
     return {
-        "trades": round(num(gm(m, "trades"))),
-        "retAll": round(num(gm(m, "retAll")) * scale, 4),
-        "ret2026": round(num(gm(m, "ret2026")) * scale, 4),
-        "winRatio": (None if gm(m, "winRatio") is None else round(num(gm(m, "winRatio")), 4)),
-        "winHoldH": (None if gm(m, "winHoldH") is None else round(num(gm(m, "winHoldH")), 2)),
-        "profitDays": (None if gm(m, "profitDays") is None else round(num(gm(m, "profitDays")))),
-        "lossDays": (None if gm(m, "lossDays") is None else round(num(gm(m, "lossDays")))),
+        "trades": round(num(gm(m, "trades", prefix))),
+        "retAll": round(num(gm(m, "retAll", prefix)) * scale, 4),
+        "ret2026": round(num(gm(m, "ret2026", prefix)) * scale, 4),
+        "winRatio": (None if gm(m, "winRatio", prefix) is None else round(num(gm(m, "winRatio", prefix)), 4)),
+        "winHoldH": (None if gm(m, "winHoldH", prefix) is None else round(num(gm(m, "winHoldH", prefix)), 2)),
+        "profitDays": (None if gm(m, "profitDays", prefix) is None else round(num(gm(m, "profitDays", prefix)))),
+        "lossDays": (None if gm(m, "lossDays", prefix) is None else round(num(gm(m, "lossDays", prefix)))),
+        "profitWeeks": (None if gm(m, "profitWeeks", prefix) is None else round(num(gm(m, "profitWeeks", prefix)))),
+        "lossWeeks": (None if gm(m, "lossWeeks", prefix) is None else round(num(gm(m, "lossWeeks", prefix)))),
+        "profitMonths": (None if gm(m, "profitMonths", prefix) is None else round(num(gm(m, "profitMonths", prefix)))),
+        "lossMonths": (None if gm(m, "lossMonths", prefix) is None else round(num(gm(m, "lossMonths", prefix)))),
+    }
+
+
+def periods(m):
+    """Yalnızca hafta/ay kâr-zarar sayılarını normal taraf için taşı."""
+    return {
+        "profitWeeks": (None if gm(m, "profitWeeks", "n_") is None else round(num(gm(m, "profitWeeks", "n_")))),
+        "lossWeeks": (None if gm(m, "lossWeeks", "n_") is None else round(num(gm(m, "lossWeeks", "n_")))),
+        "profitMonths": (None if gm(m, "profitMonths", "n_") is None else round(num(gm(m, "profitMonths", "n_")))),
+        "lossMonths": (None if gm(m, "lossMonths", "n_") is None else round(num(gm(m, "lossMonths", "n_")))),
     }
 
 
@@ -88,7 +102,7 @@ def build(paths):
         for st in pay.get("states", []):
             r = idx.get(st.get("key"))
             if r:
-                out[key_of(r)] = {"s": flat(st)}
+                out[key_of(r)] = {"n": periods(st), "s": flat(st)}
                 n += 1
         matched["BigPlan"] = (n, len(by_source.get("BigPlan", [])))
 
@@ -105,7 +119,7 @@ def build(paths):
         for row in pay.get("rows", []):
             r = idx.get((row["sid"], str(row["filter_id"])))
             if r:
-                out[key_of(r)] = {"s": flat(row)}
+                out[key_of(r)] = {"n": periods(row), "s": flat(row)}
                 n += 1
         matched["Book Signal"] = (n, len(by_source.get("Book Signal", [])))
 
@@ -125,7 +139,7 @@ def build(paths):
             if r:
                 nv = norm.get(k)
                 out[key_of(r)] = {
-                    "n": flat(nv, scale=100.0) if nv else None,
+                    "n": flat(nv, scale=100.0, prefix="n_") if nv else None,
                     "s": flat(v, scale=100.0),
                 }
                 n += 1
@@ -147,7 +161,7 @@ def build(paths):
         for sc in pay.get("scenarios", []):
             r = idx.get((int(sc["sid"]), sc.get("tf")))
             if r:
-                out[key_of(r)] = {"s": flat(sc)}
+                out[key_of(r)] = {"n": periods(sc), "s": flat(sc)}
                 n += 1
         matched["Paper ML"] = (n, len(by_source.get("Paper ML", [])))
 
@@ -164,7 +178,7 @@ def build(paths):
         for row in pay.get("rows", []):
             r = idx.get((int(row["idx"]), int(row["filter_id"])))
             if r:
-                out[key_of(r)] = {"s": flat(row)}
+                out[key_of(r)] = {"n": periods(row), "s": flat(row)}
                 n += 1
         matched["Indikator Akademi"] = (n, len(by_source.get("Indikator Akademi", [])))
 
@@ -181,7 +195,7 @@ def build(paths):
         for row in pay.get("rows", []):
             r = idx.get((int(row["pattern_id"]), row["variant"], int(str(row["filter_id"]))))
             if r:
-                out[key_of(r)] = {"s": flat(row)}
+                out[key_of(r)] = {"n": periods(row), "s": flat(row)}
                 n += 1
         matched["V4 Short"] = (n, len(by_source.get("V4 Short", [])))
 

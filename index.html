@@ -330,6 +330,14 @@
           <th data-k="sProfitDays" class="num sg-col">Karlı Gün (S)<span class="arrow"></span></th>
           <th data-k="lossDays" class="num">Karsız Gün<span class="arrow"></span></th>
           <th data-k="sLossDays" class="num sg-col">Karsız Gün (S)<span class="arrow"></span></th>
+          <th data-k="profitWeeks" class="num">Karlı Hafta<span class="arrow"></span></th>
+          <th data-k="sProfitWeeks" class="num sg-col">Karlı Hafta (S)<span class="arrow"></span></th>
+          <th data-k="lossWeeks" class="num">Karsız Hafta<span class="arrow"></span></th>
+          <th data-k="sLossWeeks" class="num sg-col">Karsız Hafta (S)<span class="arrow"></span></th>
+          <th data-k="profitMonths" class="num">Karlı Ay<span class="arrow"></span></th>
+          <th data-k="sProfitMonths" class="num sg-col">Karlı Ay (S)<span class="arrow"></span></th>
+          <th data-k="lossMonths" class="num">Karsız Ay<span class="arrow"></span></th>
+          <th data-k="sLossMonths" class="num sg-col">Karsız Ay (S)<span class="arrow"></span></th>
         </tr>
         <tr class="filters">
           <th></th>
@@ -350,6 +358,14 @@
           <th><div class="range"><input data-tf="profitDaysMin" placeholder="min" inputmode="numeric"><span>–</span><input data-tf="profitDaysMax" placeholder="max" inputmode="numeric"></div></th>
           <th></th>
           <th><div class="range"><input data-tf="lossDaysMin" placeholder="min" inputmode="numeric"><span>–</span><input data-tf="lossDaysMax" placeholder="max" inputmode="numeric"></div></th>
+          <th></th>
+          <th><div class="range"><input data-tf="profitWeeksMin" placeholder="min" inputmode="numeric"><span>–</span><input data-tf="profitWeeksMax" placeholder="max" inputmode="numeric"></div></th>
+          <th></th>
+          <th><div class="range"><input data-tf="lossWeeksMin" placeholder="min" inputmode="numeric"><span>–</span><input data-tf="lossWeeksMax" placeholder="max" inputmode="numeric"></div></th>
+          <th></th>
+          <th><div class="range"><input data-tf="profitMonthsMin" placeholder="min" inputmode="numeric"><span>–</span><input data-tf="profitMonthsMax" placeholder="max" inputmode="numeric"></div></th>
+          <th></th>
+          <th><div class="range"><input data-tf="lossMonthsMin" placeholder="min" inputmode="numeric"><span>–</span><input data-tf="lossMonthsMax" placeholder="max" inputmode="numeric"></div></th>
           <th></th>
         </tr>
       </thead>
@@ -373,8 +389,9 @@
   </div>
 
   <footer>
-    <b>Getiri:</b> İşlem başına ortalama net getiri (%). <b>Karlı gün:</b> günlük net P/L &gt; 0.
-    <b>Karsız gün:</b> günlük net P/L &lt; 0. Gün sayıları tüm dönem içindir; net sıfır günler sayılmaz.
+    <b>Getiri:</b> İşlem başına ortalama net getiri (%). <b>Karlı gün/hafta/ay:</b> ilgili dönemin
+    toplam net P/L &gt; 0. <b>Karsız gün/hafta/ay:</b> toplam net P/L &lt; 0. Hafta Pazartesi başlangıçlı,
+    ay takvim ayıdır; net sıfır dönemler sayılmaz. Tüm sayılar dönem boyunca toplanır.
     <b>(S):</b> Singular-Backtest — aynı coinde aynı anda en fazla bir açık işlem; normal sütunun hemen
     sağındaki sütun tekil varyantı gösterir. Eşleşmeyen hücreler <b>—</b> kalır.
     Codex filtre satırlarında 2026 getirisi, günlük P/L ve karlı işlem süresi kaynakta ayrı export edilmediği
@@ -422,6 +439,14 @@ const state = {
     profitDaysMax: "",
     lossDaysMin: "",
     lossDaysMax: "",
+    profitWeeksMin: "",
+    profitWeeksMax: "",
+    lossWeeksMin: "",
+    lossWeeksMax: "",
+    profitMonthsMin: "",
+    profitMonthsMax: "",
+    lossMonthsMin: "",
+    lossMonthsMax: "",
   },
 };
 
@@ -463,17 +488,26 @@ for (const row of ROWS) {
     row.sWinHoldH = s.winHoldH;
     row.sProfitDays = s.profitDays;
     row.sLossDays = s.lossDays;
+    row.sProfitWeeks = s.profitWeeks;
+    row.sLossWeeks = s.lossWeeks;
+    row.sProfitMonths = s.profitMonths;
+    row.sLossMonths = s.lossMonths;
   }
   // Codex: normal satırlar da aynı veri setinden yenilenir (kaynak tabloda
-  // işlem sayıları şişmişti).
+  // işlem sayıları şişmişti). Diğer kaynaklarda n yalnızca hafta/ay
+  // alanlarını taşır; mevcut normal sütunlar korunur.
   if (e.n) {
-    row.retAll = e.n.retAll;
-    row.ret2026 = e.n.ret2026;
-    row.trades = e.n.trades;
-    row.winRatio = e.n.winRatio;
-    row.winHoldH = e.n.winHoldH;
-    row.profitDays = e.n.profitDays;
-    row.lossDays = e.n.lossDays;
+    if (e.n.retAll != null) row.retAll = e.n.retAll;
+    if (e.n.ret2026 != null) row.ret2026 = e.n.ret2026;
+    if (e.n.trades != null) row.trades = e.n.trades;
+    if (e.n.winRatio != null) row.winRatio = e.n.winRatio;
+    if (e.n.winHoldH != null) row.winHoldH = e.n.winHoldH;
+    if (e.n.profitDays != null) row.profitDays = e.n.profitDays;
+    if (e.n.lossDays != null) row.lossDays = e.n.lossDays;
+    if (e.n.profitWeeks != null) row.profitWeeks = e.n.profitWeeks;
+    if (e.n.lossWeeks != null) row.lossWeeks = e.n.lossWeeks;
+    if (e.n.profitMonths != null) row.profitMonths = e.n.profitMonths;
+    if (e.n.lossMonths != null) row.lossMonths = e.n.lossMonths;
   }
 }
 
@@ -566,6 +600,10 @@ function applyTableFilters(rows) {
     winHoldH: ["winHoldHMin", "winHoldHMax"],
     profitDays: ["profitDaysMin", "profitDaysMax"],
     lossDays: ["lossDaysMin", "lossDaysMax"],
+    profitWeeks: ["profitWeeksMin", "profitWeeksMax"],
+    lossWeeks: ["lossWeeksMin", "lossWeeksMax"],
+    profitMonths: ["profitMonthsMin", "profitMonthsMax"],
+    lossMonths: ["lossMonthsMin", "lossMonthsMax"],
   };
   return rows.filter((row) => {
     for (const key of textKeys) {
@@ -699,7 +737,7 @@ function renderTable() {
 
   const tbody = $("tbody");
   if (!pageRows.length) {
-    tbody.innerHTML = '<tr><td colspan="19" class="empty">Bu filtrelerle satır bulunamadı.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="27" class="empty">Bu filtrelerle satır bulunamadı.</td></tr>';
   } else {
     tbody.innerHTML = pageRows.map((row) => {
       const key = rowKey(row);
@@ -727,6 +765,14 @@ function renderTable() {
         '<td class="num sg-col">' + fmtIntCell(row.sProfitDays) + "</td>" +
         '<td class="num">' + fmtIntCell(row.lossDays) + "</td>" +
         '<td class="num sg-col">' + fmtIntCell(row.sLossDays) + "</td>" +
+        '<td class="num">' + fmtIntCell(row.profitWeeks) + "</td>" +
+        '<td class="num sg-col">' + fmtIntCell(row.sProfitWeeks) + "</td>" +
+        '<td class="num">' + fmtIntCell(row.lossWeeks) + "</td>" +
+        '<td class="num sg-col">' + fmtIntCell(row.sLossWeeks) + "</td>" +
+        '<td class="num">' + fmtIntCell(row.profitMonths) + "</td>" +
+        '<td class="num sg-col">' + fmtIntCell(row.sProfitMonths) + "</td>" +
+        '<td class="num">' + fmtIntCell(row.lossMonths) + "</td>" +
+        '<td class="num sg-col">' + fmtIntCell(row.sLossMonths) + "</td>" +
         "</tr>";
     }).join("");
     tbody.querySelectorAll(".add-btn").forEach((button) => {
@@ -748,6 +794,8 @@ function renderTable() {
     retAll: "All Getiri", ret2026: "2026 Getiri", trades: "İşlem",
     winRatio: "Karlı/Zararlı İşlem", winHoldH: "Karlı İşlem Ort. Süre",
     profitDays: "Karlı Gün", lossDays: "Karsız Gün",
+    profitWeeks: "Karlı Hafta", lossWeeks: "Karsız Hafta",
+    profitMonths: "Karlı Ay", lossMonths: "Karsız Ay",
   };
   $("sortInfo").textContent = "Sıralama: " + (labels[state.sortKey] || state.sortKey) +
     (state.sortDir < 0 ? " ↓" : " ↑");
@@ -819,7 +867,9 @@ function downloadChosenCsv() {
     "All Getiri %", "All Getiri % (S)", "2026 Getiri %", "2026 Getiri % (S)",
     "İşlem Sayısı", "İşlem Sayısı (S)", "Karlı/Zararlı İşlem", "Karlı/Zararlı İşlem (S)",
     "Karlı İşlem Ort. Süre (saat)", "Karlı İşlem Ort. Süre (S)",
-    "Karlı Gün", "Karlı Gün (S)", "Karsız Gün", "Karsız Gün (S)"];
+    "Karlı Gün", "Karlı Gün (S)", "Karsız Gün", "Karsız Gün (S)",
+    "Karlı Hafta", "Karlı Hafta (S)", "Karsız Hafta", "Karsız Hafta (S)",
+    "Karlı Ay", "Karlı Ay (S)", "Karsız Ay", "Karsız Ay (S)"];
   const lines = [headers.map(csvEscape).join(";")];
   rows.forEach((row) => {
     lines.push([
@@ -841,6 +891,14 @@ function downloadChosenCsv() {
       row.sProfitDays,
       row.lossDays,
       row.sLossDays,
+      row.profitWeeks,
+      row.sProfitWeeks,
+      row.lossWeeks,
+      row.sLossWeeks,
+      row.profitMonths,
+      row.sProfitMonths,
+      row.lossMonths,
+      row.sLossMonths,
     ].map(csvEscape).join(";"));
   });
   const blob = new Blob(["\ufeff" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });

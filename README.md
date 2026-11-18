@@ -59,6 +59,10 @@ Toplam **65.180 satır**, **6 kaynak**, **309 filtre**:
 | Karlı İşlem Ort. Süre (saat) | Karlı işlemlerin ortalama elde tutma süresi (saat). |
 | Karlı Gün | Günlük net P/L > 0 olan gün sayısı. |
 | Karsız Gün | Günlük net P/L < 0 olan gün sayısı. |
+| Karlı Hafta | Pazartesi başlangıçlı haftanın toplam net P/L > 0 olan hafta sayısı. |
+| Karsız Hafta | Haftalık toplam net P/L < 0 olan hafta sayısı. |
+| Karlı Ay | Takvim ayının toplam net P/L > 0 olan ay sayısı. |
+| Karsız Ay | Aylık toplam net P/L < 0 olan ay sayısı. |
 
 ## Filtre kapsamı
 

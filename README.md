@@ -12,7 +12,9 @@ Birden fazla trade backtest reposunun sonuçlarını tek tabloda birleştiren da
 
 | Dosya | Açıklama |
 |---|---|
-| `index.html` | Tek sayfa dashboard. `Allinone` ve `Chosen` sekmeleri. |
+| `index.html` | Tek sayfa dashboard. `Allinone`, `Singular Analiz` ve `Chosen` sekmeleri. |
+| `singular/summary.js` | Altı reponun tekil (Singular-Backtest) özeti; sekme bunu okur. |
+| `singular/build_summary.py` | Repo payload'larından `summary.js` üretir. |
 | `Allinone.xlsx` | Tek sheet: `Allinone`. Tüm satırlar ve metrikler. |
 | `allinone.csv` | `;` ayraçlı, virgül ondalıklı, UTF-8 BOM. |
 | `allinone.json` | Ham birleşik veri. |
@@ -21,6 +23,9 @@ Birden fazla trade backtest reposunun sonuçlarını tek tabloda birleştiren da
 ## Özellikler
 
 - **Allinone sekmesi:** tüm strateji × filtre × timeframe satırları.
+- **Singular Analiz sekmesi:** aynı coinde tek açık işlem kuralının repo bazında
+  normal sonuçlarla karşılaştırması; repo kartları, arama, TF/sıralama filtreleri
+  ve CSV indirme.
 - **Chosen sekmesi:** satır başındaki `+` ile seçilen stratejiler; seçimler tarayıcıda `localStorage` ile saklanır.
 - **CSV indir:** Chosen listesini CSV olarak indirir.
 - **Sıralama:** sütun başlığına tıkla; tekrar tıkla yönü çevir.
@@ -72,3 +77,15 @@ Toplam **65.180 satır**, **6 kaynak**, **309 filtre**:
 - V4 Short satırları 1x ve `resolved` işlemler kullanır.
 - Kaynak repolar bu repoda yer almaz; yalnızca birleşik dashboard çıktısı arşivlenir.
 - Bu tablo keşif/tarama amaçlıdır; yatırım tavsiyesi değildir.
+
+## Singular özetini yenileme
+
+`singular/summary.js`, altı repodaki `singular_results.json` dosyalarından üretilir:
+
+```bash
+python singular/build_summary.py
+```
+
+Varsayılan olarak komşu repo klasörlerini okur (`../Codex-Bulut-Backtests`, ...).
+Farklı konumlar için `--codex=... --book=...` gibi argümanlar kullanılabilir.
+Sekme, `summary.js` yoksa uyarı gösterir; Allinone tablosu etkilenmez.

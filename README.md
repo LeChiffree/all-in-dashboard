@@ -12,9 +12,9 @@ Birden fazla trade backtest reposunun sonuçlarını tek tabloda birleştiren da
 
 | Dosya | Açıklama |
 |---|---|
-| `index.html` | Tek sayfa dashboard. `Allinone`, `Singular Analiz` ve `Chosen` sekmeleri. |
-| `singular/summary.js` | Altı reponun tekil (Singular-Backtest) özeti; sekme bunu okur. |
-| `singular/build_summary.py` | Repo payload'larından `summary.js` üretir. |
+| `index.html` | Tek sayfa dashboard. `Allinone` ve `Chosen` sekmeleri; Allinone tablosunda tekil (S) sütunları. |
+| `singular/summary.js` | Altı reponun tekil sonuçları; Allinone tablosundaki (S) sütunlarını doldurur. |
+| `singular/build_summary.py` | Repo payload'larını Allinone satırlarıyla eşleştirip `summary.js` üretir. |
 | `Allinone.xlsx` | Tek sheet: `Allinone`. Tüm satırlar ve metrikler. |
 | `allinone.csv` | `;` ayraçlı, virgül ondalıklı, UTF-8 BOM. |
 | `allinone.json` | Ham birleşik veri. |
@@ -23,9 +23,8 @@ Birden fazla trade backtest reposunun sonuçlarını tek tabloda birleştiren da
 ## Özellikler
 
 - **Allinone sekmesi:** tüm strateji × filtre × timeframe satırları.
-- **Singular Analiz sekmesi:** aynı coinde tek açık işlem kuralının repo bazında
-  normal sonuçlarla karşılaştırması; repo kartları, arama, TF/sıralama filtreleri
-  ve CSV indirme.
+- **Singular (S) sütunları:** her metrik sütununun hemen sağında, aynı coinde tek
+  açık işlem kuralının sonucu; normal ve tekil değer yan yana karşılaştırılır.
 - **Chosen sekmesi:** satır başındaki `+` ile seçilen stratejiler; seçimler tarayıcıda `localStorage` ile saklanır.
 - **CSV indir:** Chosen listesini CSV olarak indirir.
 - **Sıralama:** sütun başlığına tıkla; tekrar tıkla yönü çevir.
@@ -78,9 +77,9 @@ Toplam **65.180 satır**, **6 kaynak**, **309 filtre**:
 - Kaynak repolar bu repoda yer almaz; yalnızca birleşik dashboard çıktısı arşivlenir.
 - Bu tablo keşif/tarama amaçlıdır; yatırım tavsiyesi değildir.
 
-## Singular özetini yenileme
+## Singular sütunlarını yenileme
 
-`singular/summary.js`, altı repodaki `singular_results.json` dosyalarından üretilir:
+`singular/summary.js`, altı repodaki `singular_results.json` dosyalarından ve Allinone satır anahtarlarıyla eşleştirilerek üretilir:
 
 ```bash
 python singular/build_summary.py
@@ -88,4 +87,7 @@ python singular/build_summary.py
 
 Varsayılan olarak komşu repo klasörlerini okur (`../Codex-Bulut-Backtests`, ...).
 Farklı konumlar için `--codex=... --book=...` gibi argümanlar kullanılabilir.
-Sekme, `summary.js` yoksa uyarı gösterir; Allinone tablosu etkilenmez.
+Codex için `filter_singular.json` ve `filter_normal.json` birlikte okunur; Codex
+normal sütunları da bu veri setiyle yenilenir (kaynak allinone'daki şişmiş işlem
+sayıları düzeltilir). `summary.js` yoksa (S) sütunları boş kalır; normal tablo
+etkilenmez.

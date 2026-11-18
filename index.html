@@ -241,24 +241,10 @@
   }
   footer b { color: #cbd6eb; }
   .empty { padding: 44px 20px; text-align: center; color: var(--muted); }
-  /* Singular Analiz sekmesi */
-  .singular-hero { display: flex; justify-content: space-between; align-items: flex-end; gap: 18px; flex-wrap: wrap; background: linear-gradient(180deg, rgba(90,140,255,.10), rgba(90,140,255,.02)); border: 1px solid rgba(90,140,255,.28); border-radius: 16px; padding: 16px 18px; margin-bottom: 14px; }
-  .singular-hero h2 { margin: 4px 0 6px; font-size: 20px; letter-spacing: -.01em; }
-  .singular-hero p { margin: 0; max-width: 880px; color: var(--muted); font-size: 12px; line-height: 1.6; }
-  .sg-total { text-align: right; font-size: 11.5px; color: var(--muted); }
-  .sg-total b { display: block; font-size: 22px; color: var(--text); font-variant-numeric: tabular-nums; }
-  .sg-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: 10px; margin-bottom: 14px; }
-  .sg-card { border: 1px solid var(--border); background: var(--panel); border-radius: 14px; padding: 12px 14px; cursor: pointer; transition: border-color .12s, transform .12s; }
-  .sg-card:hover { transform: translateY(-1px); border-color: #3b4d70; }
-  .sg-card.active { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent) inset; }
-  .sg-card .t { display: flex; justify-content: space-between; gap: 8px; font-size: 11.5px; color: var(--muted); }
-  .sg-card .n { margin: 6px 0 2px; font-size: 19px; font-weight: 700; font-variant-numeric: tabular-nums; }
-  .sg-card .s { font-size: 11.5px; color: var(--muted); line-height: 1.55; }
-  .sg-card .b { color: #ffb020; }
-  .sg-more { text-align: center; margin: 14px 0 4px; }
-  .sg-more button { padding: 8px 16px; }
-  .sg-toolbar { margin-bottom: 10px; }
-  #singularView .table-wrap { max-height: 68vh; }
+  /* Singular sütunları: normal sütunun hemen sağında, hafif vurgulu */
+  th.sg-col { color: #9db8e8; border-left: 1px solid rgba(90,140,255,.22); }
+  td.sg-col { background: rgba(90,140,255,.045); border-left: 1px solid rgba(90,140,255,.14); }
+  tbody tr:hover td.sg-col { background: rgba(90,140,255,.09); }
   @media (max-width: 980px) {
     .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .table-wrap { max-height: none; }
@@ -300,67 +286,6 @@
     </section>
   </div>
 
-  <div id="singularView" hidden>
-    <section class="singular-hero">
-      <div>
-        <span class="eyebrow">SINGULAR ANALIZ</span>
-        <h2 id="sgTitle">Tek pozisyon kuralı</h2>
-        <p id="sgRule">Aynı coinde aynı anda en fazla bir açık işlem. Normal sonuçlar değişmez; tekil varyant ayrı hesaplanır.</p>
-      </div>
-      <div class="sg-total">
-        <b id="sgBlockedPct">—</b>
-        <span>bloke edilen işlem (seçili repo)</span>
-      </div>
-    </section>
-
-    <div class="sg-cards" id="sgCards"></div>
-
-    <section class="toolbar sg-toolbar" aria-label="Singular tablo filtreleri">
-      <input id="sgQ" type="search" placeholder="Strateji, filtre veya timeframe ara..." autocomplete="off">
-      <select id="sgTfSel" aria-label="Timeframe"><option value="all">Tüm TF</option></select>
-      <select id="sgSort" aria-label="Sıralama">
-        <option value="bp">Bloke % (azalan)</option>
-        <option value="nt">Normal işlem (azalan)</option>
-        <option value="st">Singular işlem (azalan)</option>
-        <option value="nr">Normal getiri (azalan)</option>
-        <option value="sr">Singular getiri (azalan)</option>
-        <option value="d">Getiri farkı (azalan)</option>
-      </select>
-      <label class="check"><input id="sgOnlyBlocked" type="checkbox"> Sadece bloke olanlar</label>
-      <button id="sgReset" type="button">Sıfırla</button>
-      <button id="sgCsv" type="button">CSV indir</button>
-    </section>
-
-    <div class="meta">
-      <span id="sgCount"></span>
-      <span class="meta-right" id="sgScope"></span>
-    </div>
-
-    <div class="table-wrap">
-      <table id="sgTbl">
-        <thead>
-          <tr>
-            <th>Strateji / İndikatör</th>
-            <th>TF</th>
-            <th>Filtre / Aşama</th>
-            <th class="num">Normal İşlem</th>
-            <th class="num">Singular İşlem</th>
-            <th class="num">Bloke %</th>
-            <th class="num">Normal Getiri %</th>
-            <th class="num">Singular Getiri %</th>
-            <th class="num">Fark</th>
-            <th class="num">Normal K/Z</th>
-            <th class="num">Singular K/Z</th>
-            <th class="num">Normal Süre</th>
-            <th class="num">Singular Süre</th>
-          </tr>
-        </thead>
-        <tbody id="sgTbody"></tbody>
-      </table>
-    </div>
-    <div class="sg-more"><button id="sgMore" type="button" hidden>Daha fazla göster</button></div>
-  </div>
-
   <section class="chosen-bar" id="chosenView" hidden>
     <div class="chosen-info">
       <span class="eyebrow" style="margin-right:4px">CHOSEN</span>
@@ -392,12 +317,19 @@
           <th data-k="filter">Filtre<span class="arrow"></span></th>
           <th data-k="timeframe">Timeframe<span class="arrow"></span></th>
           <th data-k="retAll" class="num">All Getiri %<span class="arrow"></span></th>
+          <th data-k="sRetAll" class="num sg-col">All Getiri % (S)<span class="arrow"></span></th>
           <th data-k="ret2026" class="num">2026 Getiri %<span class="arrow"></span></th>
+          <th data-k="sRet2026" class="num sg-col">2026 Getiri % (S)<span class="arrow"></span></th>
           <th data-k="trades" class="num">İşlem Sayısı<span class="arrow"></span></th>
+          <th data-k="sTrades" class="num sg-col">İşlem Sayısı (S)<span class="arrow"></span></th>
           <th data-k="winRatio" class="num">Karlı/Zararlı İşlem<span class="arrow"></span></th>
+          <th data-k="sWinRatio" class="num sg-col">Karlı/Zararlı İşlem (S)<span class="arrow"></span></th>
           <th data-k="winHoldH" class="num">Karlı İşlem Ort. Süre (saat)<span class="arrow"></span></th>
+          <th data-k="sWinHoldH" class="num sg-col">Karlı İşlem Ort. Süre (S)<span class="arrow"></span></th>
           <th data-k="profitDays" class="num">Karlı Gün<span class="arrow"></span></th>
+          <th data-k="sProfitDays" class="num sg-col">Karlı Gün (S)<span class="arrow"></span></th>
           <th data-k="lossDays" class="num">Karsız Gün<span class="arrow"></span></th>
+          <th data-k="sLossDays" class="num sg-col">Karsız Gün (S)<span class="arrow"></span></th>
         </tr>
         <tr class="filters">
           <th></th>
@@ -406,12 +338,19 @@
           <th><input data-tf="filter" placeholder="filtre ara" autocomplete="off"></th>
           <th><input data-tf="timeframe" placeholder="tf" autocomplete="off"></th>
           <th><div class="range"><input data-tf="retAllMin" placeholder="min" inputmode="decimal"><span>–</span><input data-tf="retAllMax" placeholder="max" inputmode="decimal"></div></th>
+          <th></th>
           <th><div class="range"><input data-tf="ret2026Min" placeholder="min" inputmode="decimal"><span>–</span><input data-tf="ret2026Max" placeholder="max" inputmode="decimal"></div></th>
+          <th></th>
           <th><div class="range"><input data-tf="tradesMin" placeholder="min" inputmode="numeric"><span>–</span><input data-tf="tradesMax" placeholder="max" inputmode="numeric"></div></th>
+          <th></th>
           <th><div class="range"><input data-tf="winRatioMin" placeholder="min" inputmode="decimal"><span>–</span><input data-tf="winRatioMax" placeholder="max" inputmode="decimal"></div></th>
+          <th></th>
           <th><div class="range"><input data-tf="winHoldHMin" placeholder="min" inputmode="decimal"><span>–</span><input data-tf="winHoldHMax" placeholder="max" inputmode="decimal"></div></th>
+          <th></th>
           <th><div class="range"><input data-tf="profitDaysMin" placeholder="min" inputmode="numeric"><span>–</span><input data-tf="profitDaysMax" placeholder="max" inputmode="numeric"></div></th>
+          <th></th>
           <th><div class="range"><input data-tf="lossDaysMin" placeholder="min" inputmode="numeric"><span>–</span><input data-tf="lossDaysMax" placeholder="max" inputmode="numeric"></div></th>
+          <th></th>
         </tr>
       </thead>
       <tbody id="tbody"></tbody>
@@ -436,8 +375,11 @@
   <footer>
     <b>Getiri:</b> İşlem başına ortalama net getiri (%). <b>Karlı gün:</b> günlük net P/L &gt; 0.
     <b>Karsız gün:</b> günlük net P/L &lt; 0. Gün sayıları tüm dönem içindir; net sıfır günler sayılmaz.
-    Codex filtre satırlarında 2026 getirisi ve günlük P/L kaynakta ayrı export edilmediği için
-    <b>—</b> görünür. Farklı repolar farklı evren, dönem, komisyon, slippage ve kaldıraç kullanır;
+    <b>(S):</b> Singular-Backtest — aynı coinde aynı anda en fazla bir açık işlem; normal sütunun hemen
+    sağındaki sütun tekil varyantı gösterir. Eşleşmeyen hücreler <b>—</b> kalır.
+    Codex filtre satırlarında 2026 getirisi, günlük P/L ve karlı işlem süresi kaynakta ayrı export edilmediği
+    için <b>—</b> görünür. Codex kâr oranları bu tabloda yüzdeye çevrilmiştir.
+    Farklı repolar farklı evren, dönem, komisyon, slippage ve kaldıraç kullanır;
     bu tablo keşif/tarama amaçlıdır, yatırım tavsiyesi değildir.
     <span id="generated"></span>
   </footer>
@@ -495,6 +437,44 @@ const sourceClass = {
 
 function rowKey(row) {
   return [row.source, row.strategy, row.filter, row.timeframe].join("||");
+}
+
+// Codex verisi kâr oranlarını kesir (0.12 = %12) olarak saklıyor; diğer
+// kaynaklarla aynı ölçeğe (yüzde) getir.
+for (const row of ROWS) {
+  if (row.source !== "Codex Bulut") continue;
+  if (row.retAll != null) row.retAll *= 100;
+  if (row.ret2026 != null) row.ret2026 *= 100;
+}
+
+// Singular sütunları: normal satırlara tekil karşılıklarını ekle.
+const SINGULAR_BY_KEY = (window.SINGULAR_DATA && window.SINGULAR_DATA.byKey) || {};
+let singularMatched = 0;
+for (const row of ROWS) {
+  const e = SINGULAR_BY_KEY[rowKey(row)];
+  if (!e) continue;
+  singularMatched++;
+  const s = e.s;
+  if (s) {
+    row.sTrades = s.trades;
+    row.sRetAll = s.retAll;
+    row.sRet2026 = s.ret2026;
+    row.sWinRatio = s.winRatio;
+    row.sWinHoldH = s.winHoldH;
+    row.sProfitDays = s.profitDays;
+    row.sLossDays = s.lossDays;
+  }
+  // Codex: normal satırlar da aynı veri setinden yenilenir (kaynak tabloda
+  // işlem sayıları şişmişti).
+  if (e.n) {
+    row.retAll = e.n.retAll;
+    row.ret2026 = e.n.ret2026;
+    row.trades = e.n.trades;
+    row.winRatio = e.n.winRatio;
+    row.winHoldH = e.n.winHoldH;
+    row.profitDays = e.n.profitDays;
+    row.lossDays = e.n.lossDays;
+  }
 }
 
 const rowByKey = new Map(ROWS.map((row) => [rowKey(row), row]));
@@ -682,122 +662,9 @@ function renderOptions() {
     tfs.map((s) => '<option value="' + esc(s) + '">' + esc(s) + "</option>").join("");
 }
 
-const SG = window.SINGULAR_DATA || { repos: [] };
-const sgState = {
-  key: SG.repos[0] ? SG.repos[0].key : null,
-  q: "",
-  tf: "all",
-  sort: "bp",
-  onlyBlocked: false,
-  limit: 300,
-};
-
-function sgRepo() {
-  return SG.repos.find((r) => r.key === sgState.key) || SG.repos[0];
-}
-
-function sgSortedRows() {
-  const repo = sgRepo();
-  if (!repo) return [];
-  const q = sgState.q.trim().toLocaleLowerCase("tr");
-  const rows = repo.rows.filter((r) => {
-    if (sgState.tf !== "all" && r.t !== sgState.tf) return false;
-    if (sgState.onlyBlocked && !(r.b > 0)) return false;
-    if (q && !(r.n + " " + r.f + " " + r.t).toLocaleLowerCase("tr").includes(q)) return false;
-    return true;
-  });
-  const key = sgState.sort;
-  rows.sort((a, b) => {
-    const av = key === "d" ? a.sr - a.nr : a[key];
-    const bv = key === "d" ? b.sr - b.nr : b[key];
-    return (Number(bv) || 0) - (Number(av) || 0);
-  });
-  return rows;
-}
-
-function renderSingular() {
-  if (!SG.repos.length) {
-    $("sgCards").innerHTML = '<div class="empty">singular/summary.js bulunamadı. Önce <code>python singular/build_summary.py</code> çalıştır.</div>';
-    return;
-  }
-  const repo = sgRepo();
-  $("sgTitle").textContent = repo.label + " — tekil pozisyon";
-  $("sgRule").textContent = (repo.rule ? repo.rule + " " : "") + "Kapsam: " + (repo.scope_label || repo.scope || "—");
-  $("sgBlockedPct").textContent = "%" + Number(repo.totals.blocked_pct || 0).toFixed(2);
-
-  $("sgCards").innerHTML = SG.repos.map((r) => {
-    const t = r.totals;
-    return '<div class="sg-card ' + (r.key === repo.key ? "active" : "") + '" data-sgkey="' + esc(r.key) + '" role="button" tabindex="0">' +
-      '<div class="t"><span>' + esc(r.label) + "</span><span>" + fmtInt(r.rows.length) + " satır</span></div>" +
-      '<div class="n">' + fmtInt(t.normal.trades) + " → " + fmtInt(t.singular.trades) + "</div>" +
-      '<div class="s">bloke <span class="b">%' + Number(t.blocked_pct || 0).toFixed(2) + "</span> · ort " +
-      Number(t.normal.retAll || 0).toFixed(3) + "% → " + Number(t.singular.retAll || 0).toFixed(3) + "%</div>" +
-      "</div>";
-  }).join("");
-
-  const tfs = [...new Set(repo.rows.map((r) => r.t).filter(Boolean))];
-  const keep = sgState.tf;
-  $("sgTfSel").innerHTML = '<option value="all">Tüm TF</option>' +
-    tfs.map((tf) => '<option value="' + esc(tf) + '"' + (tf === keep ? " selected" : "") + ">" + esc(tf) + "</option>").join("");
-
-  const rows = sgSortedRows();
-  const shown = rows.slice(0, sgState.limit);
-  $("sgTbody").innerHTML = shown.map((r) => {
-    const delta = r.sr - r.nr;
-    return "<tr>" +
-      "<td>" + esc(r.n) + "</td>" +
-      "<td>" + esc(r.t || "—") + "</td>" +
-      "<td>" + esc(r.f || "—") + "</td>" +
-      '<td class="num">' + fmtInt(r.nt) + "</td>" +
-      '<td class="num">' + fmtInt(r.st) + "</td>" +
-      '<td class="num">%' + Number(r.bp || 0).toFixed(2) + "</td>" +
-      '<td class="num">' + fmtPct(r.nr) + "</td>" +
-      '<td class="num">' + fmtPct(r.sr) + "</td>" +
-      '<td class="num">' + fmtPct(delta) + "</td>" +
-      '<td class="num">' + fmtRatio(r.nw) + "</td>" +
-      '<td class="num">' + fmtRatio(r.sw) + "</td>" +
-      '<td class="num">' + fmtHours(r.nh) + "</td>" +
-      '<td class="num">' + fmtHours(r.sh) + "</td>" +
-      "</tr>";
-  }).join("") || '<tr><td colspan="13" class="empty">Eşleşen satır yok.</td></tr>';
-
-  $("sgCount").textContent = fmtInt(rows.length) + " satır" + (shown.length < rows.length ? " · " + fmtInt(shown.length) + " gösteriliyor" : "");
-  $("sgScope").textContent = (repo.scope_label || "") + " · " + (repo.generated_at ? "üretim " + repo.generated_at.slice(0, 10) : "");
-  $("sgMore").hidden = shown.length >= rows.length;
-}
-
-function downloadSingularCsv() {
-  const repo = sgRepo();
-  if (!repo) return;
-  const cols = [
-    ["Strateji", "n"], ["TF", "t"], ["Filtre", "f"],
-    ["Normal islem", "nt"], ["Singular islem", "st"], ["Bloke", "b"], ["Bloke %", "bp"],
-    ["Normal getiri %", "nr"], ["Singular getiri %", "sr"], ["Fark", null],
-    ["Normal 2026 %", "n26"], ["Singular 2026 %", "s26"],
-    ["Normal K/Z", "nw"], ["Singular K/Z", "sw"],
-    ["Normal sure (sa)", "nh"], ["Singular sure (sa)", "sh"],
-  ];
-  const lines = [cols.map((c) => c[0]).join(";")];
-  for (const r of sgSortedRows()) {
-    lines.push(cols.map(([_, k]) => {
-      const v = k === null ? (r.sr - r.nr) : r[k];
-      return String(v == null ? "" : v).replace(/;/g, ",");
-    }).join(";"));
-  }
-  const blob = new Blob(["\ufeff" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "singular_" + repo.key + ".csv";
-  a.click();
-  URL.revokeObjectURL(url);
-}
-
 function renderTabs() {
-  const sgRows = SG.repos.reduce((a, r) => a + r.rows.length, 0);
   const tabs = [
     { key: "main", label: "Allinone", count: ROWS.length },
-    { key: "singular", label: "Singular Analiz", count: sgRows },
     { key: "chosen", label: "Chosen", count: chosen.size },
   ];
   $("topTabs").innerHTML = tabs.map((tab) => (
@@ -807,15 +674,13 @@ function renderTabs() {
 }
 
 function setView(view) {
-  state.view = view === "chosen" ? "chosen" : view === "singular" ? "singular" : "main";
+  state.view = view === "chosen" ? "chosen" : "main";
   state.page = 1;
   $("mainView").hidden = state.view !== "main";
   $("chosenView").hidden = state.view !== "chosen";
-  $("singularView").hidden = state.view !== "singular";
   renderTabs();
   renderChosenBar();
-  if (state.view === "singular") renderSingular();
-  else renderTable();
+  renderTable();
 }
 
 function renderChosenBar() {
@@ -834,7 +699,7 @@ function renderTable() {
 
   const tbody = $("tbody");
   if (!pageRows.length) {
-    tbody.innerHTML = '<tr><td colspan="12" class="empty">Bu filtrelerle satır bulunamadı.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="19" class="empty">Bu filtrelerle satır bulunamadı.</td></tr>';
   } else {
     tbody.innerHTML = pageRows.map((row) => {
       const key = rowKey(row);
@@ -849,12 +714,19 @@ function renderTable() {
         '<td><div class="fname">' + esc(row.filter) + "</div></td>" +
         '<td><span class="tf">' + esc(row.timeframe) + "</span></td>" +
         '<td class="num">' + fmtPct(row.retAll) + "</td>" +
+        '<td class="num sg-col">' + fmtPct(row.sRetAll) + "</td>" +
         '<td class="num">' + fmtPct(row.ret2026) + "</td>" +
+        '<td class="num sg-col">' + fmtPct(row.sRet2026) + "</td>" +
         '<td class="num">' + fmtIntCell(row.trades) + "</td>" +
+        '<td class="num sg-col">' + fmtIntCell(row.sTrades) + "</td>" +
         '<td class="num">' + fmtRatio(row.winRatio) + "</td>" +
+        '<td class="num sg-col">' + fmtRatio(row.sWinRatio) + "</td>" +
         '<td class="num">' + fmtHours(row.winHoldH) + "</td>" +
+        '<td class="num sg-col">' + fmtHours(row.sWinHoldH) + "</td>" +
         '<td class="num">' + fmtIntCell(row.profitDays) + "</td>" +
+        '<td class="num sg-col">' + fmtIntCell(row.sProfitDays) + "</td>" +
         '<td class="num">' + fmtIntCell(row.lossDays) + "</td>" +
+        '<td class="num sg-col">' + fmtIntCell(row.sLossDays) + "</td>" +
         "</tr>";
     }).join("");
     tbody.querySelectorAll(".add-btn").forEach((button) => {
@@ -865,7 +737,7 @@ function renderTable() {
   if (state.view === "chosen") {
     $("count").textContent = fmtInt(rows.length) + " seçili satır gösteriliyor (toplam " + fmtInt(chosen.size) + " seçili)";
   } else {
-    $("count").textContent = fmtInt(rows.length) + " satır gösteriliyor (toplam " + fmtInt(ROWS.length) + ")";
+    $("count").textContent = fmtInt(rows.length) + " satır gösteriliyor (toplam " + fmtInt(ROWS.length) + " · " + fmtInt(singularMatched) + " tekil eşleşme)";
   }
   $("pageInfo").textContent = "Sayfa " + state.page + " / " + pages;
   $("prev").disabled = state.page <= 1;
@@ -943,7 +815,11 @@ function csvNum(value) {
 function downloadChosenCsv() {
   const rows = [...chosen].map((key) => rowByKey.get(key)).filter(Boolean).sort(cmp);
   if (!rows.length) return;
-  const headers = ["Kaynak", "Strateji", "Filtre", "Timeframe", "All Getiri %", "2026 Getiri %", "İşlem Sayısı", "Karlı/Zararlı İşlem", "Karlı İşlem Ort. Süre (saat)", "Karlı Gün", "Karsız Gün"];
+  const headers = ["Kaynak", "Strateji", "Filtre", "Timeframe",
+    "All Getiri %", "All Getiri % (S)", "2026 Getiri %", "2026 Getiri % (S)",
+    "İşlem Sayısı", "İşlem Sayısı (S)", "Karlı/Zararlı İşlem", "Karlı/Zararlı İşlem (S)",
+    "Karlı İşlem Ort. Süre (saat)", "Karlı İşlem Ort. Süre (S)",
+    "Karlı Gün", "Karlı Gün (S)", "Karsız Gün", "Karsız Gün (S)"];
   const lines = [headers.map(csvEscape).join(";")];
   rows.forEach((row) => {
     lines.push([
@@ -952,12 +828,19 @@ function downloadChosenCsv() {
       row.filter,
       row.timeframe,
       csvNum(row.retAll),
+      csvNum(row.sRetAll),
       csvNum(row.ret2026),
+      csvNum(row.sRet2026),
       row.trades,
+      row.sTrades,
       csvNum(row.winRatio),
+      csvNum(row.sWinRatio),
       csvNum(row.winHoldH),
+      csvNum(row.sWinHoldH),
       row.profitDays,
+      row.sProfitDays,
       row.lossDays,
+      row.sLossDays,
     ].map(csvEscape).join(";"));
   });
   const blob = new Blob(["\ufeff" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
@@ -1059,50 +942,6 @@ function bind() {
       }
       resetPageAndRender();
     });
-  });
-  $("sgQ").addEventListener("input", (event) => {
-    sgState.q = event.target.value;
-    sgState.limit = 300;
-    renderSingular();
-  });
-  $("sgTfSel").addEventListener("change", (event) => {
-    sgState.tf = event.target.value;
-    sgState.limit = 300;
-    renderSingular();
-  });
-  $("sgSort").addEventListener("change", (event) => {
-    sgState.sort = event.target.value;
-    sgState.limit = 300;
-    renderSingular();
-  });
-  $("sgOnlyBlocked").addEventListener("change", (event) => {
-    sgState.onlyBlocked = event.target.checked;
-    sgState.limit = 300;
-    renderSingular();
-  });
-  $("sgReset").addEventListener("click", () => {
-    sgState.q = "";
-    sgState.tf = "all";
-    sgState.sort = "bp";
-    sgState.onlyBlocked = false;
-    sgState.limit = 300;
-    $("sgQ").value = "";
-    $("sgSort").value = "bp";
-    $("sgOnlyBlocked").checked = false;
-    renderSingular();
-  });
-  $("sgCsv").addEventListener("click", downloadSingularCsv);
-  $("sgMore").addEventListener("click", () => {
-    sgState.limit += 300;
-    renderSingular();
-  });
-  $("sgCards").addEventListener("click", (event) => {
-    const card = event.target.closest("[data-sgkey]");
-    if (!card) return;
-    sgState.key = card.dataset.sgkey;
-    sgState.tf = "all";
-    sgState.limit = 300;
-    renderSingular();
   });
 }
 

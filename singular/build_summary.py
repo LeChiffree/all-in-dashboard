@@ -1,21 +1,24 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Singular-Backtest payload'larını dashboard sekmesi için sıkıştırır.
+"""Singular-Backtest payload'larını Allinone satırlarıyla eşleştirir.
 
-Altı repodaki `singular_results.json` dosyalarını okur, ortak şemaya çevirir
-ve `singular/summary.js` (`window.SINGULAR_DATA = ...`) ile `summary.json`
-üretir. Dashboard `index.html` doğrudan dosyadan açılabilsin diye JSON yerine
-script olarak yazılır.
+Altı repodaki singular sonuçları, `allinone.json` satırlarının anahtarıyla
+(source||strategy||filter||timeframe) eşleştirir ve
+`singular/summary.js` (`window.SINGULAR_DATA = {byKey: ...}`) üretir.
+
+Dashboard bu dosyayı yükleyip Allinone tablosunda normal sütunların yanındaki
+singular sütunları doldurur.
 
 Kullanım:
   python singular/build_summary.py
-  python singular/build_summary.py --codex=... --indikator=...
 """
 from __future__ import annotations
 
 import argparse
 import json
 import os
+import re
+from datetime import datetime, timezone
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DASH = os.path.dirname(HERE)
@@ -25,11 +28,14 @@ PROJECTS = os.path.dirname(DASH)
 def default_paths():
     return {
         "codex": os.path.join(PROJECTS, "Codex-Bulut-Backtests", "Singular-Backtest", "singular_results.json"),
+        "codex_filters": os.path.join(PROJECTS, "Codex-Bulut-Backtests", "Singular-Backtest", "results", "filter_singular.json"),
+        "codex_normal_filters": os.path.join(PROJECTS, "Codex-Bulut-Backtests", "Singular-Backtest", "results", "filter_normal.json"),
         "paper": os.path.join(PROJECTS, "paper-ml-bsh", "Singular-Backtest", "singular_results.json"),
         "bigplan": os.path.join(PROJECTS, "bigplan-backtest-lab", "Singular-Backtest", "singular_results.json"),
         "book": os.path.join(PROJECTS, "book-signal-review", "Singular-Backtest", "results", "singular_results.json"),
         "v4": os.path.join(PROJECTS, "binance-v4-strategy-research", "Singular-Backtest", "results", "singular_results.json"),
         "indikator": os.path.join(PROJECTS, "indikator-akademi", "Singular-Backtest", "results", "singular_results.json"),
+        "allinone": os.path.join(DASH, "allinone.json"),
     }
 
 
@@ -41,166 +47,150 @@ def num(v, default=0.0):
         return default
 
 
-def pick(d, *names, default=0.0):
-    for n in names:
-        if n in d and d[n] is not None:
-            return d[n]
-    return default
+def gm(m, name):
+    """s_ önekli ya da düz alanı oku."""
+    return m.get("s_" + name, m.get(name))
 
 
-def ratio(wins, losses):
-    w, l = num(wins), num(losses)
-    return (w / l) if l else w
-
-
-def totals_of(pay, key, which):
-    t = pay.get("totals", {}).get(which, {})
-    ret = num(pick(t, "retAll", "avgRet", "avg_ret"))
-    if key == "codex":
-        ret *= 100.0
+def flat(m, scale=1.0):
     return {
-        "trades": round(num(pick(t, "trades"))),
-        "retAll": round(ret, 4),
-        "winRate": round(num(pick(t, "winRate", "win_rate")), 4),
-        "winHoldH": round(num(pick(t, "winHoldH", "win_hold_h")), 2),
+        "trades": round(num(gm(m, "trades"))),
+        "retAll": round(num(gm(m, "retAll")) * scale, 4),
+        "ret2026": round(num(gm(m, "ret2026")) * scale, 4),
+        "winRatio": (None if gm(m, "winRatio") is None else round(num(gm(m, "winRatio")), 4)),
+        "winHoldH": (None if gm(m, "winHoldH") is None else round(num(gm(m, "winHoldH")), 2)),
+        "profitDays": (None if gm(m, "profitDays") is None else round(num(gm(m, "profitDays")))),
+        "lossDays": (None if gm(m, "lossDays") is None else round(num(gm(m, "lossDays")))),
     }
 
 
-def row(key, o):
-    """Ortak satır şeması."""
-    if key == "codex":
-        nret = num(pick(o, "n_avg_ret")) * 100
-        sret = num(pick(o, "s_avg_ret")) * 100
-        n26 = num(pick(o, "n_ret2026")) * 100
-        s26 = num(pick(o, "s_ret2026")) * 100
-        nw = ratio(pick(o, "n_wins"), pick(o, "n_losses"))
-        sw = ratio(pick(o, "s_wins"), pick(o, "s_losses"))
-        name = f"{o.get('sid', '')} · {o.get('name', '')}" if o.get("sid") is not None else str(o.get("name", ""))
-        tf = str(o.get("tf", ""))
-        flt = "—"
-        nwrate = num(pick(o, "n_win_rate"))
-        swrate = num(pick(o, "s_win_rate"))
-        nh = num(pick(o, "n_win_hold_h"))
-        sh = num(pick(o, "s_win_hold_h"))
-    elif key == "paper":
-        nret, sret = num(pick(o, "n_retAll")), num(pick(o, "s_retAll"))
-        n26, s26 = num(pick(o, "n_ret2026")), num(pick(o, "s_ret2026"))
-        nw, sw = num(pick(o, "n_winRatio")), num(pick(o, "s_winRatio"))
-        nm = o.get("name") or o.get("scenario") or o.get("strategy") or ""
-        name = str(nm)
-        tf = str(o.get("tf", ""))
-        flt = str(o.get("filter", "") or "")
-        if o.get("threshold") is not None:
-            flt += f" · eşik {o['threshold']}"
-        nwrate, swrate = num(pick(o, "n_win_rate")), num(pick(o, "s_win_rate"))
-        nh, sh = num(pick(o, "n_winHoldH")), num(pick(o, "s_winHoldH"))
-    elif key == "bigplan":
-        nret, sret = num(pick(o, "n_retAll", "n_avgRet")), num(pick(o, "s_retAll", "s_avgRet"))
-        n26, s26 = num(pick(o, "n_ret2026")), num(pick(o, "s_ret2026"))
-        nw, sw = num(pick(o, "n_winRatio")), num(pick(o, "s_winRatio"))
-        name = str(o.get("title", o.get("id", "")))
-        tf = "tümü"
-        flt = str(o.get("kind", ""))
-        nwrate, swrate = num(pick(o, "n_winRate")), num(pick(o, "s_winRate"))
-        nh, sh = num(pick(o, "n_winHoldH")), num(pick(o, "s_winHoldH"))
-    else:  # book / v4 / indikator
-        nret, sret = num(pick(o, "n_retAll")), num(pick(o, "s_retAll"))
-        n26, s26 = num(pick(o, "n_ret2026")), num(pick(o, "s_ret2026"))
-        nw, sw = num(pick(o, "n_winRatio")), num(pick(o, "s_winRatio"))
-        name = str(o.get("title") or o.get("strategy") or o.get("sid") or "")
-        tf = str(o.get("timeframe", o.get("tf", "")))
-        flt = str(o.get("filter_label", o.get("stage_label", "")) or "")
-        nwrate, swrate = num(pick(o, "n_winRate")), num(pick(o, "s_winRate"))
-        nh, sh = num(pick(o, "n_winHoldH")), num(pick(o, "s_winHoldH"))
-
-    nt = num(pick(o, "n_trades"))
-    st = num(pick(o, "s_trades"))
-    if key == "codex" and not st:
-        st = num(pick(o, "s_trades"))
-    b = num(pick(o, "blocked"))
-    bp = num(pick(o, "blocked_pct"))
-    if not bp and nt:
-        bp = max(0.0, nt - st) / nt * 100
-    return {
-        "n": name,
-        "t": tf,
-        "f": flt,
-        "nt": round(nt),
-        "st": round(st),
-        "b": round(b),
-        "bp": round(bp, 2),
-        "nr": round(nret, 4),
-        "sr": round(sret, 4),
-        "n26": round(n26, 4),
-        "s26": round(s26, 4),
-        "nw": round(nw, 4),
-        "sw": round(sw, 4),
-        "nh": round(nh, 2),
-        "sh": round(sh, 2),
-        "nwr": round(nwrate, 4),
-        "swr": round(swrate, 4),
-    }
-
-
-def rows_of(key, pay):
-    if key == "codex":
-        return pay.get("strategies", [])
-    if key == "paper":
-        return pay.get("scenarios", [])
-    if key == "bigplan":
-        return pay.get("configs", [])
-    return pay.get("rows", [])
+def key_of(r):
+    return "||".join([r["source"], r["strategy"], str(r["filter"]), str(r["timeframe"])])
 
 
 def build(paths):
-    order = [
-        ("bigplan", "BigPlan", "bigplan-backtest-lab"),
-        ("book", "Book Signal", "book-signal-review"),
-        ("codex", "Codex Bulut", "Codex-Bulut-Backtests"),
-        ("paper", "Paper ML", "paper-ml-bsh"),
-        ("indikator", "Indikator Akademi", "indikator-akademi"),
-        ("v4", "V4 Short", "binance-v4-strategy-research"),
-    ]
-    out = []
-    for key, label, repo in order:
-        path = paths[key]
-        if not os.path.exists(path):
-            print(f"[skip] {key}: {path} yok")
-            continue
-        with open(path, encoding="utf-8") as f:
-            pay = json.load(f)
-        total = pay.get("totals", {})
-        tn = totals_of(pay, key, "normal")
-        # singular totals
-        st = total.get("singular", {})
-        sing = totals_of(pay, key, "singular")
-        blocked = total.get("blocked")
-        if blocked is None:
-            blocked = max(0, tn["trades"] - sing["trades"])
-        bp = total.get("blocked_pct")
-        if bp is None:
-            bp = (blocked / tn["trades"] * 100) if tn["trades"] else 0.0
-        rows = [row(key, o) for o in rows_of(key, pay)]
-        print(f"[ok] {label}: {len(rows):,} satır | normal {tn['trades']:,} -> singular {sing['trades']:,} (%{num(bp):.2f})")
-        out.append({
-            "key": key,
-            "label": label,
-            "repo": repo,
-            "scope": pay.get("scope"),
-            "scope_label": pay.get("scope_label") or pay.get("scope") or "",
-            "rule": pay.get("rule", ""),
-            "generated_at": pay.get("generated_at"),
-            "totals": {
-                "normal": tn,
-                "singular": sing,
-                "blocked": round(num(blocked)),
-                "blocked_pct": round(num(bp), 2),
-            },
-            "rows": rows,
-        })
+    with open(paths["allinone"], encoding="utf-8") as f:
+        rows = json.load(f)["rows"]
+
+    by_source = {}
+    for r in rows:
+        by_source.setdefault(r["source"], []).append(r)
+
+    out = {}
+    matched = {}
+
+    # ---------------- BigPlan: states key = detail son parçası ----------------
+    p = paths["bigplan"]
+    if os.path.exists(p):
+        pay = json.load(open(p, encoding="utf-8"))
+        idx = {r["detail"].rsplit(" · ", 1)[-1]: r for r in by_source.get("BigPlan", [])}
+        n = 0
+        for st in pay.get("states", []):
+            r = idx.get(st.get("key"))
+            if r:
+                out[key_of(r)] = {"s": flat(st)}
+                n += 1
+        matched["BigPlan"] = (n, len(by_source.get("BigPlan", [])))
+
+    # ---------------- Book: detail son iki parçası = sid, filter_id ----------------
+    p = paths["book"]
+    if os.path.exists(p):
+        pay = json.load(open(p, encoding="utf-8"))
+        idx = {}
+        for r in by_source.get("Book Signal", []):
+            parts = r["detail"].rsplit(" · ", 2)
+            if len(parts) >= 3:
+                idx[(parts[-2], parts[-1])] = r
+        n = 0
+        for row in pay.get("rows", []):
+            r = idx.get((row["sid"], str(row["filter_id"])))
+            if r:
+                out[key_of(r)] = {"s": flat(row)}
+                n += 1
+        matched["Book Signal"] = (n, len(by_source.get("Book Signal", [])))
+
+    # ---------------- Codex: filtre düzeyi (yeni) + baseline ----------------
+    p = paths["codex_filters"]
+    if os.path.exists(p):
+        filt = json.load(open(p, encoding="utf-8"))
+        pn = paths.get("codex_normal_filters")
+        norm = json.load(open(pn, encoding="utf-8")) if pn and os.path.exists(pn) else {}
+        idx = {}
+        for r in by_source.get("Codex Bulut", []):
+            idx[(r["strategy"], r["timeframe"], str(r["filter"]))] = r
+        n = 0
+        miss = 0
+        for k, v in filt.items():
+            r = idx.get((v.get("scenario_name", ""), k.split("|")[1], v.get("filter_label")))
+            if r:
+                nv = norm.get(k)
+                out[key_of(r)] = {
+                    "n": flat(nv, scale=100.0) if nv else None,
+                    "s": flat(v, scale=100.0),
+                }
+                n += 1
+            else:
+                miss += 1
+        matched["Codex Bulut"] = (n, len(by_source.get("Codex Bulut", [])))
+        print(f"[codex] filtre eşleşmesi {n:,}, eşleşmeyen {miss:,}")
+
+    # ---------------- Paper: scenario id + tf ----------------
+    p = paths["paper"]
+    if os.path.exists(p):
+        pay = json.load(open(p, encoding="utf-8"))
+        idx = {}
+        for r in by_source.get("Paper ML", []):
+            m = re.search(r"scenario (\d+)", r["detail"])
+            if m:
+                idx[(int(m.group(1)), r["timeframe"])] = r
+        n = 0
+        for sc in pay.get("scenarios", []):
+            r = idx.get((int(sc["sid"]), sc.get("tf")))
+            if r:
+                out[key_of(r)] = {"s": flat(sc)}
+                n += 1
+        matched["Paper ML"] = (n, len(by_source.get("Paper ML", [])))
+
+    # ---------------- Indikator: si + filter ----------------
+    p = paths["indikator"]
+    if os.path.exists(p):
+        pay = json.load(open(p, encoding="utf-8"))
+        idx = {}
+        for r in by_source.get("Indikator Akademi", []):
+            m = re.search(r"agg/(\d+)\.bin · filter (\d+)", r["detail"])
+            if m:
+                idx[(int(m.group(1)), int(m.group(2)))] = r
+        n = 0
+        for row in pay.get("rows", []):
+            r = idx.get((int(row["idx"]), int(row["filter_id"])))
+            if r:
+                out[key_of(r)] = {"s": flat(row)}
+                n += 1
+        matched["Indikator Akademi"] = (n, len(by_source.get("Indikator Akademi", [])))
+
+    # ---------------- V4: pattern + variant + stage ----------------
+    p = paths["v4"]
+    if os.path.exists(p):
+        pay = json.load(open(p, encoding="utf-8"))
+        idx = {}
+        for r in by_source.get("V4 Short", []):
+            m = re.search(r"pattern (\d+) · (.+) · stage(\d+)", r["detail"])
+            if m:
+                idx[(int(m.group(1)), m.group(2), int(m.group(3)))] = r
+        n = 0
+        for row in pay.get("rows", []):
+            r = idx.get((int(row["pattern_id"]), row["variant"], int(str(row["filter_id"]))))
+            if r:
+                out[key_of(r)] = {"s": flat(row)}
+                n += 1
+        matched["V4 Short"] = (n, len(by_source.get("V4 Short", [])))
+
     return {
-        "generated_at": __import__("datetime").datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "repos": out,
+        "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "allinone_rows": len(rows),
+        "matched_rows": len(out),
+        "matched": {k: {"matched": v[0], "total": v[1]} for k, v in matched.items()},
+        "byKey": out,
     }
 
 
@@ -216,14 +206,13 @@ def main():
             paths[k] = v
     data = build(paths)
     os.makedirs(HERE, exist_ok=True)
-    with open(os.path.join(HERE, "summary.json"), "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
     with open(os.path.join(HERE, "summary.js"), "w", encoding="utf-8") as f:
         f.write("window.SINGULAR_DATA = ")
         json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
         f.write(";\n")
-    total = sum(len(r["rows"]) for r in data["repos"])
-    print(f"[done] {len(data['repos'])} repo, {total:,} satır → singular/summary.js")
+    print(f"[done] {data['matched_rows']:,}/{data['allinone_rows']:,} satır eşleşti")
+    for k, v in data["matched"].items():
+        print(f"  {k}: {v['matched']:,}/{v['total']:,}")
 
 
 if __name__ == "__main__":

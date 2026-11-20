@@ -52,11 +52,17 @@ def gm(m, name, prefix="s_"):
     return m.get(prefix + name, m.get(name))
 
 
-def flat(m, scale=1.0, prefix="s_"):
+def flat(m, scale=1.0, prefix="s_", per_trade=False):
+    if per_trade:
+        retAll = num(gm(m, "avg_ret", prefix))
+        ret2026 = num(gm(m, "avg_ret2026", prefix))
+    else:
+        retAll = num(gm(m, "retAll", prefix)) * scale
+        ret2026 = num(gm(m, "ret2026", prefix)) * scale
     return {
         "trades": round(num(gm(m, "trades", prefix))),
-        "retAll": round(num(gm(m, "retAll", prefix)) * scale, 4),
-        "ret2026": round(num(gm(m, "ret2026", prefix)) * scale, 4),
+        "retAll": round(retAll, 4),
+        "ret2026": round(ret2026, 4),
         "winRatio": (None if gm(m, "winRatio", prefix) is None else round(num(gm(m, "winRatio", prefix)), 4)),
         "winHoldH": (None if gm(m, "winHoldH", prefix) is None else round(num(gm(m, "winHoldH", prefix)), 2)),
         "profitDays": (None if gm(m, "profitDays", prefix) is None else round(num(gm(m, "profitDays", prefix)))),
@@ -161,7 +167,7 @@ def build(paths):
         for sc in pay.get("scenarios", []):
             r = idx.get((int(sc["sid"]), sc.get("tf")))
             if r:
-                out[key_of(r)] = {"n": periods(sc), "s": flat(sc)}
+                out[key_of(r)] = {"n": periods(sc), "s": flat(sc, per_trade=True)}
                 n += 1
         matched["Paper ML"] = (n, len(by_source.get("Paper ML", [])))
 

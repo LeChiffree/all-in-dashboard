@@ -478,9 +478,9 @@ let singularMatched = 0;
 for (const row of ROWS) {
   const e = SINGULAR_BY_KEY[rowKey(row)];
   if (!e) continue;
-  singularMatched++;
   const s = e.s;
   if (s) {
+    singularMatched++;
     row.sTrades = s.trades;
     row.sRetAll = s.retAll;
     row.sRet2026 = s.ret2026;

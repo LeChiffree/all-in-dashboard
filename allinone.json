@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T17:14:51",
+  "generated": "2026-11-20T18:39:45",
   "row_count": 65180,
   "columns": [
     "Kaynak",
@@ -658461,7 +658461,11 @@
       "winHoldH": 0.13,
       "profitDays": 17,
       "lossDays": 5,
-      "detail": "paper-ml-bsh · scenario 172 · sonuc_3mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 172 · sonuc_3mum_tp15_sl7p5",
+      "profitWeeks": 16,
+      "lossWeeks": 3,
+      "profitMonths": 15,
+      "lossMonths": 1
     },
     {
       "source": "Paper ML",
@@ -658475,7 +658479,11 @@
       "winHoldH": 22.43,
       "profitDays": 507,
       "lossDays": 191,
-      "detail": "paper-ml-bsh · scenario 52 · sonuc_10mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 52 · sonuc_10mum_tp10_sl5",
+      "profitWeeks": 190,
+      "lossWeeks": 41,
+      "profitMonths": 66,
+      "lossMonths": 12
     },
     {
       "source": "Paper ML",
@@ -658489,7 +658497,11 @@
       "winHoldH": 22.51,
       "profitDays": 512,
       "lossDays": 191,
-      "detail": "paper-ml-bsh · scenario 54 · sonuc_10mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 54 · sonuc_10mum_tp10_sl5",
+      "profitWeeks": 191,
+      "lossWeeks": 41,
+      "profitMonths": 67,
+      "lossMonths": 11
     },
     {
       "source": "Paper ML",
@@ -658503,7 +658515,11 @@
       "winHoldH": 22.51,
       "profitDays": 512,
       "lossDays": 191,
-      "detail": "paper-ml-bsh · scenario 53 · sonuc_10mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 53 · sonuc_10mum_tp10_sl5",
+      "profitWeeks": 191,
+      "lossWeeks": 41,
+      "profitMonths": 67,
+      "lossMonths": 11
     },
     {
       "source": "Paper ML",
@@ -658517,7 +658533,11 @@
       "winHoldH": 8.45,
       "profitDays": 119,
       "lossDays": 86,
-      "detail": "paper-ml-bsh · scenario 122 · sonuc_50mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 122 · sonuc_50mum_tp10_sl5",
+      "profitWeeks": 93,
+      "lossWeeks": 54,
+      "profitMonths": 51,
+      "lossMonths": 17
     },
     {
       "source": "Paper ML",
@@ -658531,7 +658551,11 @@
       "winHoldH": 12.43,
       "profitDays": 254,
       "lossDays": 179,
-      "detail": "paper-ml-bsh · scenario 34 · sonuc_200mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 34 · sonuc_200mum_tp10_sl5",
+      "profitWeeks": 128,
+      "lossWeeks": 74,
+      "profitMonths": 54,
+      "lossMonths": 23
     },
     {
       "source": "Paper ML",
@@ -658545,7 +658569,11 @@
       "winHoldH": 24.88,
       "profitDays": 494,
       "lossDays": 308,
-      "detail": "paper-ml-bsh · scenario 26 · sonuc_50mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 26 · sonuc_50mum_tp10_sl5",
+      "profitWeeks": 174,
+      "lossWeeks": 75,
+      "profitMonths": 64,
+      "lossMonths": 15
     },
     {
       "source": "Paper ML",
@@ -658559,7 +658587,11 @@
       "winHoldH": 25.01,
       "profitDays": 498,
       "lossDays": 308,
-      "detail": "paper-ml-bsh · scenario 24 · sonuc_50mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 24 · sonuc_50mum_tp10_sl5",
+      "profitWeeks": 176,
+      "lossWeeks": 75,
+      "profitMonths": 64,
+      "lossMonths": 15
     },
     {
       "source": "Paper ML",
@@ -658573,7 +658605,11 @@
       "winHoldH": 25.01,
       "profitDays": 498,
       "lossDays": 308,
-      "detail": "paper-ml-bsh · scenario 25 · sonuc_50mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 25 · sonuc_50mum_tp10_sl5",
+      "profitWeeks": 176,
+      "lossWeeks": 75,
+      "profitMonths": 64,
+      "lossMonths": 15
     },
     {
       "source": "Paper ML",
@@ -658587,7 +658623,11 @@
       "winHoldH": 0.44,
       "profitDays": 19,
       "lossDays": 10,
-      "detail": "paper-ml-bsh · scenario 189 · sonuc_10mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 189 · sonuc_10mum_tp20_sl10",
+      "profitWeeks": 18,
+      "lossWeeks": 6,
+      "profitMonths": 17,
+      "lossMonths": 3
     },
     {
       "source": "Paper ML",
@@ -658601,7 +658641,11 @@
       "winHoldH": 12.37,
       "profitDays": 268,
       "lossDays": 192,
-      "detail": "paper-ml-bsh · scenario 31 · sonuc_200mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 31 · sonuc_200mum_tp10_sl5",
+      "profitWeeks": 130,
+      "lossWeeks": 79,
+      "profitMonths": 59,
+      "lossMonths": 18
     },
     {
       "source": "Paper ML",
@@ -658615,7 +658659,11 @@
       "winHoldH": 12.37,
       "profitDays": 268,
       "lossDays": 192,
-      "detail": "paper-ml-bsh · scenario 30 · sonuc_200mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 30 · sonuc_200mum_tp10_sl5",
+      "profitWeeks": 130,
+      "lossWeeks": 79,
+      "profitMonths": 59,
+      "lossMonths": 18
     },
     {
       "source": "Paper ML",
@@ -658629,7 +658677,11 @@
       "winHoldH": 0.67,
       "profitDays": 51,
       "lossDays": 37,
-      "detail": "paper-ml-bsh · scenario 159 · sonuc_15mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 159 · sonuc_15mum_tp20_sl10",
+      "profitWeeks": 34,
+      "lossWeeks": 25,
+      "profitMonths": 21,
+      "lossMonths": 12
     },
     {
       "source": "Paper ML",
@@ -658643,7 +658695,11 @@
       "winHoldH": 0.73,
       "profitDays": 79,
       "lossDays": 51,
-      "detail": "paper-ml-bsh · scenario 121 · sonuc_15mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 121 · sonuc_15mum_tp20_sl10",
+      "profitWeeks": 51,
+      "lossWeeks": 31,
+      "profitMonths": 31,
+      "lossMonths": 14
     },
     {
       "source": "Paper ML",
@@ -658657,7 +658713,11 @@
       "winHoldH": 0.71,
       "profitDays": 72,
       "lossDays": 51,
-      "detail": "paper-ml-bsh · scenario 130 · sonuc_15mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 130 · sonuc_15mum_tp20_sl10",
+      "profitWeeks": 47,
+      "lossWeeks": 31,
+      "profitMonths": 29,
+      "lossMonths": 14
     },
     {
       "source": "Paper ML",
@@ -658671,7 +658731,11 @@
       "winHoldH": 10.42,
       "profitDays": 125,
       "lossDays": 54,
-      "detail": "paper-ml-bsh · scenario 139 · sonuc_200mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 139 · sonuc_200mum_tp5_sl2p5",
+      "profitWeeks": 67,
+      "lossWeeks": 21,
+      "profitMonths": 37,
+      "lossMonths": 12
     },
     {
       "source": "Paper ML",
@@ -658685,7 +658749,11 @@
       "winHoldH": 10.42,
       "profitDays": 125,
       "lossDays": 54,
-      "detail": "paper-ml-bsh · scenario 140 · sonuc_200mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 140 · sonuc_200mum_tp5_sl2p5",
+      "profitWeeks": 67,
+      "lossWeeks": 21,
+      "profitMonths": 37,
+      "lossMonths": 12
     },
     {
       "source": "Paper ML",
@@ -658699,7 +658767,11 @@
       "winHoldH": 10.42,
       "profitDays": 125,
       "lossDays": 54,
-      "detail": "paper-ml-bsh · scenario 141 · sonuc_200mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 141 · sonuc_200mum_tp5_sl2p5",
+      "profitWeeks": 67,
+      "lossWeeks": 21,
+      "profitMonths": 37,
+      "lossMonths": 12
     },
     {
       "source": "Paper ML",
@@ -658713,7 +658785,11 @@
       "winHoldH": 25.45,
       "profitDays": 340,
       "lossDays": 233,
-      "detail": "paper-ml-bsh · scenario 64 · sonuc_200mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 64 · sonuc_200mum_tp10_sl5",
+      "profitWeeks": 125,
+      "lossWeeks": 71,
+      "profitMonths": 58,
+      "lossMonths": 19
     },
     {
       "source": "Paper ML",
@@ -658727,7 +658803,11 @@
       "winHoldH": 25.45,
       "profitDays": 340,
       "lossDays": 233,
-      "detail": "paper-ml-bsh · scenario 63 · sonuc_200mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 63 · sonuc_200mum_tp10_sl5",
+      "profitWeeks": 125,
+      "lossWeeks": 71,
+      "profitMonths": 58,
+      "lossMonths": 19
     },
     {
       "source": "Paper ML",
@@ -658741,7 +658821,11 @@
       "winHoldH": 17.4,
       "profitDays": 686,
       "lossDays": 536,
-      "detail": "paper-ml-bsh · scenario 12 · sonuc_50mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 12 · sonuc_50mum_tp10_sl5",
+      "profitWeeks": 199,
+      "lossWeeks": 89,
+      "profitMonths": 59,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -658755,7 +658839,11 @@
       "winHoldH": 17.28,
       "profitDays": 682,
       "lossDays": 537,
-      "detail": "paper-ml-bsh · scenario 13 · sonuc_50mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 13 · sonuc_50mum_tp10_sl5",
+      "profitWeeks": 197,
+      "lossWeeks": 89,
+      "profitMonths": 59,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -658769,7 +658857,11 @@
       "winHoldH": 16.02,
       "profitDays": 6,
       "lossDays": 8,
-      "detail": "paper-ml-bsh · scenario 203 · sonuc_200mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 203 · sonuc_200mum_tp20_sl10",
+      "profitWeeks": 6,
+      "lossWeeks": 6,
+      "profitMonths": 4,
+      "lossMonths": 3
     },
     {
       "source": "Paper ML",
@@ -658783,7 +658875,11 @@
       "winHoldH": 25.43,
       "profitDays": 340,
       "lossDays": 233,
-      "detail": "paper-ml-bsh · scenario 76 · sonuc_200mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 76 · sonuc_200mum_tp10_sl5",
+      "profitWeeks": 125,
+      "lossWeeks": 71,
+      "profitMonths": 58,
+      "lossMonths": 19
     },
     {
       "source": "Paper ML",
@@ -658797,7 +658893,11 @@
       "winHoldH": 17.82,
       "profitDays": 640,
       "lossDays": 348,
-      "detail": "paper-ml-bsh · scenario 38 · sonuc_10mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 38 · sonuc_10mum_tp10_sl5",
+      "profitWeeks": 202,
+      "lossWeeks": 66,
+      "profitMonths": 67,
+      "lossMonths": 11
     },
     {
       "source": "Paper ML",
@@ -658811,7 +658911,11 @@
       "winHoldH": 17.9,
       "profitDays": 643,
       "lossDays": 348,
-      "detail": "paper-ml-bsh · scenario 37 · sonuc_10mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 37 · sonuc_10mum_tp10_sl5",
+      "profitWeeks": 203,
+      "lossWeeks": 66,
+      "profitMonths": 67,
+      "lossMonths": 11
     },
     {
       "source": "Paper ML",
@@ -658825,7 +658929,11 @@
       "winHoldH": 0.17,
       "profitDays": 184,
       "lossDays": 191,
-      "detail": "paper-ml-bsh · scenario 89 · sonuc_3mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 89 · sonuc_3mum_tp10_sl5",
+      "profitWeeks": 85,
+      "lossWeeks": 66,
+      "profitMonths": 42,
+      "lossMonths": 18
     },
     {
       "source": "Paper ML",
@@ -658839,7 +658947,11 @@
       "winHoldH": 0.17,
       "profitDays": 171,
       "lossDays": 185,
-      "detail": "paper-ml-bsh · scenario 90 · sonuc_3mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 90 · sonuc_3mum_tp10_sl5",
+      "profitWeeks": 82,
+      "lossWeeks": 65,
+      "profitMonths": 42,
+      "lossMonths": 18
     },
     {
       "source": "Paper ML",
@@ -658853,7 +658965,11 @@
       "winHoldH": 33.05,
       "profitDays": 439,
       "lossDays": 287,
-      "detail": "paper-ml-bsh · scenario 55 · sonuc_200mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 55 · sonuc_200mum_tp15_sl7p5",
+      "profitWeeks": 171,
+      "lossWeeks": 86,
+      "profitMonths": 63,
+      "lossMonths": 16
     },
     {
       "source": "Paper ML",
@@ -658867,7 +658983,11 @@
       "winHoldH": 33.05,
       "profitDays": 439,
       "lossDays": 287,
-      "detail": "paper-ml-bsh · scenario 56 · sonuc_200mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 56 · sonuc_200mum_tp15_sl7p5",
+      "profitWeeks": 171,
+      "lossWeeks": 86,
+      "profitMonths": 63,
+      "lossMonths": 16
     },
     {
       "source": "Paper ML",
@@ -658881,7 +659001,11 @@
       "winHoldH": 6.6,
       "profitDays": 167,
       "lossDays": 70,
-      "detail": "paper-ml-bsh · scenario 136 · sonuc_200mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 136 · sonuc_200mum_tp5_sl2p5",
+      "profitWeeks": 82,
+      "lossWeeks": 25,
+      "profitMonths": 43,
+      "lossMonths": 13
     },
     {
       "source": "Paper ML",
@@ -658895,7 +659019,11 @@
       "winHoldH": 6.6,
       "profitDays": 167,
       "lossDays": 70,
-      "detail": "paper-ml-bsh · scenario 135 · sonuc_200mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 135 · sonuc_200mum_tp5_sl2p5",
+      "profitWeeks": 82,
+      "lossWeeks": 25,
+      "profitMonths": 43,
+      "lossMonths": 13
     },
     {
       "source": "Paper ML",
@@ -658909,7 +659037,11 @@
       "winHoldH": 5.29,
       "profitDays": 420,
       "lossDays": 148,
-      "detail": "paper-ml-bsh · scenario 73 · sonuc_3mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 73 · sonuc_3mum_tp5_sl2p5",
+      "profitWeeks": 173,
+      "lossWeeks": 38,
+      "profitMonths": 60,
+      "lossMonths": 15
     },
     {
       "source": "Paper ML",
@@ -658923,7 +659055,11 @@
       "winHoldH": 5.3,
       "profitDays": 421,
       "lossDays": 147,
-      "detail": "paper-ml-bsh · scenario 72 · sonuc_3mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 72 · sonuc_3mum_tp5_sl2p5",
+      "profitWeeks": 173,
+      "lossWeeks": 38,
+      "profitMonths": 60,
+      "lossMonths": 15
     },
     {
       "source": "Paper ML",
@@ -658937,7 +659073,11 @@
       "winHoldH": 5.3,
       "profitDays": 421,
       "lossDays": 147,
-      "detail": "paper-ml-bsh · scenario 71 · sonuc_3mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 71 · sonuc_3mum_tp5_sl2p5",
+      "profitWeeks": 173,
+      "lossWeeks": 38,
+      "profitMonths": 60,
+      "lossMonths": 15
     },
     {
       "source": "Paper ML",
@@ -658951,7 +659091,11 @@
       "winHoldH": 12.41,
       "profitDays": 701,
       "lossDays": 529,
-      "detail": "paper-ml-bsh · scenario 9 · sonuc_200mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 9 · sonuc_200mum_tp10_sl5",
+      "profitWeeks": 184,
+      "lossWeeks": 108,
+      "profitMonths": 58,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -658965,7 +659109,11 @@
       "winHoldH": 32.81,
       "profitDays": 437,
       "lossDays": 287,
-      "detail": "paper-ml-bsh · scenario 62 · sonuc_200mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 62 · sonuc_200mum_tp15_sl7p5",
+      "profitWeeks": 171,
+      "lossWeeks": 85,
+      "profitMonths": 63,
+      "lossMonths": 16
     },
     {
       "source": "Paper ML",
@@ -658979,7 +659127,11 @@
       "winHoldH": 6.03,
       "profitDays": 245,
       "lossDays": 119,
-      "detail": "paper-ml-bsh · scenario 103 · sonuc_50mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 103 · sonuc_50mum_tp5_sl2p5",
+      "profitWeeks": 129,
+      "lossWeeks": 52,
+      "profitMonths": 54,
+      "lossMonths": 24
     },
     {
       "source": "Paper ML",
@@ -658993,7 +659145,11 @@
       "winHoldH": 6.02,
       "profitDays": 245,
       "lossDays": 121,
-      "detail": "paper-ml-bsh · scenario 104 · sonuc_50mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 104 · sonuc_50mum_tp5_sl2p5",
+      "profitWeeks": 129,
+      "lossWeeks": 53,
+      "profitMonths": 54,
+      "lossMonths": 25
     },
     {
       "source": "Paper ML",
@@ -659007,7 +659163,11 @@
       "winHoldH": 6.02,
       "profitDays": 245,
       "lossDays": 121,
-      "detail": "paper-ml-bsh · scenario 102 · sonuc_50mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 102 · sonuc_50mum_tp5_sl2p5",
+      "profitWeeks": 129,
+      "lossWeeks": 53,
+      "profitMonths": 54,
+      "lossMonths": 25
     },
     {
       "source": "Paper ML",
@@ -659021,7 +659181,11 @@
       "winHoldH": 1.78,
       "profitDays": 3,
       "lossDays": 1,
-      "detail": "paper-ml-bsh · scenario 207 · sonuc_50mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 207 · sonuc_50mum_tp20_sl10",
+      "profitWeeks": 3,
+      "lossWeeks": 1,
+      "profitMonths": 3,
+      "lossMonths": 1
     },
     {
       "source": "Paper ML",
@@ -659035,7 +659199,11 @@
       "winHoldH": 12.42,
       "profitDays": 701,
       "lossDays": 529,
-      "detail": "paper-ml-bsh · scenario 14 · sonuc_200mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 14 · sonuc_200mum_tp10_sl5",
+      "profitWeeks": 184,
+      "lossWeeks": 108,
+      "profitMonths": 58,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -659049,7 +659217,11 @@
       "winHoldH": 3.41,
       "profitDays": 334,
       "lossDays": 200,
-      "detail": "paper-ml-bsh · scenario 57 · sonuc_5mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 57 · sonuc_5mum_tp5_sl2p5",
+      "profitWeeks": 143,
+      "lossWeeks": 86,
+      "profitMonths": 52,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -659063,7 +659235,11 @@
       "winHoldH": 3.43,
       "profitDays": 337,
       "lossDays": 201,
-      "detail": "paper-ml-bsh · scenario 58 · sonuc_5mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 58 · sonuc_5mum_tp5_sl2p5",
+      "profitWeeks": 146,
+      "lossWeeks": 84,
+      "profitMonths": 53,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -659077,7 +659253,11 @@
       "winHoldH": 3.44,
       "profitDays": 337,
       "lossDays": 201,
-      "detail": "paper-ml-bsh · scenario 59 · sonuc_5mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 59 · sonuc_5mum_tp5_sl2p5",
+      "profitWeeks": 146,
+      "lossWeeks": 84,
+      "profitMonths": 53,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -659091,7 +659271,11 @@
       "winHoldH": 1.52,
       "profitDays": 178,
       "lossDays": 73,
-      "detail": "paper-ml-bsh · scenario 144 · sonuc_15mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 144 · sonuc_15mum_tp2p5_sl1p25",
+      "profitWeeks": 108,
+      "lossWeeks": 35,
+      "profitMonths": 58,
+      "lossMonths": 13
     },
     {
       "source": "Paper ML",
@@ -659105,7 +659289,11 @@
       "winHoldH": 1.52,
       "profitDays": 178,
       "lossDays": 73,
-      "detail": "paper-ml-bsh · scenario 146 · sonuc_15mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 146 · sonuc_15mum_tp2p5_sl1p25",
+      "profitWeeks": 108,
+      "lossWeeks": 35,
+      "profitMonths": 58,
+      "lossMonths": 13
     },
     {
       "source": "Paper ML",
@@ -659119,7 +659307,11 @@
       "winHoldH": 1.52,
       "profitDays": 178,
       "lossDays": 73,
-      "detail": "paper-ml-bsh · scenario 145 · sonuc_15mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 145 · sonuc_15mum_tp2p5_sl1p25",
+      "profitWeeks": 108,
+      "lossWeeks": 35,
+      "profitMonths": 58,
+      "lossMonths": 13
     },
     {
       "source": "Paper ML",
@@ -659133,7 +659325,11 @@
       "winHoldH": 6.67,
       "profitDays": 297,
       "lossDays": 131,
-      "detail": "paper-ml-bsh · scenario 45 · sonuc_15mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 45 · sonuc_15mum_tp5_sl2p5",
+      "profitWeeks": 141,
+      "lossWeeks": 43,
+      "profitMonths": 56,
+      "lossMonths": 17
     },
     {
       "source": "Paper ML",
@@ -659147,7 +659343,11 @@
       "winHoldH": 6.68,
       "profitDays": 297,
       "lossDays": 131,
-      "detail": "paper-ml-bsh · scenario 46 · sonuc_15mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 46 · sonuc_15mum_tp5_sl2p5",
+      "profitWeeks": 141,
+      "lossWeeks": 43,
+      "profitMonths": 56,
+      "lossMonths": 17
     },
     {
       "source": "Paper ML",
@@ -659161,7 +659361,11 @@
       "winHoldH": 6.68,
       "profitDays": 297,
       "lossDays": 131,
-      "detail": "paper-ml-bsh · scenario 47 · sonuc_15mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 47 · sonuc_15mum_tp5_sl2p5",
+      "profitWeeks": 141,
+      "lossWeeks": 43,
+      "profitMonths": 56,
+      "lossMonths": 17
     },
     {
       "source": "Paper ML",
@@ -659175,7 +659379,11 @@
       "winHoldH": 5.44,
       "profitDays": 339,
       "lossDays": 148,
-      "detail": "paper-ml-bsh · scenario 92 · sonuc_10mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 92 · sonuc_10mum_tp5_sl2p5",
+      "profitWeeks": 149,
+      "lossWeeks": 53,
+      "profitMonths": 50,
+      "lossMonths": 25
     },
     {
       "source": "Paper ML",
@@ -659189,7 +659397,11 @@
       "winHoldH": 5.47,
       "profitDays": 341,
       "lossDays": 147,
-      "detail": "paper-ml-bsh · scenario 93 · sonuc_10mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 93 · sonuc_10mum_tp5_sl2p5",
+      "profitWeeks": 150,
+      "lossWeeks": 53,
+      "profitMonths": 50,
+      "lossMonths": 25
     },
     {
       "source": "Paper ML",
@@ -659203,7 +659415,11 @@
       "winHoldH": 5.47,
       "profitDays": 341,
       "lossDays": 147,
-      "detail": "paper-ml-bsh · scenario 91 · sonuc_10mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 91 · sonuc_10mum_tp5_sl2p5",
+      "profitWeeks": 150,
+      "lossWeeks": 53,
+      "profitMonths": 50,
+      "lossMonths": 25
     },
     {
       "source": "Paper ML",
@@ -659217,7 +659433,11 @@
       "winHoldH": 2.17,
       "profitDays": 3,
       "lossDays": 1,
-      "detail": "paper-ml-bsh · scenario 210 · sonuc_50mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 210 · sonuc_50mum_tp15_sl7p5",
+      "profitWeeks": 3,
+      "lossWeeks": 1,
+      "profitMonths": 3,
+      "lossMonths": 1
     },
     {
       "source": "Paper ML",
@@ -659231,7 +659451,11 @@
       "winHoldH": 0.72,
       "profitDays": 122,
       "lossDays": 71,
-      "detail": "paper-ml-bsh · scenario 118 · sonuc_15mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 118 · sonuc_15mum_tp15_sl7p5",
+      "profitWeeks": 74,
+      "lossWeeks": 39,
+      "profitMonths": 40,
+      "lossMonths": 14
     },
     {
       "source": "Paper ML",
@@ -659245,7 +659469,11 @@
       "winHoldH": 13.89,
       "profitDays": 502,
       "lossDays": 262,
-      "detail": "paper-ml-bsh · scenario 133 · sonuc_5mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 133 · sonuc_5mum_tp10_sl5",
+      "profitWeeks": 192,
+      "lossWeeks": 73,
+      "profitMonths": 68,
+      "lossMonths": 12
     },
     {
       "source": "Paper ML",
@@ -659259,7 +659487,11 @@
       "winHoldH": 13.89,
       "profitDays": 502,
       "lossDays": 262,
-      "detail": "paper-ml-bsh · scenario 134 · sonuc_5mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 134 · sonuc_5mum_tp10_sl5",
+      "profitWeeks": 192,
+      "lossWeeks": 73,
+      "profitMonths": 68,
+      "lossMonths": 12
     },
     {
       "source": "Paper ML",
@@ -659273,7 +659505,11 @@
       "winHoldH": 9.69,
       "profitDays": 415,
       "lossDays": 315,
-      "detail": "paper-ml-bsh · scenario 36 · sonuc_50mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 36 · sonuc_50mum_tp10_sl5",
+      "profitWeeks": 182,
+      "lossWeeks": 103,
+      "profitMonths": 66,
+      "lossMonths": 16
     },
     {
       "source": "Paper ML",
@@ -659287,7 +659523,11 @@
       "winHoldH": 9.69,
       "profitDays": 415,
       "lossDays": 315,
-      "detail": "paper-ml-bsh · scenario 35 · sonuc_50mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 35 · sonuc_50mum_tp10_sl5",
+      "profitWeeks": 182,
+      "lossWeeks": 103,
+      "profitMonths": 66,
+      "lossMonths": 16
     },
     {
       "source": "Paper ML",
@@ -659301,7 +659541,11 @@
       "winHoldH": 10.05,
       "profitDays": 768,
       "lossDays": 688,
-      "detail": "paper-ml-bsh · scenario 2 · sonuc_200mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 2 · sonuc_200mum_tp20_sl10",
+      "profitWeeks": 200,
+      "lossWeeks": 110,
+      "profitMonths": 63,
+      "lossMonths": 17
     },
     {
       "source": "Paper ML",
@@ -659315,7 +659559,11 @@
       "winHoldH": 5.61,
       "profitDays": 192,
       "lossDays": 130,
-      "detail": "paper-ml-bsh · scenario 169 · sonuc_200mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 169 · sonuc_200mum_tp5_sl2p5",
+      "profitWeeks": 95,
+      "lossWeeks": 52,
+      "profitMonths": 47,
+      "lossMonths": 21
     },
     {
       "source": "Paper ML",
@@ -659329,7 +659577,11 @@
       "winHoldH": 5.61,
       "profitDays": 192,
       "lossDays": 130,
-      "detail": "paper-ml-bsh · scenario 170 · sonuc_200mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 170 · sonuc_200mum_tp5_sl2p5",
+      "profitWeeks": 95,
+      "lossWeeks": 52,
+      "profitMonths": 47,
+      "lossMonths": 21
     },
     {
       "source": "Paper ML",
@@ -659343,7 +659595,11 @@
       "winHoldH": 5.61,
       "profitDays": 192,
       "lossDays": 130,
-      "detail": "paper-ml-bsh · scenario 168 · sonuc_200mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 168 · sonuc_200mum_tp5_sl2p5",
+      "profitWeeks": 95,
+      "lossWeeks": 52,
+      "profitMonths": 47,
+      "lossMonths": 21
     },
     {
       "source": "Paper ML",
@@ -659357,7 +659613,11 @@
       "winHoldH": 4.37,
       "profitDays": 483,
       "lossDays": 233,
-      "detail": "paper-ml-bsh · scenario 77 · sonuc_3mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 77 · sonuc_3mum_tp5_sl2p5",
+      "profitWeeks": 181,
+      "lossWeeks": 60,
+      "profitMonths": 58,
+      "lossMonths": 18
     },
     {
       "source": "Paper ML",
@@ -659371,7 +659631,11 @@
       "winHoldH": 4.37,
       "profitDays": 483,
       "lossDays": 233,
-      "detail": "paper-ml-bsh · scenario 78 · sonuc_3mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 78 · sonuc_3mum_tp5_sl2p5",
+      "profitWeeks": 181,
+      "lossWeeks": 60,
+      "profitMonths": 58,
+      "lossMonths": 18
     },
     {
       "source": "Paper ML",
@@ -659385,7 +659649,11 @@
       "winHoldH": 1.16,
       "profitDays": 22,
       "lossDays": 44,
-      "detail": "paper-ml-bsh · scenario 209 · sonuc_15mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 209 · sonuc_15mum_tp5_sl2p5",
+      "profitWeeks": 17,
+      "lossWeeks": 40,
+      "profitMonths": 10,
+      "lossMonths": 20
     },
     {
       "source": "Paper ML",
@@ -659399,7 +659667,11 @@
       "winHoldH": 0.23,
       "profitDays": 47,
       "lossDays": 36,
-      "detail": "paper-ml-bsh · scenario 180 · sonuc_5mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 180 · sonuc_5mum_tp15_sl7p5",
+      "profitWeeks": 36,
+      "lossWeeks": 27,
+      "profitMonths": 24,
+      "lossMonths": 13
     },
     {
       "source": "Paper ML",
@@ -659413,7 +659685,11 @@
       "winHoldH": 0.44,
       "profitDays": 48,
       "lossDays": 31,
-      "detail": "paper-ml-bsh · scenario 187 · sonuc_10mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 187 · sonuc_10mum_tp20_sl10",
+      "profitWeeks": 39,
+      "lossWeeks": 19,
+      "profitMonths": 28,
+      "lossMonths": 8
     },
     {
       "source": "Paper ML",
@@ -659427,7 +659703,11 @@
       "winHoldH": 0.44,
       "profitDays": 43,
       "lossDays": 27,
-      "detail": "paper-ml-bsh · scenario 188 · sonuc_10mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 188 · sonuc_10mum_tp20_sl10",
+      "profitWeeks": 34,
+      "lossWeeks": 19,
+      "profitMonths": 28,
+      "lossMonths": 7
     },
     {
       "source": "Paper ML",
@@ -659441,7 +659721,11 @@
       "winHoldH": 3.5,
       "profitDays": 4,
       "lossDays": 1,
-      "detail": "paper-ml-bsh · scenario 197 · sonuc_50mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 197 · sonuc_50mum_tp15_sl7p5",
+      "profitWeeks": 4,
+      "lossWeeks": 1,
+      "profitMonths": 3,
+      "lossMonths": 1
     },
     {
       "source": "Paper ML",
@@ -659455,7 +659739,11 @@
       "winHoldH": 24.96,
       "profitDays": 1038,
       "lossDays": 908,
-      "detail": "paper-ml-bsh · scenario 4 · sonuc_200mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 4 · sonuc_200mum_tp20_sl10",
+      "profitWeeks": 231,
+      "lossWeeks": 109,
+      "profitMonths": 62,
+      "lossMonths": 20
     },
     {
       "source": "Paper ML",
@@ -659469,7 +659757,11 @@
       "winHoldH": 0.22,
       "profitDays": 23,
       "lossDays": 0,
-      "detail": "paper-ml-bsh · scenario 215 · sonuc_5mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 215 · sonuc_5mum_tp20_sl10",
+      "profitWeeks": 22,
+      "lossWeeks": 0,
+      "profitMonths": 18,
+      "lossMonths": 0
     },
     {
       "source": "Paper ML",
@@ -659483,7 +659775,11 @@
       "winHoldH": 25.84,
       "profitDays": 1071,
       "lossDays": 926,
-      "detail": "paper-ml-bsh · scenario 3 · sonuc_200mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 3 · sonuc_200mum_tp20_sl10",
+      "profitWeeks": 237,
+      "lossWeeks": 110,
+      "profitMonths": 65,
+      "lossMonths": 18
     },
     {
       "source": "Paper ML",
@@ -659497,7 +659793,11 @@
       "winHoldH": 1.21,
       "profitDays": 327,
       "lossDays": 106,
-      "detail": "paper-ml-bsh · scenario 67 · sonuc_3mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 67 · sonuc_3mum_tp2p5_sl1p25",
+      "profitWeeks": 155,
+      "lossWeeks": 36,
+      "profitMonths": 61,
+      "lossMonths": 11
     },
     {
       "source": "Paper ML",
@@ -659511,7 +659811,11 @@
       "winHoldH": 1.21,
       "profitDays": 327,
       "lossDays": 106,
-      "detail": "paper-ml-bsh · scenario 66 · sonuc_3mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 66 · sonuc_3mum_tp2p5_sl1p25",
+      "profitWeeks": 155,
+      "lossWeeks": 36,
+      "profitMonths": 61,
+      "lossMonths": 11
     },
     {
       "source": "Paper ML",
@@ -659525,7 +659829,11 @@
       "winHoldH": 1.21,
       "profitDays": 327,
       "lossDays": 106,
-      "detail": "paper-ml-bsh · scenario 65 · sonuc_3mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 65 · sonuc_3mum_tp2p5_sl1p25",
+      "profitWeeks": 155,
+      "lossWeeks": 36,
+      "profitMonths": 61,
+      "lossMonths": 11
     },
     {
       "source": "Paper ML",
@@ -659539,7 +659847,11 @@
       "winHoldH": 3.04,
       "profitDays": 599,
       "lossDays": 451,
-      "detail": "paper-ml-bsh · scenario 39 · sonuc_50mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 39 · sonuc_50mum_tp5_sl2p5",
+      "profitWeeks": 191,
+      "lossWeeks": 111,
+      "profitMonths": 65,
+      "lossMonths": 16
     },
     {
       "source": "Paper ML",
@@ -659553,7 +659865,11 @@
       "winHoldH": 3.05,
       "profitDays": 598,
       "lossDays": 454,
-      "detail": "paper-ml-bsh · scenario 40 · sonuc_50mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 40 · sonuc_50mum_tp5_sl2p5",
+      "profitWeeks": 191,
+      "lossWeeks": 112,
+      "profitMonths": 65,
+      "lossMonths": 17
     },
     {
       "source": "Paper ML",
@@ -659567,7 +659883,11 @@
       "winHoldH": 1.68,
       "profitDays": 17,
       "lossDays": 10,
-      "detail": "paper-ml-bsh · scenario 200 · sonuc_10mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 200 · sonuc_10mum_tp5_sl2p5",
+      "profitWeeks": 15,
+      "lossWeeks": 7,
+      "profitMonths": 13,
+      "lossMonths": 7
     },
     {
       "source": "Paper ML",
@@ -659581,7 +659901,11 @@
       "winHoldH": 21.96,
       "profitDays": 1071,
       "lossDays": 683,
-      "detail": "paper-ml-bsh · scenario 20 · sonuc_10mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 20 · sonuc_10mum_tp10_sl5",
+      "profitWeeks": 264,
+      "lossWeeks": 74,
+      "profitMonths": 69,
+      "lossMonths": 13
     },
     {
       "source": "Paper ML",
@@ -659595,7 +659919,11 @@
       "winHoldH": 22.03,
       "profitDays": 1072,
       "lossDays": 683,
-      "detail": "paper-ml-bsh · scenario 21 · sonuc_10mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 21 · sonuc_10mum_tp10_sl5",
+      "profitWeeks": 264,
+      "lossWeeks": 74,
+      "profitMonths": 69,
+      "lossMonths": 13
     },
     {
       "source": "Paper ML",
@@ -659609,7 +659937,11 @@
       "winHoldH": 22.03,
       "profitDays": 1072,
       "lossDays": 683,
-      "detail": "paper-ml-bsh · scenario 19 · sonuc_10mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 19 · sonuc_10mum_tp10_sl5",
+      "profitWeeks": 264,
+      "lossWeeks": 74,
+      "profitMonths": 69,
+      "lossMonths": 13
     },
     {
       "source": "Paper ML",
@@ -659623,7 +659955,11 @@
       "winHoldH": 0.49,
       "profitDays": 128,
       "lossDays": 123,
-      "detail": "paper-ml-bsh · scenario 147 · sonuc_10mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 147 · sonuc_10mum_tp15_sl7p5",
+      "profitWeeks": 74,
+      "lossWeeks": 49,
+      "profitMonths": 41,
+      "lossMonths": 13
     },
     {
       "source": "Paper ML",
@@ -659637,7 +659973,11 @@
       "winHoldH": 0.47,
       "profitDays": 89,
       "lossDays": 72,
-      "detail": "paper-ml-bsh · scenario 158 · sonuc_10mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 158 · sonuc_10mum_tp15_sl7p5",
+      "profitWeeks": 57,
+      "lossWeeks": 39,
+      "profitMonths": 30,
+      "lossMonths": 16
     },
     {
       "source": "Paper ML",
@@ -659651,7 +659991,11 @@
       "winHoldH": 6.76,
       "profitDays": 155,
       "lossDays": 123,
-      "detail": "paper-ml-bsh · scenario 83 · sonuc_200mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 83 · sonuc_200mum_tp2p5_sl1p25",
+      "profitWeeks": 84,
+      "lossWeeks": 63,
+      "profitMonths": 49,
+      "lossMonths": 25
     },
     {
       "source": "Paper ML",
@@ -659665,7 +660009,11 @@
       "winHoldH": 6.76,
       "profitDays": 155,
       "lossDays": 123,
-      "detail": "paper-ml-bsh · scenario 81 · sonuc_200mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 81 · sonuc_200mum_tp2p5_sl1p25",
+      "profitWeeks": 84,
+      "lossWeeks": 63,
+      "profitMonths": 49,
+      "lossMonths": 25
     },
     {
       "source": "Paper ML",
@@ -659679,7 +660027,11 @@
       "winHoldH": 6.76,
       "profitDays": 155,
       "lossDays": 123,
-      "detail": "paper-ml-bsh · scenario 82 · sonuc_200mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 82 · sonuc_200mum_tp2p5_sl1p25",
+      "profitWeeks": 84,
+      "lossWeeks": 63,
+      "profitMonths": 49,
+      "lossMonths": 25
     },
     {
       "source": "Paper ML",
@@ -659693,7 +660045,11 @@
       "winHoldH": 0.49,
       "profitDays": 136,
       "lossDays": 124,
-      "detail": "paper-ml-bsh · scenario 149 · sonuc_10mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 149 · sonuc_10mum_tp15_sl7p5",
+      "profitWeeks": 77,
+      "lossWeeks": 50,
+      "profitMonths": 42,
+      "lossMonths": 13
     },
     {
       "source": "Paper ML",
@@ -659707,7 +660063,11 @@
       "winHoldH": 0.16,
       "profitDays": 127,
       "lossDays": 119,
-      "detail": "paper-ml-bsh · scenario 161 · sonuc_3mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 161 · sonuc_3mum_tp10_sl5",
+      "profitWeeks": 69,
+      "lossWeeks": 60,
+      "profitMonths": 39,
+      "lossMonths": 18
     },
     {
       "source": "Paper ML",
@@ -659721,7 +660081,11 @@
       "winHoldH": 1.18,
       "profitDays": 52,
       "lossDays": 103,
-      "detail": "paper-ml-bsh · scenario 196 · sonuc_15mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 196 · sonuc_15mum_tp5_sl2p5",
+      "profitWeeks": 29,
+      "lossWeeks": 70,
+      "profitMonths": 15,
+      "lossMonths": 32
     },
     {
       "source": "Paper ML",
@@ -659735,7 +660099,11 @@
       "winHoldH": 0.85,
       "profitDays": 244,
       "lossDays": 109,
-      "detail": "paper-ml-bsh · scenario 125 · sonuc_5mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 125 · sonuc_5mum_tp2p5_sl1p25",
+      "profitWeeks": 139,
+      "lossWeeks": 65,
+      "profitMonths": 61,
+      "lossMonths": 20
     },
     {
       "source": "Paper ML",
@@ -659749,7 +660117,11 @@
       "winHoldH": 0.85,
       "profitDays": 244,
       "lossDays": 110,
-      "detail": "paper-ml-bsh · scenario 123 · sonuc_5mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 123 · sonuc_5mum_tp2p5_sl1p25",
+      "profitWeeks": 139,
+      "lossWeeks": 66,
+      "profitMonths": 61,
+      "lossMonths": 20
     },
     {
       "source": "Paper ML",
@@ -659763,7 +660135,11 @@
       "winHoldH": 0.85,
       "profitDays": 244,
       "lossDays": 110,
-      "detail": "paper-ml-bsh · scenario 124 · sonuc_5mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 124 · sonuc_5mum_tp2p5_sl1p25",
+      "profitWeeks": 139,
+      "lossWeeks": 66,
+      "profitMonths": 61,
+      "lossMonths": 20
     },
     {
       "source": "Paper ML",
@@ -659777,7 +660153,11 @@
       "winHoldH": 37.37,
       "profitDays": 565,
       "lossDays": 595,
-      "detail": "paper-ml-bsh · scenario 85 · sonuc_200mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 85 · sonuc_200mum_tp20_sl10",
+      "profitWeeks": 184,
+      "lossWeeks": 130,
+      "profitMonths": 60,
+      "lossMonths": 21
     },
     {
       "source": "Paper ML",
@@ -659791,7 +660171,11 @@
       "winHoldH": 14.69,
       "profitDays": 183,
       "lossDays": 256,
-      "detail": "paper-ml-bsh · scenario 181 · sonuc_200mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 181 · sonuc_200mum_tp15_sl7p5",
+      "profitWeeks": 91,
+      "lossWeeks": 96,
+      "profitMonths": 36,
+      "lossMonths": 36
     },
     {
       "source": "Paper ML",
@@ -659805,7 +660189,11 @@
       "winHoldH": 2.17,
       "profitDays": 3,
       "lossDays": 3,
-      "detail": "paper-ml-bsh · scenario 211 · sonuc_50mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 211 · sonuc_50mum_tp20_sl10",
+      "profitWeeks": 3,
+      "lossWeeks": 3,
+      "profitMonths": 3,
+      "lossMonths": 2
     },
     {
       "source": "Paper ML",
@@ -659819,7 +660207,11 @@
       "winHoldH": 25.47,
       "profitDays": 1133,
       "lossDays": 910,
-      "detail": "paper-ml-bsh · scenario 16 · sonuc_50mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 16 · sonuc_50mum_tp10_sl5",
+      "profitWeeks": 244,
+      "lossWeeks": 105,
+      "profitMonths": 67,
+      "lossMonths": 16
     },
     {
       "source": "Paper ML",
@@ -659833,7 +660225,11 @@
       "winHoldH": 25.48,
       "profitDays": 1134,
       "lossDays": 909,
-      "detail": "paper-ml-bsh · scenario 15 · sonuc_50mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 15 · sonuc_50mum_tp10_sl5",
+      "profitWeeks": 244,
+      "lossWeeks": 105,
+      "profitMonths": 67,
+      "lossMonths": 16
     },
     {
       "source": "Paper ML",
@@ -659847,7 +660243,11 @@
       "winHoldH": 25.48,
       "profitDays": 1134,
       "lossDays": 909,
-      "detail": "paper-ml-bsh · scenario 17 · sonuc_50mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 17 · sonuc_50mum_tp10_sl5",
+      "profitWeeks": 244,
+      "lossWeeks": 105,
+      "profitMonths": 67,
+      "lossMonths": 16
     },
     {
       "source": "Paper ML",
@@ -659861,7 +660261,11 @@
       "winHoldH": 3.05,
       "profitDays": 257,
       "lossDays": 192,
-      "detail": "paper-ml-bsh · scenario 157 · sonuc_50mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 157 · sonuc_50mum_tp5_sl2p5",
+      "profitWeeks": 143,
+      "lossWeeks": 96,
+      "profitMonths": 53,
+      "lossMonths": 28
     },
     {
       "source": "Paper ML",
@@ -659875,7 +660279,11 @@
       "winHoldH": 0.94,
       "profitDays": 3,
       "lossDays": 2,
-      "detail": "paper-ml-bsh · scenario 216 · sonuc_15mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 216 · sonuc_15mum_tp10_sl5",
+      "profitWeeks": 3,
+      "lossWeeks": 2,
+      "profitMonths": 3,
+      "lossMonths": 2
     },
     {
       "source": "Paper ML",
@@ -659889,7 +660297,11 @@
       "winHoldH": 1.28,
       "profitDays": 220,
       "lossDays": 99,
-      "detail": "paper-ml-bsh · scenario 165 · sonuc_10mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 165 · sonuc_10mum_tp2p5_sl1p25",
+      "profitWeeks": 127,
+      "lossWeeks": 53,
+      "profitMonths": 60,
+      "lossMonths": 14
     },
     {
       "source": "Paper ML",
@@ -659903,7 +660315,11 @@
       "winHoldH": 1.28,
       "profitDays": 220,
       "lossDays": 99,
-      "detail": "paper-ml-bsh · scenario 166 · sonuc_10mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 166 · sonuc_10mum_tp2p5_sl1p25",
+      "profitWeeks": 127,
+      "lossWeeks": 53,
+      "profitMonths": 60,
+      "lossMonths": 14
     },
     {
       "source": "Paper ML",
@@ -659917,7 +660333,11 @@
       "winHoldH": 1.28,
       "profitDays": 220,
       "lossDays": 99,
-      "detail": "paper-ml-bsh · scenario 167 · sonuc_10mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 167 · sonuc_10mum_tp2p5_sl1p25",
+      "profitWeeks": 127,
+      "lossWeeks": 53,
+      "profitMonths": 60,
+      "lossMonths": 14
     },
     {
       "source": "Paper ML",
@@ -659931,7 +660351,11 @@
       "winHoldH": 0.18,
       "profitDays": 43,
       "lossDays": 20,
-      "detail": "paper-ml-bsh · scenario 212 · sonuc_3mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 212 · sonuc_3mum_tp15_sl7p5",
+      "profitWeeks": 38,
+      "lossWeeks": 15,
+      "profitMonths": 25,
+      "lossMonths": 8
     },
     {
       "source": "Paper ML",
@@ -659945,7 +660369,11 @@
       "winHoldH": 3.05,
       "profitDays": 260,
       "lossDays": 194,
-      "detail": "paper-ml-bsh · scenario 153 · sonuc_50mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 153 · sonuc_50mum_tp5_sl2p5",
+      "profitWeeks": 144,
+      "lossWeeks": 96,
+      "profitMonths": 53,
+      "lossMonths": 28
     },
     {
       "source": "Paper ML",
@@ -659959,7 +660387,11 @@
       "winHoldH": 3.05,
       "profitDays": 260,
       "lossDays": 194,
-      "detail": "paper-ml-bsh · scenario 152 · sonuc_50mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 152 · sonuc_50mum_tp5_sl2p5",
+      "profitWeeks": 144,
+      "lossWeeks": 96,
+      "profitMonths": 53,
+      "lossMonths": 28
     },
     {
       "source": "Paper ML",
@@ -659973,7 +660405,11 @@
       "winHoldH": 0.27,
       "profitDays": 303,
       "lossDays": 303,
-      "detail": "paper-ml-bsh · scenario 129 · sonuc_5mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 129 · sonuc_5mum_tp10_sl5",
+      "profitWeeks": 117,
+      "lossWeeks": 86,
+      "profitMonths": 44,
+      "lossMonths": 26
     },
     {
       "source": "Paper ML",
@@ -659987,7 +660423,11 @@
       "winHoldH": 3.89,
       "profitDays": 12,
       "lossDays": 32,
-      "detail": "paper-ml-bsh · scenario 198 · sonuc_50mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 198 · sonuc_50mum_tp10_sl5",
+      "profitWeeks": 9,
+      "lossWeeks": 22,
+      "profitMonths": 6,
+      "lossMonths": 12
     },
     {
       "source": "Paper ML",
@@ -660001,7 +660441,11 @@
       "winHoldH": 3.62,
       "profitDays": 9,
       "lossDays": 18,
-      "detail": "paper-ml-bsh · scenario 199 · sonuc_50mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 199 · sonuc_50mum_tp20_sl10",
+      "profitWeeks": 8,
+      "lossWeeks": 13,
+      "profitMonths": 4,
+      "lossMonths": 9
     },
     {
       "source": "Paper ML",
@@ -660015,7 +660459,11 @@
       "winHoldH": 9.26,
       "profitDays": 206,
       "lossDays": 173,
-      "detail": "paper-ml-bsh · scenario 86 · sonuc_200mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 86 · sonuc_200mum_tp2p5_sl1p25",
+      "profitWeeks": 107,
+      "lossWeeks": 74,
+      "profitMonths": 53,
+      "lossMonths": 26
     },
     {
       "source": "Paper ML",
@@ -660029,7 +660477,11 @@
       "winHoldH": 9.26,
       "profitDays": 206,
       "lossDays": 173,
-      "detail": "paper-ml-bsh · scenario 87 · sonuc_200mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 87 · sonuc_200mum_tp2p5_sl1p25",
+      "profitWeeks": 107,
+      "lossWeeks": 74,
+      "profitMonths": 53,
+      "lossMonths": 26
     },
     {
       "source": "Paper ML",
@@ -660043,7 +660495,11 @@
       "winHoldH": 4.24,
       "profitDays": 445,
       "lossDays": 278,
-      "detail": "paper-ml-bsh · scenario 41 · sonuc_15mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 41 · sonuc_15mum_tp5_sl2p5",
+      "profitWeeks": 172,
+      "lossWeeks": 72,
+      "profitMonths": 57,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -660057,7 +660513,11 @@
       "winHoldH": 4.25,
       "profitDays": 445,
       "lossDays": 278,
-      "detail": "paper-ml-bsh · scenario 42 · sonuc_15mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 42 · sonuc_15mum_tp5_sl2p5",
+      "profitWeeks": 173,
+      "lossWeeks": 71,
+      "profitMonths": 58,
+      "lossMonths": 21
     },
     {
       "source": "Paper ML",
@@ -660071,7 +660531,11 @@
       "winHoldH": 3.01,
       "profitDays": 352,
       "lossDays": 238,
-      "detail": "paper-ml-bsh · scenario 132 · sonuc_200mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 132 · sonuc_200mum_tp5_sl2p5",
+      "profitWeeks": 148,
+      "lossWeeks": 70,
+      "profitMonths": 54,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -660085,7 +660549,11 @@
       "winHoldH": 3.01,
       "profitDays": 352,
       "lossDays": 238,
-      "detail": "paper-ml-bsh · scenario 131 · sonuc_200mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 131 · sonuc_200mum_tp5_sl2p5",
+      "profitWeeks": 148,
+      "lossWeeks": 70,
+      "profitMonths": 54,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -660099,7 +660567,11 @@
       "winHoldH": 0.34,
       "profitDays": 9,
       "lossDays": 22,
-      "detail": "paper-ml-bsh · scenario 202 · sonuc_5mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 202 · sonuc_5mum_tp5_sl2p5",
+      "profitWeeks": 9,
+      "lossWeeks": 20,
+      "profitMonths": 7,
+      "lossMonths": 14
     },
     {
       "source": "Paper ML",
@@ -660113,7 +660585,11 @@
       "winHoldH": 12.53,
       "profitDays": 1106,
       "lossDays": 986,
-      "detail": "paper-ml-bsh · scenario 1 · sonuc_200mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 1 · sonuc_200mum_tp20_sl10",
+      "profitWeeks": 236,
+      "lossWeeks": 117,
+      "profitMonths": 70,
+      "lossMonths": 13
     },
     {
       "source": "Paper ML",
@@ -660127,7 +660603,11 @@
       "winHoldH": 71.96,
       "profitDays": 803,
       "lossDays": 406,
-      "detail": "paper-ml-bsh · scenario 51 · sonuc_200mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 51 · sonuc_200mum_tp10_sl5",
+      "profitWeeks": 240,
+      "lossWeeks": 72,
+      "profitMonths": 69,
+      "lossMonths": 12
     },
     {
       "source": "Paper ML",
@@ -660141,7 +660621,11 @@
       "winHoldH": 71.96,
       "profitDays": 803,
       "lossDays": 406,
-      "detail": "paper-ml-bsh · scenario 50 · sonuc_200mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 50 · sonuc_200mum_tp10_sl5",
+      "profitWeeks": 240,
+      "lossWeeks": 72,
+      "profitMonths": 69,
+      "lossMonths": 12
     },
     {
       "source": "Paper ML",
@@ -660155,7 +660639,11 @@
       "winHoldH": 71.96,
       "profitDays": 803,
       "lossDays": 406,
-      "detail": "paper-ml-bsh · scenario 49 · sonuc_200mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 49 · sonuc_200mum_tp10_sl5",
+      "profitWeeks": 240,
+      "lossWeeks": 72,
+      "profitMonths": 69,
+      "lossMonths": 12
     },
     {
       "source": "Paper ML",
@@ -660169,7 +660657,11 @@
       "winHoldH": 38.73,
       "profitDays": 693,
       "lossDays": 844,
-      "detail": "paper-ml-bsh · scenario 101 · sonuc_200mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 101 · sonuc_200mum_tp20_sl10",
+      "profitWeeks": 179,
+      "lossWeeks": 151,
+      "profitMonths": 51,
+      "lossMonths": 30
     },
     {
       "source": "Paper ML",
@@ -660183,7 +660675,11 @@
       "winHoldH": 18.0,
       "profitDays": 990,
       "lossDays": 813,
-      "detail": "paper-ml-bsh · scenario 27 · sonuc_200mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 27 · sonuc_200mum_tp15_sl7p5",
+      "profitWeeks": 209,
+      "lossWeeks": 126,
+      "profitMonths": 64,
+      "lossMonths": 18
     },
     {
       "source": "Paper ML",
@@ -660197,7 +660693,11 @@
       "winHoldH": 0.25,
       "profitDays": 207,
       "lossDays": 169,
-      "detail": "paper-ml-bsh · scenario 171 · sonuc_5mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 171 · sonuc_5mum_tp10_sl5",
+      "profitWeeks": 111,
+      "lossWeeks": 66,
+      "profitMonths": 43,
+      "lossMonths": 24
     },
     {
       "source": "Paper ML",
@@ -660211,7 +660711,11 @@
       "winHoldH": 10.54,
       "profitDays": 902,
       "lossDays": 928,
-      "detail": "paper-ml-bsh · scenario 18 · sonuc_200mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 18 · sonuc_200mum_tp20_sl10",
+      "profitWeeks": 189,
+      "lossWeeks": 146,
+      "profitMonths": 49,
+      "lossMonths": 33
     },
     {
       "source": "Paper ML",
@@ -660225,7 +660729,11 @@
       "winHoldH": 15.03,
       "profitDays": 12,
       "lossDays": 17,
-      "detail": "paper-ml-bsh · scenario 208 · sonuc_200mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 208 · sonuc_200mum_tp20_sl10",
+      "profitWeeks": 10,
+      "lossWeeks": 10,
+      "profitMonths": 6,
+      "lossMonths": 8
     },
     {
       "source": "Paper ML",
@@ -660239,7 +660747,11 @@
       "winHoldH": 102.3,
       "profitDays": 759,
       "lossDays": 339,
-      "detail": "paper-ml-bsh · scenario 80 · sonuc_200mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 80 · sonuc_200mum_tp10_sl5",
+      "profitWeeks": 244,
+      "lossWeeks": 63,
+      "profitMonths": 73,
+      "lossMonths": 8
     },
     {
       "source": "Paper ML",
@@ -660253,7 +660765,11 @@
       "winHoldH": 102.3,
       "profitDays": 759,
       "lossDays": 339,
-      "detail": "paper-ml-bsh · scenario 79 · sonuc_200mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 79 · sonuc_200mum_tp10_sl5",
+      "profitWeeks": 244,
+      "lossWeeks": 63,
+      "profitMonths": 73,
+      "lossMonths": 8
     },
     {
       "source": "Paper ML",
@@ -660267,7 +660783,11 @@
       "winHoldH": 1.54,
       "profitDays": 114,
       "lossDays": 62,
-      "detail": "paper-ml-bsh · scenario 183 · sonuc_200mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 183 · sonuc_200mum_tp2p5_sl1p25",
+      "profitWeeks": 74,
+      "lossWeeks": 35,
+      "profitMonths": 45,
+      "lossMonths": 15
     },
     {
       "source": "Paper ML",
@@ -660281,7 +660801,11 @@
       "winHoldH": 2.21,
       "profitDays": 93,
       "lossDays": 42,
-      "detail": "paper-ml-bsh · scenario 185 · sonuc_200mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 185 · sonuc_200mum_tp2p5_sl1p25",
+      "profitWeeks": 64,
+      "lossWeeks": 30,
+      "profitMonths": 43,
+      "lossMonths": 14
     },
     {
       "source": "Paper ML",
@@ -660295,7 +660819,11 @@
       "winHoldH": 2.21,
       "profitDays": 93,
       "lossDays": 42,
-      "detail": "paper-ml-bsh · scenario 186 · sonuc_200mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 186 · sonuc_200mum_tp2p5_sl1p25",
+      "profitWeeks": 64,
+      "lossWeeks": 30,
+      "profitMonths": 43,
+      "lossMonths": 14
     },
     {
       "source": "Paper ML",
@@ -660309,7 +660837,11 @@
       "winHoldH": 1.54,
       "profitDays": 114,
       "lossDays": 62,
-      "detail": "paper-ml-bsh · scenario 182 · sonuc_200mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 182 · sonuc_200mum_tp2p5_sl1p25",
+      "profitWeeks": 74,
+      "lossWeeks": 35,
+      "profitMonths": 45,
+      "lossMonths": 15
     },
     {
       "source": "Paper ML",
@@ -660323,7 +660855,11 @@
       "winHoldH": 2.21,
       "profitDays": 93,
       "lossDays": 42,
-      "detail": "paper-ml-bsh · scenario 184 · sonuc_200mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 184 · sonuc_200mum_tp2p5_sl1p25",
+      "profitWeeks": 64,
+      "lossWeeks": 30,
+      "profitMonths": 43,
+      "lossMonths": 14
     },
     {
       "source": "Paper ML",
@@ -660337,7 +660873,11 @@
       "winHoldH": 10.51,
       "profitDays": 904,
       "lossDays": 916,
-      "detail": "paper-ml-bsh · scenario 23 · sonuc_200mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 23 · sonuc_200mum_tp20_sl10",
+      "profitWeeks": 186,
+      "lossWeeks": 148,
+      "profitMonths": 49,
+      "lossMonths": 33
     },
     {
       "source": "Paper ML",
@@ -660351,7 +660891,11 @@
       "winHoldH": 1.42,
       "profitDays": 204,
       "lossDays": 116,
-      "detail": "paper-ml-bsh · scenario 163 · sonuc_50mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 163 · sonuc_50mum_tp2p5_sl1p25",
+      "profitWeeks": 119,
+      "lossWeeks": 61,
+      "profitMonths": 61,
+      "lossMonths": 15
     },
     {
       "source": "Paper ML",
@@ -660365,7 +660909,11 @@
       "winHoldH": 1.42,
       "profitDays": 204,
       "lossDays": 116,
-      "detail": "paper-ml-bsh · scenario 164 · sonuc_50mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 164 · sonuc_50mum_tp2p5_sl1p25",
+      "profitWeeks": 119,
+      "lossWeeks": 61,
+      "profitMonths": 61,
+      "lossMonths": 15
     },
     {
       "source": "Paper ML",
@@ -660379,7 +660927,11 @@
       "winHoldH": 1.42,
       "profitDays": 204,
       "lossDays": 116,
-      "detail": "paper-ml-bsh · scenario 162 · sonuc_50mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 162 · sonuc_50mum_tp2p5_sl1p25",
+      "profitWeeks": 119,
+      "lossWeeks": 61,
+      "profitMonths": 61,
+      "lossMonths": 15
     },
     {
       "source": "Paper ML",
@@ -660393,7 +660945,11 @@
       "winHoldH": 17.98,
       "profitDays": 988,
       "lossDays": 814,
-      "detail": "paper-ml-bsh · scenario 28 · sonuc_200mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 28 · sonuc_200mum_tp15_sl7p5",
+      "profitWeeks": 209,
+      "lossWeeks": 125,
+      "profitMonths": 64,
+      "lossMonths": 18
     },
     {
       "source": "Paper ML",
@@ -660407,7 +660963,11 @@
       "winHoldH": 2.04,
       "profitDays": 366,
       "lossDays": 359,
-      "detail": "paper-ml-bsh · scenario 142 · sonuc_10mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 142 · sonuc_10mum_tp5_sl2p5",
+      "profitWeeks": 165,
+      "lossWeeks": 130,
+      "profitMonths": 54,
+      "lossMonths": 28
     },
     {
       "source": "Paper ML",
@@ -660421,7 +660981,11 @@
       "winHoldH": 2.04,
       "profitDays": 367,
       "lossDays": 358,
-      "detail": "paper-ml-bsh · scenario 143 · sonuc_10mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 143 · sonuc_10mum_tp5_sl2p5",
+      "profitWeeks": 166,
+      "lossWeeks": 129,
+      "profitMonths": 54,
+      "lossMonths": 28
     },
     {
       "source": "Paper ML",
@@ -660435,7 +660999,11 @@
       "winHoldH": 13.71,
       "profitDays": 494,
       "lossDays": 261,
-      "detail": "paper-ml-bsh · scenario 174 · sonuc_5mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 174 · sonuc_5mum_tp10_sl5",
+      "profitWeeks": 189,
+      "lossWeeks": 73,
+      "profitMonths": 67,
+      "lossMonths": 13
     },
     {
       "source": "Paper ML",
@@ -660449,7 +661017,11 @@
       "winHoldH": 16.43,
       "profitDays": 1171,
       "lossDays": 808,
-      "detail": "paper-ml-bsh · scenario 6 · sonuc_10mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 6 · sonuc_10mum_tp10_sl5",
+      "profitWeeks": 262,
+      "lossWeeks": 80,
+      "profitMonths": 71,
+      "lossMonths": 11
     },
     {
       "source": "Paper ML",
@@ -660463,7 +661035,11 @@
       "winHoldH": 16.5,
       "profitDays": 1173,
       "lossDays": 807,
-      "detail": "paper-ml-bsh · scenario 5 · sonuc_10mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 5 · sonuc_10mum_tp10_sl5",
+      "profitWeeks": 262,
+      "lossWeeks": 80,
+      "profitMonths": 71,
+      "lossMonths": 11
     },
     {
       "source": "Paper ML",
@@ -660477,7 +661053,11 @@
       "winHoldH": 10.34,
       "profitDays": 870,
       "lossDays": 870,
-      "detail": "paper-ml-bsh · scenario 29 · sonuc_200mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 29 · sonuc_200mum_tp20_sl10",
+      "profitWeeks": 190,
+      "lossWeeks": 139,
+      "profitMonths": 57,
+      "lossMonths": 25
     },
     {
       "source": "Paper ML",
@@ -660491,7 +661071,11 @@
       "winHoldH": 0.19,
       "profitDays": 8,
       "lossDays": 9,
-      "detail": "paper-ml-bsh · scenario 217 · sonuc_3mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 217 · sonuc_3mum_tp2p5_sl1p25",
+      "profitWeeks": 7,
+      "lossWeeks": 8,
+      "profitMonths": 6,
+      "lossMonths": 6
     },
     {
       "source": "Paper ML",
@@ -660505,7 +661089,11 @@
       "winHoldH": 0.66,
       "profitDays": 413,
       "lossDays": 260,
-      "detail": "paper-ml-bsh · scenario 106 · sonuc_50mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 106 · sonuc_50mum_tp2p5_sl1p25",
+      "profitWeeks": 176,
+      "lossWeeks": 96,
+      "profitMonths": 67,
+      "lossMonths": 14
     },
     {
       "source": "Paper ML",
@@ -660519,7 +661107,11 @@
       "winHoldH": 0.66,
       "profitDays": 413,
       "lossDays": 260,
-      "detail": "paper-ml-bsh · scenario 105 · sonuc_50mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 105 · sonuc_50mum_tp2p5_sl1p25",
+      "profitWeeks": 176,
+      "lossWeeks": 96,
+      "profitMonths": 67,
+      "lossMonths": 14
     },
     {
       "source": "Paper ML",
@@ -660533,7 +661125,11 @@
       "winHoldH": 5.6,
       "profitDays": 1011,
       "lossDays": 873,
-      "detail": "paper-ml-bsh · scenario 7 · sonuc_200mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 7 · sonuc_200mum_tp10_sl5",
+      "profitWeeks": 223,
+      "lossWeeks": 119,
+      "profitMonths": 68,
+      "lossMonths": 15
     },
     {
       "source": "Paper ML",
@@ -660547,7 +661143,11 @@
       "winHoldH": 5.58,
       "profitDays": 1012,
       "lossDays": 870,
-      "detail": "paper-ml-bsh · scenario 8 · sonuc_200mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 8 · sonuc_200mum_tp10_sl5",
+      "profitWeeks": 221,
+      "lossWeeks": 120,
+      "profitMonths": 68,
+      "lossMonths": 15
     },
     {
       "source": "Paper ML",
@@ -660561,7 +661161,11 @@
       "winHoldH": 0.8,
       "profitDays": 451,
       "lossDays": 268,
-      "detail": "paper-ml-bsh · scenario 75 · sonuc_3mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 75 · sonuc_3mum_tp2p5_sl1p25",
+      "profitWeeks": 179,
+      "lossWeeks": 83,
+      "profitMonths": 56,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -660575,7 +661179,11 @@
       "winHoldH": 0.8,
       "profitDays": 451,
       "lossDays": 268,
-      "detail": "paper-ml-bsh · scenario 74 · sonuc_3mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 74 · sonuc_3mum_tp2p5_sl1p25",
+      "profitWeeks": 179,
+      "lossWeeks": 83,
+      "profitMonths": 56,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -660589,7 +661197,11 @@
       "winHoldH": 0.2,
       "profitDays": 60,
       "lossDays": 58,
-      "detail": "paper-ml-bsh · scenario 201 · sonuc_3mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 201 · sonuc_3mum_tp15_sl7p5",
+      "profitWeeks": 50,
+      "lossWeeks": 41,
+      "profitMonths": 34,
+      "lossMonths": 17
     },
     {
       "source": "Paper ML",
@@ -660603,7 +661215,11 @@
       "winHoldH": 23.07,
       "profitDays": 702,
       "lossDays": 257,
-      "detail": "paper-ml-bsh · scenario 112 · sonuc_50mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 112 · sonuc_50mum_tp5_sl2p5",
+      "profitWeeks": 222,
+      "lossWeeks": 50,
+      "profitMonths": 68,
+      "lossMonths": 13
     },
     {
       "source": "Paper ML",
@@ -660617,7 +661233,11 @@
       "winHoldH": 23.07,
       "profitDays": 702,
       "lossDays": 257,
-      "detail": "paper-ml-bsh · scenario 110 · sonuc_50mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 110 · sonuc_50mum_tp5_sl2p5",
+      "profitWeeks": 222,
+      "lossWeeks": 50,
+      "profitMonths": 68,
+      "lossMonths": 13
     },
     {
       "source": "Paper ML",
@@ -660631,7 +661251,11 @@
       "winHoldH": 23.07,
       "profitDays": 702,
       "lossDays": 257,
-      "detail": "paper-ml-bsh · scenario 111 · sonuc_50mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 111 · sonuc_50mum_tp5_sl2p5",
+      "profitWeeks": 222,
+      "lossWeeks": 50,
+      "profitMonths": 68,
+      "lossMonths": 13
     },
     {
       "source": "Paper ML",
@@ -660645,7 +661269,11 @@
       "winHoldH": 28.71,
       "profitDays": 1225,
       "lossDays": 1164,
-      "detail": "paper-ml-bsh · scenario 22 · sonuc_200mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 22 · sonuc_200mum_tp20_sl10",
+      "profitWeeks": 209,
+      "lossWeeks": 150,
+      "profitMonths": 54,
+      "lossMonths": 29
     },
     {
       "source": "Paper ML",
@@ -660659,7 +661287,11 @@
       "winHoldH": 14.13,
       "profitDays": 124,
       "lossDays": 170,
-      "detail": "paper-ml-bsh · scenario 190 · sonuc_200mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 190 · sonuc_200mum_tp15_sl7p5",
+      "profitWeeks": 68,
+      "lossWeeks": 79,
+      "profitMonths": 37,
+      "lossMonths": 28
     },
     {
       "source": "Paper ML",
@@ -660673,7 +661305,11 @@
       "winHoldH": 0.76,
       "profitDays": 365,
       "lossDays": 223,
-      "detail": "paper-ml-bsh · scenario 120 · sonuc_15mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 120 · sonuc_15mum_tp2p5_sl1p25",
+      "profitWeeks": 167,
+      "lossWeeks": 72,
+      "profitMonths": 60,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -660687,7 +661323,11 @@
       "winHoldH": 0.76,
       "profitDays": 365,
       "lossDays": 223,
-      "detail": "paper-ml-bsh · scenario 119 · sonuc_15mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 119 · sonuc_15mum_tp2p5_sl1p25",
+      "profitWeeks": 167,
+      "lossWeeks": 72,
+      "profitMonths": 60,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -660701,7 +661341,11 @@
       "winHoldH": 13.75,
       "profitDays": 382,
       "lossDays": 412,
-      "detail": "paper-ml-bsh · scenario 113 · sonuc_200mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 113 · sonuc_200mum_tp15_sl7p5",
+      "profitWeeks": 161,
+      "lossWeeks": 133,
+      "profitMonths": 55,
+      "lossMonths": 27
     },
     {
       "source": "Paper ML",
@@ -660715,7 +661359,11 @@
       "winHoldH": 13.8,
       "profitDays": 388,
       "lossDays": 412,
-      "detail": "paper-ml-bsh · scenario 107 · sonuc_200mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 107 · sonuc_200mum_tp15_sl7p5",
+      "profitWeeks": 162,
+      "lossWeeks": 133,
+      "profitMonths": 55,
+      "lossMonths": 27
     },
     {
       "source": "Paper ML",
@@ -660729,7 +661377,11 @@
       "winHoldH": 0.27,
       "profitDays": 358,
       "lossDays": 434,
-      "detail": "paper-ml-bsh · scenario 115 · sonuc_5mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 115 · sonuc_5mum_tp10_sl5",
+      "profitWeeks": 121,
+      "lossWeeks": 105,
+      "profitMonths": 47,
+      "lossMonths": 30
     },
     {
       "source": "Paper ML",
@@ -660743,7 +661395,11 @@
       "winHoldH": 0.56,
       "profitDays": 203,
       "lossDays": 136,
-      "detail": "paper-ml-bsh · scenario 194 · sonuc_10mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 194 · sonuc_10mum_tp2p5_sl1p25",
+      "profitWeeks": 128,
+      "lossWeeks": 88,
+      "profitMonths": 54,
+      "lossMonths": 28
     },
     {
       "source": "Paper ML",
@@ -660757,7 +661413,11 @@
       "winHoldH": 0.56,
       "profitDays": 203,
       "lossDays": 136,
-      "detail": "paper-ml-bsh · scenario 193 · sonuc_10mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 193 · sonuc_10mum_tp2p5_sl1p25",
+      "profitWeeks": 128,
+      "lossWeeks": 88,
+      "profitMonths": 54,
+      "lossMonths": 28
     },
     {
       "source": "Paper ML",
@@ -660771,7 +661431,11 @@
       "winHoldH": 0.28,
       "profitDays": 34,
       "lossDays": 13,
-      "detail": "paper-ml-bsh · scenario 205 · sonuc_5mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 205 · sonuc_5mum_tp20_sl10",
+      "profitWeeks": 31,
+      "lossWeeks": 12,
+      "profitMonths": 26,
+      "lossMonths": 8
     },
     {
       "source": "Paper ML",
@@ -660785,7 +661449,11 @@
       "winHoldH": 0.27,
       "profitDays": 33,
       "lossDays": 13,
-      "detail": "paper-ml-bsh · scenario 206 · sonuc_5mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 206 · sonuc_5mum_tp20_sl10",
+      "profitWeeks": 30,
+      "lossWeeks": 12,
+      "profitMonths": 25,
+      "lossMonths": 8
     },
     {
       "source": "Paper ML",
@@ -660799,7 +661467,11 @@
       "winHoldH": 16.24,
       "profitDays": 1225,
       "lossDays": 1003,
-      "detail": "paper-ml-bsh · scenario 11 · sonuc_50mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 11 · sonuc_50mum_tp10_sl5",
+      "profitWeeks": 237,
+      "lossWeeks": 116,
+      "profitMonths": 65,
+      "lossMonths": 18
     },
     {
       "source": "Paper ML",
@@ -660813,7 +661485,11 @@
       "winHoldH": 16.27,
       "profitDays": 1223,
       "lossDays": 1005,
-      "detail": "paper-ml-bsh · scenario 10 · sonuc_50mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 10 · sonuc_50mum_tp10_sl5",
+      "profitWeeks": 237,
+      "lossWeeks": 116,
+      "profitMonths": 65,
+      "lossMonths": 18
     },
     {
       "source": "Paper ML",
@@ -660827,7 +661503,11 @@
       "winHoldH": 14.09,
       "profitDays": 1143,
       "lossDays": 862,
-      "detail": "paper-ml-bsh · scenario 44 · sonuc_5mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 44 · sonuc_5mum_tp10_sl5",
+      "profitWeeks": 247,
+      "lossWeeks": 102,
+      "profitMonths": 66,
+      "lossMonths": 16
     },
     {
       "source": "Paper ML",
@@ -660841,7 +661521,11 @@
       "winHoldH": 14.09,
       "profitDays": 1143,
       "lossDays": 862,
-      "detail": "paper-ml-bsh · scenario 43 · sonuc_5mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 43 · sonuc_5mum_tp10_sl5",
+      "profitWeeks": 247,
+      "lossWeeks": 102,
+      "profitMonths": 66,
+      "lossMonths": 16
     },
     {
       "source": "Paper ML",
@@ -660855,7 +661539,11 @@
       "winHoldH": 0.5,
       "profitDays": 363,
       "lossDays": 374,
-      "detail": "paper-ml-bsh · scenario 114 · sonuc_10mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 114 · sonuc_10mum_tp10_sl5",
+      "profitWeeks": 132,
+      "lossWeeks": 106,
+      "profitMonths": 54,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -660869,7 +661557,11 @@
       "winHoldH": 0.4,
       "profitDays": 603,
       "lossDays": 865,
-      "detail": "paper-ml-bsh · scenario 160 · sonuc_5mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 160 · sonuc_5mum_tp20_sl10",
+      "profitWeeks": 152,
+      "lossWeeks": 175,
+      "profitMonths": 44,
+      "lossMonths": 35
     },
     {
       "source": "Paper ML",
@@ -660883,7 +661575,11 @@
       "winHoldH": 0.27,
       "profitDays": 360,
       "lossDays": 435,
-      "detail": "paper-ml-bsh · scenario 126 · sonuc_5mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 126 · sonuc_5mum_tp10_sl5",
+      "profitWeeks": 122,
+      "lossWeeks": 105,
+      "profitMonths": 48,
+      "lossMonths": 29
     },
     {
       "source": "Paper ML",
@@ -660897,7 +661593,11 @@
       "winHoldH": 0.39,
       "profitDays": 52,
       "lossDays": 104,
-      "detail": "paper-ml-bsh · scenario 204 · sonuc_5mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 204 · sonuc_5mum_tp5_sl2p5",
+      "profitWeeks": 33,
+      "lossWeeks": 70,
+      "profitMonths": 21,
+      "lossMonths": 32
     },
     {
       "source": "Paper ML",
@@ -660911,7 +661611,11 @@
       "winHoldH": 13.87,
       "profitDays": 1113,
       "lossDays": 863,
-      "detail": "paper-ml-bsh · scenario 61 · sonuc_5mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 61 · sonuc_5mum_tp10_sl5",
+      "profitWeeks": 247,
+      "lossWeeks": 99,
+      "profitMonths": 64,
+      "lossMonths": 18
     },
     {
       "source": "Paper ML",
@@ -660925,7 +661629,11 @@
       "winHoldH": 37.83,
       "profitDays": 601,
       "lossDays": 516,
-      "detail": "paper-ml-bsh · scenario 176 · sonuc_200mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 176 · sonuc_200mum_tp20_sl10",
+      "profitWeeks": 206,
+      "lossWeeks": 114,
+      "profitMonths": 69,
+      "lossMonths": 14
     },
     {
       "source": "Paper ML",
@@ -660939,7 +661647,11 @@
       "winHoldH": 37.84,
       "profitDays": 601,
       "lossDays": 516,
-      "detail": "paper-ml-bsh · scenario 175 · sonuc_200mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 175 · sonuc_200mum_tp20_sl10",
+      "profitWeeks": 206,
+      "lossWeeks": 114,
+      "profitMonths": 69,
+      "lossMonths": 14
     },
     {
       "source": "Paper ML",
@@ -660953,7 +661665,11 @@
       "winHoldH": 28.99,
       "profitDays": 1266,
       "lossDays": 1163,
-      "detail": "paper-ml-bsh · scenario 60 · sonuc_200mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 60 · sonuc_200mum_tp20_sl10",
+      "profitWeeks": 209,
+      "lossWeeks": 150,
+      "profitMonths": 56,
+      "lossMonths": 27
     },
     {
       "source": "Paper ML",
@@ -660967,7 +661683,11 @@
       "winHoldH": 26.54,
       "profitDays": 725,
       "lossDays": 294,
-      "detail": "paper-ml-bsh · scenario 127 · sonuc_50mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 127 · sonuc_50mum_tp5_sl2p5",
+      "profitWeeks": 226,
+      "lossWeeks": 60,
+      "profitMonths": 67,
+      "lossMonths": 14
     },
     {
       "source": "Paper ML",
@@ -660981,7 +661701,11 @@
       "winHoldH": 26.54,
       "profitDays": 725,
       "lossDays": 294,
-      "detail": "paper-ml-bsh · scenario 128 · sonuc_50mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 128 · sonuc_50mum_tp5_sl2p5",
+      "profitWeeks": 226,
+      "lossWeeks": 60,
+      "profitMonths": 67,
+      "lossMonths": 14
     },
     {
       "source": "Paper ML",
@@ -660995,7 +661719,11 @@
       "winHoldH": 10.31,
       "profitDays": 910,
       "lossDays": 1057,
-      "detail": "paper-ml-bsh · scenario 151 · sonuc_50mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 151 · sonuc_50mum_tp10_sl5",
+      "profitWeeks": 175,
+      "lossWeeks": 175,
+      "profitMonths": 47,
+      "lossMonths": 36
     },
     {
       "source": "Paper ML",
@@ -661009,7 +661737,11 @@
       "winHoldH": 26.91,
       "profitDays": 1146,
       "lossDays": 1119,
-      "detail": "paper-ml-bsh · scenario 84 · sonuc_200mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 84 · sonuc_200mum_tp20_sl10",
+      "profitWeeks": 212,
+      "lossWeeks": 140,
+      "profitMonths": 56,
+      "lossMonths": 27
     },
     {
       "source": "Paper ML",
@@ -661023,7 +661755,11 @@
       "winHoldH": 0.36,
       "profitDays": 24,
       "lossDays": 67,
-      "detail": "paper-ml-bsh · scenario 213 · sonuc_5mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 213 · sonuc_5mum_tp5_sl2p5",
+      "profitWeeks": 19,
+      "lossWeeks": 47,
+      "profitMonths": 14,
+      "lossMonths": 26
     },
     {
       "source": "Paper ML",
@@ -661037,7 +661773,11 @@
       "winHoldH": 13.52,
       "profitDays": 1284,
       "lossDays": 1206,
-      "detail": "paper-ml-bsh · scenario 137 · sonuc_200mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 137 · sonuc_200mum_tp20_sl10",
+      "profitWeeks": 228,
+      "lossWeeks": 132,
+      "profitMonths": 57,
+      "lossMonths": 26
     },
     {
       "source": "Paper ML",
@@ -661051,7 +661791,11 @@
       "winHoldH": 0.37,
       "profitDays": 162,
       "lossDays": 295,
-      "detail": "paper-ml-bsh · scenario 179 · sonuc_5mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 179 · sonuc_5mum_tp15_sl7p5",
+      "profitWeeks": 94,
+      "lossWeeks": 138,
+      "profitMonths": 37,
+      "lossMonths": 37
     },
     {
       "source": "Paper ML",
@@ -661065,7 +661809,11 @@
       "winHoldH": 10.05,
       "profitDays": 835,
       "lossDays": 986,
-      "detail": "paper-ml-bsh · scenario 177 · sonuc_50mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 177 · sonuc_50mum_tp10_sl5",
+      "profitWeeks": 174,
+      "lossWeeks": 175,
+      "profitMonths": 52,
+      "lossMonths": 31
     },
     {
       "source": "Paper ML",
@@ -661079,7 +661827,11 @@
       "winHoldH": 2.76,
       "profitDays": 558,
       "lossDays": 642,
-      "detail": "paper-ml-bsh · scenario 48 · sonuc_50mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 48 · sonuc_50mum_tp15_sl7p5",
+      "profitWeeks": 154,
+      "lossWeeks": 130,
+      "profitMonths": 51,
+      "lossMonths": 28
     },
     {
       "source": "Paper ML",
@@ -661093,7 +661845,11 @@
       "winHoldH": 13.5,
       "profitDays": 1285,
       "lossDays": 1203,
-      "detail": "paper-ml-bsh · scenario 148 · sonuc_200mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 148 · sonuc_200mum_tp20_sl10",
+      "profitWeeks": 226,
+      "lossWeeks": 134,
+      "profitMonths": 57,
+      "lossMonths": 26
     },
     {
       "source": "Paper ML",
@@ -661107,7 +661863,11 @@
       "winHoldH": 1.8,
       "profitDays": 890,
       "lossDays": 866,
-      "detail": "paper-ml-bsh · scenario 32 · sonuc_5mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 32 · sonuc_5mum_tp5_sl2p5",
+      "profitWeeks": 179,
+      "lossWeeks": 148,
+      "profitMonths": 47,
+      "lossMonths": 35
     },
     {
       "source": "Paper ML",
@@ -661121,7 +661881,11 @@
       "winHoldH": 1.81,
       "profitDays": 887,
       "lossDays": 869,
-      "detail": "paper-ml-bsh · scenario 33 · sonuc_5mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 33 · sonuc_5mum_tp5_sl2p5",
+      "profitWeeks": 179,
+      "lossWeeks": 148,
+      "profitMonths": 48,
+      "lossMonths": 34
     },
     {
       "source": "Paper ML",
@@ -661135,7 +661899,11 @@
       "winHoldH": 7.24,
       "profitDays": 1008,
       "lossDays": 751,
-      "detail": "paper-ml-bsh · scenario 109 · sonuc_200mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 109 · sonuc_200mum_tp5_sl2p5",
+      "profitWeeks": 228,
+      "lossWeeks": 111,
+      "profitMonths": 67,
+      "lossMonths": 16
     },
     {
       "source": "Paper ML",
@@ -661149,7 +661917,11 @@
       "winHoldH": 7.24,
       "profitDays": 1008,
       "lossDays": 751,
-      "detail": "paper-ml-bsh · scenario 108 · sonuc_200mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 108 · sonuc_200mum_tp5_sl2p5",
+      "profitWeeks": 228,
+      "lossWeeks": 111,
+      "profitMonths": 67,
+      "lossMonths": 16
     },
     {
       "source": "Paper ML",
@@ -661163,7 +661935,11 @@
       "winHoldH": 0.64,
       "profitDays": 666,
       "lossDays": 512,
-      "detail": "paper-ml-bsh · scenario 116 · sonuc_10mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 116 · sonuc_10mum_tp2p5_sl1p25",
+      "profitWeeks": 207,
+      "lossWeeks": 122,
+      "profitMonths": 56,
+      "lossMonths": 27
     },
     {
       "source": "Paper ML",
@@ -661177,7 +661953,11 @@
       "winHoldH": 0.64,
       "profitDays": 666,
       "lossDays": 512,
-      "detail": "paper-ml-bsh · scenario 117 · sonuc_10mum_tp2p5_sl1p25"
+      "detail": "paper-ml-bsh · scenario 117 · sonuc_10mum_tp2p5_sl1p25",
+      "profitWeeks": 207,
+      "lossWeeks": 122,
+      "profitMonths": 56,
+      "lossMonths": 27
     },
     {
       "source": "Paper ML",
@@ -661191,7 +661971,11 @@
       "winHoldH": 27.03,
       "profitDays": 1157,
       "lossDays": 1115,
-      "detail": "paper-ml-bsh · scenario 191 · sonuc_200mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 191 · sonuc_200mum_tp20_sl10",
+      "profitWeeks": 212,
+      "lossWeeks": 141,
+      "profitMonths": 56,
+      "lossMonths": 27
     },
     {
       "source": "Paper ML",
@@ -661205,7 +661989,11 @@
       "winHoldH": 6.32,
       "profitDays": 1133,
       "lossDays": 1023,
-      "detail": "paper-ml-bsh · scenario 95 · sonuc_200mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 95 · sonuc_200mum_tp5_sl2p5",
+      "profitWeeks": 236,
+      "lossWeeks": 122,
+      "profitMonths": 61,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -661219,7 +662007,11 @@
       "winHoldH": 6.32,
       "profitDays": 1134,
       "lossDays": 1023,
-      "detail": "paper-ml-bsh · scenario 96 · sonuc_200mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 96 · sonuc_200mum_tp5_sl2p5",
+      "profitWeeks": 236,
+      "lossWeeks": 122,
+      "profitMonths": 61,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -661233,7 +662025,11 @@
       "winHoldH": 6.32,
       "profitDays": 1134,
       "lossDays": 1023,
-      "detail": "paper-ml-bsh · scenario 94 · sonuc_200mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 94 · sonuc_200mum_tp5_sl2p5",
+      "profitWeeks": 236,
+      "lossWeeks": 122,
+      "profitMonths": 61,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -661247,7 +662043,11 @@
       "winHoldH": 3.23,
       "profitDays": 577,
       "lossDays": 427,
-      "detail": "paper-ml-bsh · scenario 154 · sonuc_10mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 154 · sonuc_10mum_tp5_sl2p5",
+      "profitWeeks": 184,
+      "lossWeeks": 109,
+      "profitMonths": 54,
+      "lossMonths": 27
     },
     {
       "source": "Paper ML",
@@ -661261,7 +662061,11 @@
       "winHoldH": 3.25,
       "profitDays": 578,
       "lossDays": 427,
-      "detail": "paper-ml-bsh · scenario 155 · sonuc_10mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 155 · sonuc_10mum_tp5_sl2p5",
+      "profitWeeks": 185,
+      "lossWeeks": 109,
+      "profitMonths": 54,
+      "lossMonths": 27
     },
     {
       "source": "Paper ML",
@@ -661275,7 +662079,11 @@
       "winHoldH": 2.76,
       "profitDays": 619,
       "lossDays": 736,
-      "detail": "paper-ml-bsh · scenario 88 · sonuc_50mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 88 · sonuc_50mum_tp15_sl7p5",
+      "profitWeeks": 153,
+      "lossWeeks": 149,
+      "profitMonths": 45,
+      "lossMonths": 35
     },
     {
       "source": "Paper ML",
@@ -661289,7 +662097,11 @@
       "winHoldH": 12.57,
       "profitDays": 1097,
       "lossDays": 1090,
-      "detail": "paper-ml-bsh · scenario 100 · sonuc_200mum_tp10_sl5"
+      "detail": "paper-ml-bsh · scenario 100 · sonuc_200mum_tp10_sl5",
+      "profitWeeks": 206,
+      "lossWeeks": 148,
+      "profitMonths": 60,
+      "lossMonths": 23
     },
     {
       "source": "Paper ML",
@@ -661303,7 +662115,11 @@
       "winHoldH": 2.75,
       "profitDays": 267,
       "lossDays": 242,
-      "detail": "paper-ml-bsh · scenario 192 · sonuc_15mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 192 · sonuc_15mum_tp5_sl2p5",
+      "profitWeeks": 140,
+      "lossWeeks": 119,
+      "profitMonths": 54,
+      "lossMonths": 26
     },
     {
       "source": "Paper ML",
@@ -661317,7 +662133,11 @@
       "winHoldH": 0.27,
       "profitDays": 51,
       "lossDays": 33,
-      "detail": "paper-ml-bsh · scenario 218 · sonuc_5mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 218 · sonuc_5mum_tp15_sl7p5",
+      "profitWeeks": 42,
+      "lossWeeks": 28,
+      "profitMonths": 34,
+      "lossMonths": 14
     },
     {
       "source": "Paper ML",
@@ -661331,7 +662151,11 @@
       "winHoldH": 1.07,
       "profitDays": 344,
       "lossDays": 506,
-      "detail": "paper-ml-bsh · scenario 173 · sonuc_15mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 173 · sonuc_15mum_tp5_sl2p5",
+      "profitWeeks": 135,
+      "lossWeeks": 171,
+      "profitMonths": 41,
+      "lossMonths": 42
     },
     {
       "source": "Paper ML",
@@ -661345,7 +662169,11 @@
       "winHoldH": 2.73,
       "profitDays": 418,
       "lossDays": 428,
-      "detail": "paper-ml-bsh · scenario 150 · sonuc_50mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 150 · sonuc_50mum_tp15_sl7p5",
+      "profitWeeks": 148,
+      "lossWeeks": 104,
+      "profitMonths": 51,
+      "lossMonths": 26
     },
     {
       "source": "Paper ML",
@@ -661359,7 +662187,11 @@
       "winHoldH": 6.79,
       "profitDays": 1139,
       "lossDays": 934,
-      "detail": "paper-ml-bsh · scenario 70 · sonuc_15mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 70 · sonuc_15mum_tp5_sl2p5",
+      "profitWeeks": 229,
+      "lossWeeks": 123,
+      "profitMonths": 58,
+      "lossMonths": 25
     },
     {
       "source": "Paper ML",
@@ -661373,7 +662205,11 @@
       "winHoldH": 6.79,
       "profitDays": 1139,
       "lossDays": 934,
-      "detail": "paper-ml-bsh · scenario 68 · sonuc_15mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 68 · sonuc_15mum_tp5_sl2p5",
+      "profitWeeks": 230,
+      "lossWeeks": 122,
+      "profitMonths": 58,
+      "lossMonths": 25
     },
     {
       "source": "Paper ML",
@@ -661387,7 +662223,11 @@
       "winHoldH": 6.79,
       "profitDays": 1139,
       "lossDays": 934,
-      "detail": "paper-ml-bsh · scenario 69 · sonuc_15mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 69 · sonuc_15mum_tp5_sl2p5",
+      "profitWeeks": 230,
+      "lossWeeks": 122,
+      "profitMonths": 58,
+      "lossMonths": 25
     },
     {
       "source": "Paper ML",
@@ -661401,7 +662241,11 @@
       "winHoldH": 1.06,
       "profitDays": 350,
       "lossDays": 521,
-      "detail": "paper-ml-bsh · scenario 178 · sonuc_15mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 178 · sonuc_15mum_tp5_sl2p5",
+      "profitWeeks": 138,
+      "lossWeeks": 169,
+      "profitMonths": 47,
+      "lossMonths": 36
     },
     {
       "source": "Paper ML",
@@ -661415,7 +662259,11 @@
       "winHoldH": 0.24,
       "profitDays": 27,
       "lossDays": 5,
-      "detail": "paper-ml-bsh · scenario 219 · sonuc_5mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 219 · sonuc_5mum_tp20_sl10",
+      "profitWeeks": 26,
+      "lossWeeks": 5,
+      "profitMonths": 20,
+      "lossMonths": 4
     },
     {
       "source": "Paper ML",
@@ -661429,7 +662277,11 @@
       "winHoldH": 2.76,
       "profitDays": 621,
       "lossDays": 745,
-      "detail": "paper-ml-bsh · scenario 138 · sonuc_50mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 138 · sonuc_50mum_tp15_sl7p5",
+      "profitWeeks": 155,
+      "lossWeeks": 149,
+      "profitMonths": 46,
+      "lossMonths": 34
     },
     {
       "source": "Paper ML",
@@ -661443,7 +662295,11 @@
       "winHoldH": 0.37,
       "profitDays": 181,
       "lossDays": 332,
-      "detail": "paper-ml-bsh · scenario 195 · sonuc_5mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 195 · sonuc_5mum_tp15_sl7p5",
+      "profitWeeks": 95,
+      "lossWeeks": 145,
+      "profitMonths": 37,
+      "lossMonths": 37
     },
     {
       "source": "Paper ML",
@@ -661457,7 +662313,11 @@
       "winHoldH": 5.61,
       "profitDays": 1084,
       "lossDays": 781,
-      "detail": "paper-ml-bsh · scenario 98 · sonuc_3mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 98 · sonuc_3mum_tp5_sl2p5",
+      "profitWeeks": 240,
+      "lossWeeks": 106,
+      "profitMonths": 60,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -661471,7 +662331,11 @@
       "winHoldH": 5.61,
       "profitDays": 1084,
       "lossDays": 781,
-      "detail": "paper-ml-bsh · scenario 97 · sonuc_3mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 97 · sonuc_3mum_tp5_sl2p5",
+      "profitWeeks": 240,
+      "lossWeeks": 106,
+      "profitMonths": 60,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -661485,7 +662349,11 @@
       "winHoldH": 5.61,
       "profitDays": 1084,
       "lossDays": 781,
-      "detail": "paper-ml-bsh · scenario 99 · sonuc_3mum_tp5_sl2p5"
+      "detail": "paper-ml-bsh · scenario 99 · sonuc_3mum_tp5_sl2p5",
+      "profitWeeks": 240,
+      "lossWeeks": 106,
+      "profitMonths": 60,
+      "lossMonths": 22
     },
     {
       "source": "Paper ML",
@@ -661499,7 +662367,11 @@
       "winHoldH": 14.71,
       "profitDays": 1054,
       "lossDays": 1045,
-      "detail": "paper-ml-bsh · scenario 156 · sonuc_200mum_tp15_sl7p5"
+      "detail": "paper-ml-bsh · scenario 156 · sonuc_200mum_tp15_sl7p5",
+      "profitWeeks": 218,
+      "lossWeeks": 138,
+      "profitMonths": 64,
+      "lossMonths": 19
     },
     {
       "source": "Paper ML",
@@ -661513,7 +662385,11 @@
       "winHoldH": 0.62,
       "profitDays": 90,
       "lossDays": 50,
-      "detail": "paper-ml-bsh · scenario 214 · sonuc_10mum_tp20_sl10"
+      "detail": "paper-ml-bsh · scenario 214 · sonuc_10mum_tp20_sl10",
+      "profitWeeks": 71,
+      "lossWeeks": 30,
+      "profitMonths": 45,
+      "lossMonths": 9
     },
     {
       "source": "Indikator Akademi",

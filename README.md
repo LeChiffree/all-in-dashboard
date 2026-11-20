@@ -33,13 +33,13 @@ Birden fazla trade backtest reposunun sonuçlarını tek tabloda birleştiren da
 
 ## Kapsam
 
-Toplam **65.180 satır**, **6 kaynak**, **309 filtre**:
+Toplam **65.220 satır**, **6 kaynak**, **309 filtre**:
 
 | Kaynak | Satır |
 |---|---:|
 | BigPlan | 563 |
 | Book Signal | 1.738 |
-| Codex Bulut | 44.730 |
+| Codex Bulut | 44.770 |
 | Paper ML | 219 |
 | Indikator Akademi | 17.870 |
 | V4 Short | 60 |
@@ -68,7 +68,7 @@ Toplam **65.180 satır**, **6 kaynak**, **309 filtre**:
 
 - **BigPlan:** 184 filtre varyantı.
 - **Book Signal:** baseline + 14 filtre.
-- **Codex Bulut:** baseline + 55 filtre. Filtre satırlarında 2026 getirisi, günlük P/L ve karlı işlem süresi kaynakta ayrı export edilmediği için boş bırakılır; all-period getiri, işlem sayısı ve karlı/zararlı oranı doludur.
+- **Codex Bulut:** baseline + 55 filtre. Filtre satırları all-period ve 2026 getirisi, işlem sayısı, karlı/zararlı oranı, karlı işlem süresi ve gün/hafta/ay sayılarını içerir.
 - **Indikator Akademi:** 600 senaryo × 31 filtre tam olarak eklenir. `Filtresiz` yalnızca bu 31 filtrenin ilk satırıdır.
 - **Paper ML:** senaryo içindeki filtre ve threshold varyantları.
 - **V4 Short:** 12 short formasyonu × 5 kümülatif aşama (`1 → 12 → 123 → 1234 → 12345`).
@@ -76,6 +76,9 @@ Toplam **65.180 satır**, **6 kaynak**, **309 filtre**:
 ## Notlar
 
 - Getiri sütunları **toplam portföy getirisi değil**, işlem başına ortalama net getiridir.
+- Gün/hafta/ay sayıları tüm coinlerin aynı dönemdeki net P/L'si toplandıktan sonra
+  portföy düzeyinde hesaplanır; coin başına kâr/zarar günleri ayrı ayrı sayılıp
+  toplanmaz.
 - Farklı repolar farklı evren, dönem, komisyon, slippage ve kaldıraç kullanır.
 - V4 Short satırları 1x ve `resolved` işlemler kullanır.
 - Kaynak repolar bu repoda yer almaz; yalnızca birleşik dashboard çıktısı arşivlenir.

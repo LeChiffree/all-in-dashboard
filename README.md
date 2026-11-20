@@ -95,3 +95,14 @@ Codex için `filter_singular.json` ve `filter_normal.json` birlikte okunur; Code
 normal sütunları da bu veri setiyle yenilenir (kaynak allinone'daki şişmiş işlem
 sayıları düzeltilir). `summary.js` yoksa (S) sütunları boş kalır; normal tablo
 etkilenmez.
+
+Codex filtre payload'ı değiştiğinde (yeni filtre satırları dahil) tam senkron için:
+
+```bash
+python tools/sync_codex.py
+```
+
+Bu komut `allinone.json` içindeki Codex satırlarını `filter_normal.json` ile
+günceller, eksik Codex satırlarını ekler, `allinone.csv` / `Allinone.xlsx` /
+`index.html` çıktılarını yeniden üretir ve `singular/build_summary.py` çalıştırır.
+

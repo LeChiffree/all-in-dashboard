@@ -129,28 +129,43 @@ def build(paths):
                 n += 1
         matched["Book Signal"] = (n, len(by_source.get("Book Signal", [])))
 
-    # ---------------- Codex: filtre düzeyi (yeni) + baseline ----------------
-    p = paths["codex_filters"]
-    if os.path.exists(p):
-        filt = json.load(open(p, encoding="utf-8"))
-        pn = paths.get("codex_normal_filters")
-        norm = json.load(open(pn, encoding="utf-8")) if pn and os.path.exists(pn) else {}
+    # ---------------- Codex: normal + singular filter payloads ----------------
+    pn = paths.get("codex_normal_filters")
+    if pn and os.path.exists(pn):
+        norm = json.load(open(pn, encoding="utf-8"))
+        p = paths.get("codex_filters")
+        sing = json.load(open(p, encoding="utf-8")) if p and os.path.exists(p) else {}
         idx = {}
         for r in by_source.get("Codex Bulut", []):
             idx[(r["strategy"], r["timeframe"], str(r["filter"]))] = r
         n = 0
         miss = 0
-        for k, v in filt.items():
-            r = idx.get((v.get("scenario_name", ""), k.split("|")[1], v.get("filter_label")))
-            if r:
-                nv = norm.get(k)
-                out[key_of(r)] = {
-                    "n": flat(nv, scale=100.0, prefix="n_") if nv else None,
-                    "s": flat(v, scale=100.0),
-                }
-                n += 1
-            else:
+        seen = set()
+        # Normal payload is the driver: it contains 3 keys that singular lacks.
+        for k, nv in norm.items():
+            key = (nv.get("scenario_name", ""), k.split("|")[1], nv.get("filter_label"))
+            r = idx.get(key)
+            if not r:
                 miss += 1
+                continue
+            sv = sing.get(k)
+            out[key_of(r)] = {
+                "n": flat(nv, scale=100.0, prefix="n_"),
+                "s": flat(sv, scale=100.0) if sv else None,
+            }
+            seen.add(k)
+            n += 1
+        # Keep any singular-only keys if the two payloads ever diverge.
+        for k, sv in sing.items():
+            if k in seen:
+                continue
+            key = (sv.get("scenario_name", ""), k.split("|")[1], sv.get("filter_label"))
+            r = idx.get(key)
+            if not r:
+                miss += 1
+                continue
+            out[key_of(r)] = {"n": None, "s": flat(sv, scale=100.0)}
+            n += 1
         matched["Codex Bulut"] = (n, len(by_source.get("Codex Bulut", [])))
         print(f"[codex] filtre eşleşmesi {n:,}, eşleşmeyen {miss:,}")
 

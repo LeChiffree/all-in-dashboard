@@ -53,7 +53,9 @@ Toplam **65.220 satır**, **6 kaynak**, **309 filtre**:
 | Filtre | Uygulanan filtre veya kümülatif filtre aşaması. |
 | Timeframe | `5m`, `15m`, `1h`, `4h`, `1d`, `1w`. |
 | All Getiri % | İşlem başına ortalama net getiri (tüm dönem). |
+| All Getiri % (Düzeltilmiş) | Lookahead düzeltmeleri sonrası aynı metrik (bkz. `_raporlar/all-in-dashboard-lookahead-denetimi-2026-11-24/RAPOR.md`). |
 | 2026 Getiri % | İşlem başına ortalama net getiri (2026 dilimi). |
+| 2026 Getiri % (Düzeltilmiş) | Lookahead düzeltmeleri sonrası 2026 metriği. |
 | İşlem Sayısı | Toplam işlem sayısı. |
 | Karlı/Zararlı İşlem | Karlı işlem sayısı / zararlı işlem sayısı. |
 | Karlı İşlem Ort. Süre (saat) | Karlı işlemlerin ortalama elde tutma süresi (saat). |

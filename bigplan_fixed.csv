@@ -1,0 +1,564 @@
+﻿Anahtar;Strateji;Timeframe;Filtre;Getiri Öncesi %;Getiri Düzeltilmiş %;Getiri Sıkı Stop %;2026 Öncesi %;2026 Düzeltilmiş %;2026 Sıkı Stop %;İşlem Öncesi;İşlem Düzeltilmiş;İşlem Sıkı Stop
+smi|1w|varyant2;SMI Aşırılık Dönüşü (14,3);1w;BTC 7g getirisi + Genişlik momentumu;57,802;57,802;57,802;71,164;71,164;71,164;701;701;701
+cci|1w|varyant1;CCI Aşırılık Dönüşü (20);1w;PSAR tarafı + MACD tersi;62,217;62,217;62,217;68,303;68,303;68,303;315;315;315
+smi|1w|varyant1;SMI Aşırılık Dönüşü (14,3);1w;BTC 7g getirisi + Sinyal barı yönü;56,044;56,044;56,044;65,338;65,338;65,338;738;738;738
+smi|1w|varyant3;SMI Aşırılık Dönüşü (14,3);1w;BTC 7g getirisi + MFI aşırı bölge yasağı;52,394;52,394;52,394;61,478;61,478;61,478;813;813;813
+smi|1w|single:b_btc_ret7d;SMI Aşırılık Dönüşü (14,3);1w;Tekil Filtre: BTC 7g getirisi;50,496;50,496;50,496;57,555;57,555;57,555;840;840;840
+mfi|1d|varyant1;MFI Aşırılık Dönüşü (14);1d;Piyasa genişliği + BTC dolar hacmi ≥ %50 dilim;43,693;43,693;43,693;54,147;54,147;54,147;1052;1052;1052
+smi|1w|single:b_breadth_mom;SMI Aşırılık Dönüşü (14,3);1w;Tekil Filtre: Genişlik momentumu;48,776;48,776;48,776;51,686;51,686;51,686;832;832;832
+histvol|1d|varyant1;Tarihsel Volatilite Düşüş Filtresi;1d;BTC’ye göre güç (30g) + Piyasa genişliği;16,856;16,856;16,856;48,539;48,539;48,539;3252;3252;3252
+smi|1w|single:v_mfi;SMI Aşırılık Dönüşü (14,3);1w;Tekil Filtre: MFI aşırı bölge yasağı;45,999;45,999;45,999;47,37;47,37;47,37;999;999;999
+smi|1w|single:h_candle;SMI Aşırılık Dönüşü (14,3);1w;Tekil Filtre: Sinyal barı yönü;47,355;47,355;47,355;45,289;45,289;45,289;889;889;889
+smi|1w|temel;SMI Aşırılık Dönüşü (14,3);1w;Filtresiz;44,768;44,768;44,768;45,238;45,238;45,238;1031;1031;1031
+mfi|1d|varyant3;MFI Aşırılık Dönüşü (14);1d;Piyasa genişliği + RVOL>1.5;40,642;40,642;40,642;44,374;44,374;44,374;888;888;888
+mfi|1d|varyant2;MFI Aşırılık Dönüşü (14);1d;RVOL>1.5 + BTC dolar hacmi ≥ %50 dilim;37,736;37,736;37,736;44,359;44,359;44,359;1008;1008;1008
+cci|1w|varyant2;CCI Aşırılık Dönüşü (20);1w;PSAR tarafı + Hacim şoku tavanı;49,34;49,34;49,34;42,506;42,506;42,506;403;403;403
+cci|1w|varyant3;CCI Aşırılık Dönüşü (20);1w;PSAR tarafı + Stokastik %K/%D;45,228;45,228;45,228;34,444;34,444;34,444;370;370;370
+mfi|1d|single:b_breadth;MFI Aşırılık Dönüşü (14);1d;Tekil Filtre: Piyasa genişliği;33,947;33,947;33,947;34,118;34,118;34,118;1971;1971;1971
+cci|1w|single:t_psar;CCI Aşırılık Dönüşü (20);1w;Tekil Filtre: PSAR tarafı;43,308;43,308;43,308;32,99;32,99;32,99;453;453;453
+mfi|1d|single:v_rvol15;MFI Aşırılık Dönüşü (14);1d;Tekil Filtre: RVOL>1.5;32,051;32,051;32,051;32,625;32,625;32,625;1835;1835;1835
+histvol|1d|varyant2;Tarihsel Volatilite Düşüş Filtresi;1d;BTC’ye göre güç (30g) + RSI>50 tarafı;14,575;14,575;14,575;32,239;32,239;32,239;4910;4910;4910
+ribbon|4h|varyant1;EMA Şeridi Hizalanması (13-89);4h;ATR% ≥ %120 normal + Piyasa genişliği;17,521;17,521;17,521;31,164;31,164;31,164;3667;3667;3667
+histvol|1d|single:b_breadth;Tarihsel Volatilite Düşüş Filtresi;1d;Tekil Filtre: Piyasa genişliği;10,904;10,904;10,904;28,731;28,731;28,731;6683;6683;6683
+sma|1d|varyant1;SMA Kesişimi (10/30);1d;Piyasa genişliği + ADX>20 + yön;14,327;14,327;14,327;28,621;28,621;28,621;3390;3390;3390
+mfi|1d|single:b_btc_dvol;MFI Aşırılık Dönüşü (14);1d;Tekil Filtre: BTC dolar hacmi ≥ %50 dilim;28,512;28,512;28,512;28,547;28,547;28,547;2655;2655;2655
+histvol|1d|varyant3;Tarihsel Volatilite Düşüş Filtresi;1d;BTC’ye göre güç (30g) + PSAR tarafı;13,315;13,315;13,315;28,226;28,226;28,226;3377;3377;3377
+histvol|1d|single:f_relbtc;Tarihsel Volatilite Düşüş Filtresi;1d;Tekil Filtre: BTC’ye göre güç (30g);12,31;12,31;12,31;26,907;26,907;26,907;6172;6172;6172
+histvol|1d|single:m_rsi50;Tarihsel Volatilite Düşüş Filtresi;1d;Tekil Filtre: RSI>50 tarafı;10,708;10,708;10,708;24,497;24,497;24,497;8640;8640;8640
+willr|1w|varyant2;Williams %R Dönüşü (14);1w;Hacim ortalamanın üstü + ROC tersi;34,265;34,265;34,265;24,32;24,32;24,32;780;780;780
+histvol|1d|single:t_psar;Tarihsel Volatilite Düşüş Filtresi;1d;Tekil Filtre: PSAR tarafı;10,495;10,495;10,495;24,205;24,205;24,205;6437;6437;6437
+ribbon|4h|varyant2;EMA Şeridi Hizalanması (13-89);4h;ATR% ≥ %120 normal + CMF pozitifliği;14,341;14,341;14,341;23,23;23,23;23,23;4165;4165;4165
+voi|1w|varyant3;Hacim Osilatörü Sıfır Kesişimi (5,20);1w;MACD tersi + Stokastik %K/%D;23,104;23,104;23,104;21,757;21,757;21,757;1278;1278;1278
+histvol|1d|temel;Tarihsel Volatilite Düşüş Filtresi;1d;Filtresiz;9,339;9,339;9,339;21,643;21,643;21,643;10792;10792;10792
+smi|1d|varyant1;SMI Aşırılık Dönüşü (14,3);1d;Piyasa genişliği + ROC tersi;13,109;13,109;13,109;21,237;21,237;21,237;3515;3515;3515
+sma|1d|single:b_breadth;SMA Kesişimi (10/30);1d;Tekil Filtre: Piyasa genişliği;10,708;10,708;10,708;21,125;21,125;21,125;8345;8345;8345
+uo|4h|varyant1;Ultimate Oscillator Dönüşü;4h;Piyasa genişliği + Yalnız uzama anında;18,465;18,465;18,465;21,093;21,093;21,093;1729;1729;1729
+ribbon|4h|varyant3;EMA Şeridi Hizalanması (13-89);4h;ATR% ≥ %120 normal + Kendi momentumu (30g);13,54;13,54;13,54;20,84;20,84;20,84;4351;4351;4351
+willr|1w|single:v_above;Williams %R Dönüşü (14);1w;Tekil Filtre: Hacim ortalamanın üstü;31,106;31,106;31,106;20,065;20,065;20,065;951;951;951
+ribbon|4h|single:e_atr_high;EMA Şeridi Hizalanması (13-89);4h;Tekil Filtre: ATR% ≥ %120 normal;11,763;11,763;11,763;19,747;19,747;19,747;5635;5635;5635
+willr|1w|varyant1;Williams %R Dönüşü (14);1w;Piyasa hacmi ≥ %50 dilim + ROC tersi;36,283;36,283;36,283;19,594;19,594;19,594;916;916;916
+smi|1d|varyant3;SMI Aşırılık Dönüşü (14,3);1d;MACD tersi + Hacim ortalamanın üstü;10,152;10,152;10,152;19,403;19,403;19,403;3128;3128;3128
+uo|4h|varyant2;Ultimate Oscillator Dönüşü;4h;Piyasa genişliği + RVOL>1.5;17,741;17,741;17,741;19,377;19,377;19,377;2098;2098;2098
+voi|1w|varyant2;Hacim Osilatörü Sıfır Kesişimi (5,20);1w;MACD tersi + BTC 7g getirisi;22,105;22,105;22,105;19,099;19,099;19,099;965;965;965
+voi|1w|single:m_macd_x;Hacim Osilatörü Sıfır Kesişimi (5,20);1w;Tekil Filtre: MACD tersi;18,833;18,833;18,833;19,005;19,005;19,005;2066;2066;2066
+ribbon|4h|single:b_breadth;EMA Şeridi Hizalanması (13-89);4h;Tekil Filtre: Piyasa genişliği;8,962;8,962;8,962;17,911;17,911;17,911;12563;12563;12563
+smi|1d|varyant2;SMI Aşırılık Dönüşü (14,3);1d;Piyasa genişliği + MACD tersi;10,682;10,682;10,682;17,581;17,581;17,581;5078;5078;5078
+mfi|1d|temel;MFI Aşırılık Dönüşü (14);1d;Filtresiz;20,919;20,919;20,919;17,383;17,383;17,383;4379;4379;4379
+willr|1w|single:m_roc_x;Williams %R Dönüşü (14);1w;Tekil Filtre: ROC tersi;27,497;27,497;27,497;16,635;16,635;16,635;1366;1366;1366
+willr|1w|varyant3;Williams %R Dönüşü (14);1w;Piyasa hacmi ≥ %50 dilim;31,773;31,773;31,773;16,618;16,618;16,618;1035;1035;1035
+willr|1w|temel;Williams %R Dönüşü (14);1w;Filtresiz;25,569;25,569;25,569;16,574;16,574;16,574;1513;1513;1513
+hma|1d|varyant3;HMA(20) Fiyat Kesişimi;1d;BTC dolar hacmi ≥ %50 dilim + Kendi momentumu (30g);10,45;10,45;10,45;16,078;16,078;16,078;5423;5423;5423
+sma|1d|single:t_adx20;SMA Kesişimi (10/30);1d;Tekil Filtre: ADX>20 + yön;9,564;9,564;9,564;15,683;15,683;15,683;5678;5678;5678
+willr|1d|varyant1;Williams %R Dönüşü (14);1d;Piyasa genişliği + Hacim ortalamanın üstü;10,503;10,503;10,503;14,483;14,483;14,483;4030;4030;4030
+uo|4h|single:v_rvol15;Ultimate Oscillator Dönüşü;4h;Tekil Filtre: RVOL>1.5;13,266;13,266;13,266;14,475;14,475;14,475;4545;4545;4545
+hma|1d|single:b_btc_dvol;HMA(20) Fiyat Kesişimi;1d;Tekil Filtre: BTC dolar hacmi ≥ %50 dilim;9,533;9,533;9,533;14,376;14,376;14,376;7543;7543;7543
+sma|1d|varyant2;SMA Kesişimi (10/30);1d;Piyasa genişliği + BTC vol ≥ %50 dilim;12,087;12,087;12,087;14,23;14,23;14,23;3376;3376;3376
+hma|1d|varyant2;HMA(20) Fiyat Kesişimi;1d;RVOL>1.5 + Kendi momentumu (30g);11,435;11,435;11,435;14,128;14,128;14,128;3218;3218;3218
+hma|1d|single:v_rvol15;HMA(20) Fiyat Kesişimi;1d;Tekil Filtre: RVOL>1.5;10,48;10,48;10,48;14,115;14,115;14,115;4078;4078;4078
+sma|1d|varyant3;SMA Kesişimi (10/30);1d;BTC vol ≥ %50 dilim + ADX>20 + yön;13,035;13,035;13,035;13,859;13,859;13,859;2772;2772;2772
+ribbon|4h|single:v_cmf;EMA Şeridi Hizalanması (13-89);4h;Tekil Filtre: CMF pozitifliği;8,038;8,038;8,038;13,713;13,713;13,713;15794;15794;15794
+uo|4h|single:h_ext;Ultimate Oscillator Dönüşü;4h;Tekil Filtre: Yalnız uzama anında;12,033;12,033;12,033;13,416;13,416;13,416;4374;4374;4374
+hma|1d|single:f_own30;HMA(20) Fiyat Kesişimi;1d;Tekil Filtre: Kendi momentumu (30g);9,38;9,38;9,38;13,414;13,414;13,414;8348;8348;8348
+sma|1d|temel;SMA Kesişimi (10/30);1d;Filtresiz;7,481;7,481;7,481;13,367;13,367;13,367;13643;13643;13643
+voi|1w|single:m_stoch;Hacim Osilatörü Sıfır Kesişimi (5,20);1w;Tekil Filtre: Stokastik %K/%D;12,711;12,711;12,711;13,314;13,314;13,314;2616;2616;2616
+uo|4h|single:b_breadth;Ultimate Oscillator Dönüşü;4h;Tekil Filtre: Piyasa genişliği;14,984;14,984;14,984;13,1;13,1;13,1;3604;3604;3604
+voi|1w|single:m_roc_x;Hacim Osilatörü Sıfır Kesişimi (5,20);1w;Tekil Filtre: ROC tersi;14,551;14,551;14,551;13,091;13,091;13,091;1996;1996;1996
+hma|1d|temel;HMA(20) Fiyat Kesişimi;1d;Filtresiz;8,723;8,723;8,723;13,067;13,067;13,067;11654;11654;11654
+smi|1d|single:b_breadth;SMI Aşırılık Dönüşü (14,3);1d;Tekil Filtre: Piyasa genişliği;8,392;8,392;8,392;12,783;12,783;12,783;6267;6267;6267
+voi|1w|temel;Hacim Osilatörü Sıfır Kesişimi (5,20);1w;Filtresiz;11,169;11,169;11,169;12,7;12,7;12,7;4011;4011;4011
+voi|1w|single:b_btc_ret7d;Hacim Osilatörü Sıfır Kesişimi (5,20);1w;Tekil Filtre: BTC 7g getirisi;12,395;12,395;12,395;12,571;12,571;12,571;2005;2005;2005
+ribbon|4h|temel;EMA Şeridi Hizalanması (13-89);4h;Filtresiz;7,338;7,338;7,338;12,526;12,526;12,526;18218;18218;18218
+ribbon|4h|single:f_own30;EMA Şeridi Hizalanması (13-89);4h;Tekil Filtre: Kendi momentumu (30g);7,933;7,933;7,933;12,502;12,502;12,502;13353;13353;13353
+hma|1d|single:b_mktvol;HMA(20) Fiyat Kesişimi;1d;Tekil Filtre: Piyasa hacmi ≥ %50 dilim;10,227;10,227;10,227;12,14;12,14;12,14;5970;5970;5970
+uo|4h|varyant3;Ultimate Oscillator Dönüşü;4h;RVOL>1.5 + Kendi momentumu (30g);14,952;14,952;14,952;12,1;12,1;12,1;1812;1812;1812
+hma|1d|varyant1;HMA(20) Fiyat Kesişimi;1d;BTC dolar hacmi ≥ %50 dilim + Piyasa hacmi ≥ %50 dilim;11,122;11,122;11,122;11,585;11,585;11,585;4014;4014;4014
+smi|1d|single:m_roc_x;SMI Aşırılık Dönüşü (14,3);1d;Tekil Filtre: ROC tersi;7,143;7,143;7,143;11,073;11,073;11,073;7937;7937;7937
+voi|1w|varyant1;Hacim Osilatörü Sıfır Kesişimi (5,20);1w;ROC tersi + BTC 7g getirisi;18,316;18,316;18,316;11,005;11,005;11,005;846;846;846
+smi|1d|single:m_macd_x;SMI Aşırılık Dönüşü (14,3);1d;Tekil Filtre: MACD tersi;6,528;6,528;6,528;10,798;10,798;10,798;8935;8935;8935
+cci|1d|varyant1;CCI Aşırılık Dönüşü (20);1d;Piyasa genişliği + Piyasa hacmi ≥ %50 dilim;9,353;9,353;9,353;10,643;10,643;10,643;2795;2795;2795
+cci|1w|single:m_macd_x;CCI Aşırılık Dönüşü (20);1w;Tekil Filtre: MACD tersi;30,538;30,538;30,538;10,366;10,366;10,366;1287;1287;1287
+pvt|1d|varyant1;PVT + EMA(21) Kesişimi;1d;Hacim ortalamanın üstü + RSI>50 tarafı;5,31;5,31;5,31;9,928;9,928;9,928;8037;8037;8037
+willr|1d|varyant2;Williams %R Dönüşü (14);1d;Piyasa genişliği + MACD tersi;7,108;7,108;7,108;9,838;9,838;9,838;7537;7537;7537
+uo|4h|temel;Ultimate Oscillator Dönüşü;4h;Filtresiz;9,667;9,667;9,667;9,758;9,758;9,758;7331;7331;7331
+willr|1d|varyant3;Williams %R Dönüşü (14);1d;Piyasa genişliği;6,792;6,792;6,792;9,325;9,325;9,325;7950;7950;7950
+pvt|1d|varyant2;PVT + EMA(21) Kesişimi;1d;Piyasa hacmi ≥ %50 dilim + RSI>50 tarafı;5,338;5,338;5,338;9,105;9,105;9,105;7049;7049;7049
+vortex|1d|varyant1;Vortex Kesişimi (14);1d;Piyasa genişliği + BTC dolar hacmi ≥ %50 dilim;5,51;5,51;5,51;9,1;9,1;9,1;9386;9386;9386
+cci|1d|single:b_breadth;CCI Aşırılık Dönüşü (20);1d;Tekil Filtre: Piyasa genişliği;7,985;7,985;7,985;8,707;8,707;8,707;6583;6583;6583
+sma|1d|single:b_btc_volpct;SMA Kesişimi (10/30);1d;Tekil Filtre: BTC vol ≥ %50 dilim;8,615;8,615;8,615;8,595;8,595;8,595;6121;6121;6121
+psar|1d|varyant1;Parabolic SAR Dönüşü;1d;Piyasa hacmi ≥ %50 dilim + RSI>50 tarafı;5,595;5,595;5,595;8,414;8,414;8,414;6573;6573;6573
+pvt|1d|varyant3;PVT + EMA(21) Kesişimi;1d;Hacim ortalamanın üstü + ROC>0 tarafı;4,368;4,368;4,368;8,198;8,198;8,198;8285;8285;8285
+nvi|4h|varyant2;NVI + EMA(200) Trendi;4h;ATR% ≥ %120 normal + BTC düşüş >%25 → long yasak;3,535;3,535;3,535;8,178;8,178;8,178;13734;13734;13734
+cmo|1d|varyant1;CMO Sıfır Kesişimi (14);1d;Piyasa genişliği + BTC dolar hacmi ≥ %50 dilim;4,807;4,807;4,807;7,916;7,916;7,916;10964;10964;10964
+smi|1d|single:v_above;SMI Aşırılık Dönüşü (14,3);1d;Tekil Filtre: Hacim ortalamanın üstü;6,054;6,054;6,054;7,907;7,907;7,907;5295;5295;5295
+cci|1w|single:m_stoch;CCI Aşırılık Dönüşü (20);1w;Tekil Filtre: Stokastik %K/%D;28,079;28,079;28,079;7,701;7,701;7,701;1190;1190;1190
+psar|1d|varyant2;Parabolic SAR Dönüşü;1d;Piyasa genişliği;5,693;5,693;5,693;7,672;7,672;7,672;15839;15839;15839
+nvi|4h|varyant1;NVI + EMA(200) Trendi;4h;ATR% ≥ %120 normal + RSI aşırı bölge yasağı;3,728;3,728;3,728;7,404;7,404;7,404;13122;13122;13122
+vortex|1d|varyant2;Vortex Kesişimi (14);1d;Piyasa genişliği + Sinyal barı yönü;4,629;4,629;4,629;7,364;7,364;7,364;15760;15760;15760
+cci|1w|single:v_shock_cap;CCI Aşırılık Dönüşü (20);1w;Tekil Filtre: Hacim şoku tavanı;28,095;28,095;28,095;7,342;7,342;7,342;1363;1363;1363
+willr|1d|single:v_above;Williams %R Dönüşü (14);1d;Tekil Filtre: Hacim ortalamanın üstü;5,363;5,363;5,363;7,14;7,14;7,14;10249;10249;10249
+vortex|1d|varyant3;Vortex Kesişimi (14);1d;Piyasa genişliği + ROC>0 tarafı;4,345;4,345;4,345;7,107;7,107;7,107;15447;15447;15447
+psar|1d|varyant3;Parabolic SAR Dönüşü;1d;Piyasa genişliği + CMO yönü;5,545;5,545;5,545;7,089;7,089;7,089;10026;10026;10026
+cmo|1d|varyant2;CMO Sıfır Kesişimi (14);1d;Piyasa genişliği + ROC>0 tarafı;4,043;4,043;4,043;7,027;7,027;7,027;16949;16949;16949
+cmo|1d|varyant3;CMO Sıfır Kesişimi (14);1d;Hacim ortalamanın üstü + Sinyal barı yönü;3,428;3,428;3,428;6,992;6,992;6,992;10273;10273;10273
+percentb|1d|varyant1;%B Aşırılık Dönüşü;1d;Piyasa genişliği + MACD tersi;5,992;5,992;5,992;6,966;6,966;6,966;3949;3949;3949
+bb|1d|varyant1;Bollinger Ortalamaya Dönüş (20, 2);1d;Piyasa genişliği + MACD tersi;5,992;5,992;5,992;6,966;6,966;6,966;3949;3949;3949
+nvi|4h|varyant3;NVI + EMA(200) Trendi;4h;ATR% ≥ %120 normal;3,415;3,415;3,415;6,962;6,962;6,962;14809;14809;14809
+cci|1w|temel;CCI Aşırılık Dönüşü (20);1w;Filtresiz;27,653;27,653;27,653;6,932;6,932;6,932;1386;1386;1386
+percentb|1d|varyant2;%B Aşırılık Dönüşü;1d;Piyasa genişliği;5,954;5,954;5,954;6,914;6,914;6,914;4011;4011;4011
+bb|1d|varyant2;Bollinger Ortalamaya Dönüş (20, 2);1d;Piyasa genişliği;5,954;5,954;5,954;6,914;6,914;6,914;4011;4011;4011
+percentb|1d|varyant3;%B Aşırılık Dönüşü;1d;Piyasa genişliği + F&G ılımlı bölge;5,928;5,928;5,928;6,882;6,882;6,882;3758;3758;3758
+bb|1d|varyant3;Bollinger Ortalamaya Dönüş (20, 2);1d;Piyasa genişliği + F&G ılımlı bölge;5,928;5,928;5,928;6,882;6,882;6,882;3758;3758;3758
+cmo|1d|single:v_above;CMO Sıfır Kesişimi (14);1d;Tekil Filtre: Hacim ortalamanın üstü;3,246;3,246;3,246;6,664;6,664;6,664;11016;11016;11016
+uo|4h|single:f_own30;Ultimate Oscillator Dönüşü;4h;Tekil Filtre: Kendi momentumu (30g);10,59;10,59;10,59;6,641;6,641;6,641;3982;3982;3982
+smi|1d|temel;SMI Aşırılık Dönüşü (14,3);1d;Filtresiz;4,765;4,765;4,765;6,542;6,542;6,542;11805;11805;11805
+pvt|1d|single:b_mktvol;PVT + EMA(21) Kesişimi;1d;Tekil Filtre: Piyasa hacmi ≥ %50 dilim;3,876;3,876;3,876;6,478;6,478;6,478;10022;10022;10022
+pvt|1d|single:v_above;PVT + EMA(21) Kesişimi;1d;Tekil Filtre: Hacim ortalamanın üstü;3,346;3,346;3,346;6,406;6,406;6,406;12483;12483;12483
+pvt|1d|single:m_rsi50;PVT + EMA(21) Kesişimi;1d;Tekil Filtre: RSI>50 tarafı;3,181;3,181;3,181;6,344;6,344;6,344;19041;19041;19041
+psar|1d|single:b_mktvol;Parabolic SAR Dönüşü;1d;Tekil Filtre: Piyasa hacmi ≥ %50 dilim;4,339;4,339;4,339;6,271;6,271;6,271;10018;10018;10018
+vortex|1d|single:b_breadth;Vortex Kesişimi (14);1d;Tekil Filtre: Piyasa genişliği;4,04;4,04;4,04;6,166;6,166;6,166;20453;20453;20453
+mprofile|4h|varyant3;POC Göçü Trendi (yaklaşım);4h;Üst TF trend (×4) + BTC düşüş >%20 → sadece long;5,021;5,021;5,021;6,129;6,129;6,129;11962;11962;11962
+cmo|1d|single:b_breadth;CMO Sıfır Kesişimi (14);1d;Tekil Filtre: Piyasa genişliği;3,59;3,59;3,59;5,859;5,859;5,859;23895;23895;23895
+bb|1d|single:e_fng_mod;Bollinger Ortalamaya Dönüş (20, 2);1d;Tekil Filtre: F&G ılımlı bölge;3,486;3,486;3,486;5,825;5,825;5,825;9229;9229;9229
+percentb|1d|single:e_fng_mod;%B Aşırılık Dönüşü;1d;Tekil Filtre: F&G ılımlı bölge;3,483;3,483;3,483;5,825;5,825;5,825;9228;9228;9228
+liquidity|1d|varyant1;Likidite Süpürme + Geri Alım;1d;Piyasa genişliği + MACD tersi;4,811;4,822;4,535;5,795;5,803;5,401;6101;6102;6190
+candle1|1d|varyant1;Pin Bar / Çekiç Dönüşü;1d;Piyasa genişliği + ROC tersi;4,157;4,157;4,157;5,745;5,745;5,745;2905;2905;2905
+liquidity|1d|varyant2;Likidite Süpürme + Geri Alım;1d;Piyasa genişliği;4,677;4,688;4,423;5,695;5,703;5,35;6425;6426;6519
+supertrend|4h|varyant2;Supertrend Dönüşü (10, 3);4h;Piyasa hacmi ≥ %50 dilim + RVOL>1.5;3,172;3,172;3,172;5,592;5,592;5,592;16652;16652;16652
+candle1|1d|varyant2;Pin Bar / Çekiç Dönüşü;1d;Piyasa genişliği + MACD tersi;4,058;4,058;4,058;5,529;5,529;5,529;3014;3014;3014
+adx|4h|varyant3;ADX + DI Kesişimi (14);4h;Piyasa genişliği + Supertrend tarafı;3,019;3,019;3,019;5,457;5,457;5,457;15067;15067;15067
+mom|1d|varyant1;Momentum Sıfır Kesişimi (10);1d;Piyasa genişliği + PSAR tarafı;3,366;3,366;3,366;5,397;5,397;5,397;16408;16408;16408
+adx|4h|varyant2;ADX + DI Kesişimi (14);4h;Piyasa genişliği + Hacim ortalamanın üstü;3,045;3,045;3,045;5,39;5,39;5,39;11888;11888;11888
+mprofile|4h|varyant1;POC Göçü Trendi (yaklaşım);4h;ATR% ≥ %120 normal + BTC dolar hacmi ≥ %50 dilim;5,057;5,057;5,057;5,35;5,35;5,35;5094;5094;5094
+candle1|1d|varyant3;Pin Bar / Çekiç Dönüşü;1d;Piyasa genişliği;3,898;3,898;3,898;5,282;5,282;5,282;3194;3194;3194
+cci|1d|varyant3;CCI Aşırılık Dönüşü (20);1d;Piyasa genişliği + TSI yönü;7,43;7,43;7,43;5,137;5,137;5,137;3190;3190;3190
+cmo|1d|single:b_btc_dvol;CMO Sıfır Kesişimi (14);1d;Tekil Filtre: BTC dolar hacmi ≥ %50 dilim;2,774;2,774;2,774;5,114;5,114;5,114;19351;19351;19351
+cci|1d|varyant2;CCI Aşırılık Dönüşü (20);1d;Piyasa genişliği + EMA50 eğimi;7,292;7,292;7,292;4,92;4,92;4,92;3285;3285;3285
+vortex|1d|single:b_btc_dvol;Vortex Kesişimi (14);1d;Tekil Filtre: BTC dolar hacmi ≥ %50 dilim;2,968;2,968;2,968;4,897;4,897;4,897;16371;16371;16371
+pvt|1d|single:m_roc;PVT + EMA(21) Kesişimi;1d;Tekil Filtre: ROC>0 tarafı;2,466;2,466;2,466;4,76;4,76;4,76;18733;18733;18733
+psar|1d|single:m_rsi50;Parabolic SAR Dönüşü;1d;Tekil Filtre: RSI>50 tarafı;3,949;3,949;3,949;4,662;4,662;4,662;18555;18555;18555
+psar|1d|single:m_cmo;Parabolic SAR Dönüşü;1d;Tekil Filtre: CMO yönü;3,755;3,755;3,755;4,646;4,646;4,646;14619;14619;14619
+adx|4h|varyant1;ADX + DI Kesişimi (14);4h;Piyasa genişliği + Piyasa hacmi ≥ %50 dilim;3,05;3,05;3,05;4,516;4,516;4,516;16963;16963;16963
+vortex|1d|single:m_roc;Vortex Kesişimi (14);1d;Tekil Filtre: ROC>0 tarafı;2,635;2,635;2,635;4,511;4,511;4,511;27042;27042;27042
+cmo|1d|single:m_roc;CMO Sıfır Kesişimi (14);1d;Tekil Filtre: ROC>0 tarafı;2,473;2,473;2,473;4,473;4,473;4,473;30341;30341;30341
+psar|1d|temel;Parabolic SAR Dönüşü;1d;Filtresiz;3,171;3,171;3,171;4,431;4,431;4,431;30088;30088;30088
+pvt|1d|temel;PVT + EMA(21) Kesişimi;1d;Filtresiz;2,145;2,145;2,145;4,427;4,427;4,427;28172;28172;28172
+willr|1d|temel;Williams %R Dönüşü (14);1d;Filtresiz;4,056;4,056;4,056;4,339;4,339;4,339;16602;16602;16602
+vortex|1d|single:h_candle;Vortex Kesişimi (14);1d;Tekil Filtre: Sinyal barı yönü;2,713;2,713;2,713;4,311;4,311;4,311;27739;27739;27739
+mom|1d|varyant3;Momentum Sıfır Kesişimi (10);1d;Hacim ortalamanın üstü;2,491;2,491;2,491;4,224;4,224;4,224;12233;12233;12233
+mprofile|4h|single:b_btc_dd_x;POC Göçü Trendi (yaklaşım);4h;Tekil Filtre: BTC düşüş >%20 → sadece long;3,37;3,37;3,37;4,112;4,112;4,112;21267;21267;21267
+willr|1d|single:m_macd_x;Williams %R Dönüşü (14);1d;Tekil Filtre: MACD tersi;4,206;4,206;4,206;4,108;4,108;4,108;15690;15690;15690
+mom|1d|varyant2;Momentum Sıfır Kesişimi (10);1d;Piyasa genişliği + Hafta sonu yasağı;3,01;3,01;3,01;4,089;4,089;4,089;20952;20952;20952
+cmo|1d|single:h_candle;CMO Sıfır Kesişimi (14);1d;Tekil Filtre: Sinyal barı yönü;2,334;2,334;2,334;4,074;4,074;4,074;37147;37147;37147
+nvi|4h|single:b_btc_dd;NVI + EMA(200) Trendi;4h;Tekil Filtre: BTC düşüş >%25 → long yasak;2,056;2,056;2,056;4,07;4,07;4,07;51410;51410;51410
+mprofile|4h|single:e_atr_high;POC Göçü Trendi (yaklaşım);4h;Tekil Filtre: ATR% ≥ %120 normal;3,957;3,957;3,957;3,946;3,946;3,946;6437;6437;6437
+mprofile|4h|single:b_btc_dvol;POC Göçü Trendi (yaklaşım);4h;Tekil Filtre: BTC dolar hacmi ≥ %50 dilim;3,417;3,417;3,417;3,938;3,938;3,938;18811;18811;18811
+supertrend|4h|single:v_rvol15;Supertrend Dönüşü (10, 3);4h;Tekil Filtre: RVOL>1.5;2,374;2,374;2,374;3,93;3,93;3,93;24349;24349;24349
+cci|1d|single:b_mktvol;CCI Aşırılık Dönüşü (20);1d;Tekil Filtre: Piyasa hacmi ≥ %50 dilim;5,205;5,205;5,205;3,892;3,892;3,892;7129;7129;7129
+vortex|1d|temel;Vortex Kesişimi (14);1d;Filtresiz;2,422;2,422;2,422;3,827;3,827;3,827;38116;38116;38116
+cci|1d|single:f_ema50slope;CCI Aşırılık Dönüşü (20);1d;Tekil Filtre: EMA50 eğimi;6,05;6,05;6,05;3,814;3,814;3,814;4076;4076;4076
+sma|4h|varyant1;SMA Kesişimi (10/30);4h;Piyasa genişliği + Dolar hacmi ≥ medyan;2,191;2,191;2,191;3,756;3,756;3,756;19508;19508;19508
+ribbon|1h|varyant3;EMA Şeridi Hizalanması (13-89);1h;ATR% ≥ %120 normal + Hafta sonu yasağı;2,17;2,17;2,17;3,738;3,738;3,738;20667;20667;20667
+smi|4h|varyant2;SMI Aşırılık Dönüşü (14,3);4h;Piyasa genişliği + Hacim osilatörü;2,225;2,225;2,225;3,72;3,72;3,72;21514;21514;21514
+adx|4h|single:t_st;ADX + DI Kesişimi (14);4h;Tekil Filtre: Supertrend tarafı;1,903;1,903;1,903;3,696;3,696;3,696;28273;28273;28273
+supertrend|4h|single:b_mktvol;Supertrend Dönüşü (10, 3);4h;Tekil Filtre: Piyasa hacmi ≥ %50 dilim;2,499;2,499;2,499;3,684;3,684;3,684;33148;33148;33148
+mprofile|4h|varyant2;POC Göçü Trendi (yaklaşım);4h;Üst TF trend (×4) + ABD seansı (13-21 UTC);4,814;4,814;4,814;3,665;3,665;3,665;8611;8611;8611
+smi|4h|varyant1;SMI Aşırılık Dönüşü (14,3);4h;Piyasa genişliği + RSI 50 tersi;2,459;2,459;2,459;3,658;3,658;3,658;22467;22467;22467
+mprofile|4h|single:t_htf;POC Göçü Trendi (yaklaşım);4h;Tekil Filtre: Üst TF trend (×4);3,955;3,955;3,955;3,65;3,65;3,65;15016;15016;15016
+ribbon|1h|varyant2;EMA Şeridi Hizalanması (13-89);1h;ATR% ≥ %120 normal + BTC vol ≥ %50 dilim;2,187;2,187;2,187;3,638;3,638;3,638;17539;17539;17539
+cmo|1d|temel;CMO Sıfır Kesişimi (14);1d;Filtresiz;2,189;2,189;2,189;3,627;3,627;3,627;44902;44902;44902
+adx|4h|single:b_breadth;ADX + DI Kesişimi (14);4h;Tekil Filtre: Piyasa genişliği;2,508;2,508;2,508;3,604;3,604;3,604;28015;28015;28015
+nvi|4h|single:m_rsi_zone;NVI + EMA(200) Trendi;4h;Tekil Filtre: RSI aşırı bölge yasağı;2,057;2,057;2,057;3,574;3,574;3,574;51801;51801;51801
+supertrend|4h|varyant1;Supertrend Dönüşü (10, 3);4h;Piyasa hacmi ≥ %50 dilim + EMA200 tarafı;3,36;3,36;3,36;3,571;3,571;3,571;17875;17875;17875
+dpo|1d|varyant1;DPO Sıfır Kesişimi (20);1d;Dolar hacmi ≥ medyan + Hafta sonu yasağı;2,379;2,379;2,379;3,566;3,566;3,566;17819;17819;17819
+mom|1d|single:b_breadth;Momentum Sıfır Kesişimi (10);1d;Tekil Filtre: Piyasa genişliği;2,545;2,545;2,545;3,463;3,463;3,463;28767;28767;28767
+cci|1d|single:m_tsi;CCI Aşırılık Dönüşü (20);1d;Tekil Filtre: TSI yönü;6,08;6,08;6,08;3,456;3,456;3,456;4115;4115;4115
+nvi|4h|temel;NVI + EMA(200) Trendi;4h;Filtresiz;1,962;1,962;1,962;3,455;3,455;3,455;56038;56038;56038
+ribbon|1h|varyant1;EMA Şeridi Hizalanması (13-89);1h;ATR% ≥ %120 normal + CMF pozitifliği;2,547;2,547;2,547;3,396;3,396;3,396;18284;18284;18284
+mprofile|4h|temel;POC Göçü Trendi (yaklaşım);4h;Filtresiz;2,997;2,997;2,997;3,378;3,378;3,378;24581;24581;24581
+mprofile|4h|single:g_ussession;POC Göçü Trendi (yaklaşım);4h;Tekil Filtre: ABD seansı (13-21 UTC);3,37;3,37;3,37;3,303;3,303;3,303;14279;14279;14279
+wma|4h|varyant1;WMA Kesişimi (10/30);4h;Piyasa genişliği + Dolar hacmi ≥ medyan;1,964;1,964;1,964;3,248;3,248;3,248;24302;24302;24302
+dpo|1d|varyant2;DPO Sıfır Kesişimi (20);1d;Dolar hacmi ≥ medyan;2,081;2,081;2,081;3,235;3,235;3,235;23539;23539;23539
+ribbon|1h|single:e_atr_high;EMA Şeridi Hizalanması (13-89);1h;Tekil Filtre: ATR% ≥ %120 normal;2,075;2,075;2,075;3,101;3,101;3,101;23764;23764;23764
+adx|4h|single:b_mktvol;ADX + DI Kesişimi (14);4h;Tekil Filtre: Piyasa hacmi ≥ %50 dilim;1,775;1,775;1,775;3,063;3,063;3,063;36934;36934;36934
+smi|4h|varyant3;SMI Aşırılık Dönüşü (14,3);4h;Piyasa genişliği + Hafta sonu yasağı;2,001;2,001;2,001;3,005;3,005;3,005;31368;31368;31368
+bb|1d|single:m_macd_x;Bollinger Ortalamaya Dönüş (20, 2);1d;Tekil Filtre: MACD tersi;2,496;2,496;2,496;2,974;2,974;2,974;13012;13012;13012
+percentb|1d|single:m_macd_x;%B Aşırılık Dönüşü;1d;Tekil Filtre: MACD tersi;2,493;2,493;2,493;2,974;2,974;2,974;13011;13011;13011
+wma|4h|varyant2;WMA Kesişimi (10/30);4h;Piyasa genişliği + Supertrend tarafı;1,829;1,829;1,829;2,96;2,96;2,96;27654;27654;27654
+mom|1d|single:t_psar;Momentum Sıfır Kesişimi (10);1d;Tekil Filtre: PSAR tarafı;1,872;1,872;1,872;2,924;2,924;2,924;31464;31464;31464
+percentb|1d|temel;%B Aşırılık Dönüşü;1d;Filtresiz;2,373;2,373;2,373;2,91;2,91;2,91;13496;13496;13496
+bb|1d|temel;Bollinger Ortalamaya Dönüş (20, 2);1d;Filtresiz;2,373;2,373;2,373;2,91;2,91;2,91;13499;13499;13499
+sma|4h|varyant2;SMA Kesişimi (10/30);4h;Piyasa genişliği + Supertrend tarafı;2,005;2,005;2,005;2,894;2,894;2,894;27047;27047;27047
+adx|4h|single:v_above;ADX + DI Kesişimi (14);4h;Tekil Filtre: Hacim ortalamanın üstü;1,516;1,516;1,516;2,856;2,856;2,856;30286;30286;30286
+dpo|1d|varyant3;DPO Sıfır Kesişimi (20);1d;Hacim ortalamanın üstü;2,082;2,082;2,082;2,766;2,766;2,766;18984;18984;18984
+supertrend|4h|temel;Supertrend Dönüşü (10, 3);4h;Filtresiz;1,902;1,902;1,902;2,679;2,679;2,679;52449;52449;52449
+supertrend|4h|varyant3;Supertrend Dönüşü (10, 3);4h;Piyasa hacmi ≥ %50 dilim + Kendi momentumu (30g);3,207;3,207;3,207;2,629;2,629;2,629;16145;16145;16145
+smi|4h|single:b_breadth;SMI Aşırılık Dönüşü (14,3);4h;Tekil Filtre: Piyasa genişliği;1,803;1,803;1,803;2,618;2,618;2,618;39466;39466;39466
+mom|1d|single:g_weekend;Momentum Sıfır Kesişimi (10);1d;Tekil Filtre: Hafta sonu yasağı;1,699;1,699;1,699;2,582;2,582;2,582;40029;40029;40029
+hma|4h|varyant3;HMA(20) Fiyat Kesişimi;4h;Piyasa hacmi ≥ %50 dilim + Supertrend tarafı;1,607;1,607;1,607;2,576;2,576;2,576;36023;36023;36023
+mprofile|1h|varyant1;POC Göçü Trendi (yaklaşım);1h;Piyasa genişliği + BTC vol ≥ %50 dilim;1,375;1,375;1,375;2,493;2,493;2,493;34992;34992;34992
+supertrend|4h|single:t_ema200;Supertrend Dönüşü (10, 3);4h;Tekil Filtre: EMA200 tarafı;2,332;2,332;2,332;2,489;2,489;2,489;27896;27896;27896
+hma|4h|varyant1;HMA(20) Fiyat Kesişimi;4h;Piyasa hacmi ≥ %50 dilim + Hacim osilatörü;1,859;1,859;1,859;2,488;2,488;2,488;34337;34337;34337
+candle1|1d|single:m_macd_x;Pin Bar / Çekiç Dönüşü;1d;Tekil Filtre: MACD tersi;1,302;1,302;1,302;2,359;2,359;2,359;11228;11228;11228
+mprofile|1h|varyant2;POC Göçü Trendi (yaklaşım);1h;Piyasa genişliği + RSI 50 tersi;1,291;1,291;1,291;2,354;2,354;2,354;29887;29887;29887
+pvt|4h|varyant3;PVT + EMA(21) Kesişimi;4h;RVOL>1.5 + Piyasa hacmi ≥ %50 dilim;1,09;1,09;1,09;2,353;2,353;2,353;42876;42876;42876
+liquidity|1d|single:m_macd_x;Likidite Süpürme + Geri Alım;1d;Tekil Filtre: MACD tersi;1,608;1,612;1,506;2,274;2,282;2,123;21942;21947;22114
+mprofile|1h|varyant3;POC Göçü Trendi (yaklaşım);1h;Piyasa genişliği + ABD seansı (13-21 UTC);1,197;1,197;1,197;2,27;2,27;2,27;36329;36329;36329
+voi|1d|varyant1;Hacim Osilatörü Sıfır Kesişimi (5,20);1d;BTC vol ≥ %50 dilim + ROC tersi;3,239;3,239;3,239;2,269;2,269;2,269;9122;9122;9122
+liquidity|1d|temel;Likidite Süpürme + Geri Alım;1d;Filtresiz;1,379;1,384;1,296;2,248;2,258;2,133;24623;24627;24805
+hma|4h|varyant2;HMA(20) Fiyat Kesişimi;4h;Piyasa hacmi ≥ %50 dilim + AO yönü;1,63;1,63;1,63;2,246;2,246;2,246;38555;38555;38555
+adx|4h|temel;ADX + DI Kesişimi (14);4h;Filtresiz;1,311;1,311;1,311;2,21;2,21;2,21;59181;59181;59181
+smi|4h|single:m_rsi50_x;SMI Aşırılık Dönüşü (14,3);4h;Tekil Filtre: RSI 50 tersi;1,384;1,384;1,384;2,209;2,209;2,209;55633;55633;55633
+sma|4h|single:b_breadth;SMA Kesişimi (10/30);4h;Tekil Filtre: Piyasa genişliği;1,727;1,727;1,727;2,191;2,191;2,191;45089;45089;45089
+smi|4h|single:v_volosc;SMI Aşırılık Dönüşü (14,3);4h;Tekil Filtre: Hacim osilatörü;1,427;1,427;1,427;2,174;2,174;2,174;48596;48596;48596
+candle1|1d|single:m_roc_x;Pin Bar / Çekiç Dönüşü;1d;Tekil Filtre: ROC tersi;1,197;1,197;1,197;2,134;2,134;2,134;12275;12275;12275
+willr|4h|varyant1;Williams %R Dönüşü (14);4h;RVOL>1.5 + Piyasa genişliği;1,761;1,761;1,761;2,092;2,092;2,092;24618;24618;24618
+willr|4h|varyant2;Williams %R Dönüşü (14);4h;RVOL>1.5 + Piyasa genişliği + Hacim ortalamanın üstü;1,761;1,761;1,761;2,092;2,092;2,092;24618;24618;24618
+candle1|1d|temel;Pin Bar / Çekiç Dönüşü;1d;Filtresiz;1,192;1,192;1,192;2,086;2,086;2,086;12726;12726;12726
+hma|4h|single:b_mktvol;HMA(20) Fiyat Kesişimi;4h;Tekil Filtre: Piyasa hacmi ≥ %50 dilim;1,439;1,439;1,439;2,045;2,045;2,045;52612;52612;52612
+smi|4h|single:g_weekend;SMI Aşırılık Dönüşü (14,3);4h;Tekil Filtre: Hafta sonu yasağı;1,3;1,3;1,3;2,042;2,042;2,042;69347;69347;69347
+ao|4h|varyant3;Awesome Oscillator Sıfır Kesişimi;4h;Piyasa genişliği + TSI yönü;1,544;1,544;1,544;2,021;2,021;2,021;32324;32324;32324
+donchian|4h|varyant1;Donchian Kırılımı (20/10 — Turtle);4h;EMA200 tarafı + Piyasa hacmi ≥ %50 dilim;1,43;1,43;1,43;2,017;2,017;2,017;38503;38503;38503
+cci|1d|temel;CCI Aşırılık Dönüşü (20);1d;Filtresiz;3,333;3,333;3,333;1,988;1,988;1,988;13961;13961;13961
+ao|4h|varyant1;Awesome Oscillator Sıfır Kesişimi;4h;Piyasa genişliği + CMF pozitifliği;1,721;1,721;1,721;1,984;1,984;1,984;33273;33273;33273
+mom|1d|temel;Momentum Sıfır Kesişimi (10);1d;Filtresiz;1,268;1,268;1,268;1,919;1,919;1,919;55629;55629;55629
+ao|4h|single:b_breadth;Awesome Oscillator Sıfır Kesişimi;4h;Tekil Filtre: Piyasa genişliği;1,534;1,534;1,534;1,917;1,917;1,917;49737;49737;49737
+wma|4h|single:b_breadth;WMA Kesişimi (10/30);4h;Tekil Filtre: Piyasa genişliği;1,429;1,429;1,429;1,903;1,903;1,903;54024;54024;54024
+mprofile|1h|single:b_breadth;POC Göçü Trendi (yaklaşım);1h;Tekil Filtre: Piyasa genişliği;1,051;1,051;1,051;1,898;1,898;1,898;58065;58065;58065
+sma|4h|single:v_dollarvol;SMA Kesişimi (10/30);4h;Tekil Filtre: Dolar hacmi ≥ medyan;1,176;1,176;1,176;1,881;1,881;1,881;41847;41847;41847
+ribbon|1h|single:b_btc_volpct;EMA Şeridi Hizalanması (13-89);1h;Tekil Filtre: BTC vol ≥ %50 dilim;1,431;1,431;1,431;1,847;1,847;1,847;51743;51743;51743
+hma|4h|single:t_st;HMA(20) Fiyat Kesişimi;4h;Tekil Filtre: Supertrend tarafı;1,428;1,428;1,428;1,84;1,84;1,84;49752;49752;49752
+supertrend|4h|single:f_own30;Supertrend Dönüşü (10, 3);4h;Tekil Filtre: Kendi momentumu (30g);2,257;2,257;2,257;1,836;1,836;1,836;25386;25386;25386
+donchian|4h|varyant3;Donchian Kırılımı (20/10 — Turtle);4h;Kendi momentumu (30g) + BTC düşüş >%20 → sadece long;1,328;1,328;1,328;1,825;1,825;1,825;33309;33309;33309
+aroon|4h|varyant1;Aroon Eşik Kesişimi (25);4h;Kendi momentumu (30g) + BTC dolar hacmi ≥ %50 dilim;1,709;1,709;1,709;1,805;1,805;1,805;31294;31294;31294
+ribbon|1h|single:g_weekend;EMA Şeridi Hizalanması (13-89);1h;Tekil Filtre: Hafta sonu yasağı;1,425;1,425;1,425;1,768;1,768;1,768;69769;69769;69769
+cci|4h|varyant2;CCI Aşırılık Dönüşü (20);4h;Piyasa genişliği + Hacim ortalamanın üstü;1,397;1,397;1,397;1,762;1,762;1,762;19478;19478;19478
+aroon|4h|varyant3;Aroon Eşik Kesişimi (25);4h;Kendi momentumu (30g) + Stokastik %K/%D;1,572;1,572;1,572;1,757;1,757;1,757;35355;35355;35355
+guppy|1h|varyant1;GMMA Kısa/Uzun Grup Kesişimi;1h;Piyasa genişliği + BTC vol ≥ %50 dilim;1,015;1,015;1,015;1,757;1,757;1,757;52468;52468;52468
+trix|4h|varyant2;TRIX Sinyal Kesişimi (15);4h;Piyasa genişliği + Hafta sonu yasağı;1,121;1,121;1,121;1,74;1,74;1,74;43594;43594;43594
+willr|4h|varyant3;Williams %R Dönüşü (14);4h;Piyasa genişliği + Hacim ortalamanın üstü;1,563;1,563;1,563;1,726;1,726;1,726;32618;32618;32618
+mprofile|1h|single:m_rsi50_x;POC Göçü Trendi (yaklaşım);1h;Tekil Filtre: RSI 50 tersi;0,949;0,949;0,949;1,706;1,706;1,706;50480;50480;50480
+aroon|4h|single:t_st;Aroon Eşik Kesişimi (25);4h;Tekil Filtre: Supertrend tarafı;1,188;1,188;1,188;1,698;1,698;1,698;55170;55170;55170
+donchian|4h|varyant2;Donchian Kırılımı (20/10 — Turtle);4h;Kendi momentumu (30g) + Piyasa hacmi ≥ %50 dilim;1,405;1,405;1,405;1,691;1,691;1,691;33340;33340;33340
+smi|4h|temel;SMI Aşırılık Dönüşü (14,3);4h;Filtresiz;1,112;1,112;1,112;1,673;1,673;1,673;83864;83864;83864
+donchian|4h|single:b_mktvol;Donchian Kırılımı (20/10 — Turtle);4h;Tekil Filtre: Piyasa hacmi ≥ %50 dilim;1,074;1,074;1,074;1,67;1,67;1,67;49157;49157;49157
+aroon|4h|single:m_stoch;Aroon Eşik Kesişimi (25);4h;Tekil Filtre: Stokastik %K/%D;1,194;1,194;1,194;1,664;1,664;1,664;62353;62353;62353
+natr|4h|varyant2;EMA(50) Trendi + NATR Yüzde Stopu;4h;RVOL>1.5;0,988;0,983;0,984;1,662;1,672;1,677;43343;43343;43343
+natr|4h|varyant3;EMA(50) Trendi + NATR Yüzde Stopu;4h;RVOL>1.5 + Hacim ortalamanın üstü;0,988;0,983;0,984;1,662;1,672;1,677;43343;43343;43343
+hma|4h|single:v_volosc;HMA(20) Fiyat Kesişimi;4h;Tekil Filtre: Hacim osilatörü;1,438;1,438;1,438;1,65;1,65;1,65;52418;52418;52418
+pmo|4h|varyant1;PMO Sinyal Kesişimi;4h;Piyasa genişliği + Hafta sonu yasağı;1,133;1,133;1,133;1,644;1,644;1,644;47320;47320;47320
+hma|4h|single:m_ao;HMA(20) Fiyat Kesişimi;4h;Tekil Filtre: AO yönü;1,394;1,394;1,394;1,626;1,626;1,626;54268;54268;54268
+wma|4h|varyant3;WMA Kesişimi (10/30);4h;Supertrend tarafı + Kendi momentumu (30g);1,522;1,522;1,522;1,612;1,612;1,612;29809;29809;29809
+liquidity|1d|varyant3;Likidite Süpürme + Geri Alım;1d;Kendi momentumu (30g);2,388;2,39;2,263;1,605;1,611;1,454;5170;5171;5194
+pvt|4h|single:v_rvol15;PVT + EMA(21) Kesişimi;4h;Tekil Filtre: RVOL>1.5;0,837;0,837;0,837;1,602;1,602;1,602;62832;62832;62832
+donchian|4h|single:b_btc_dd_x;Donchian Kırılımı (20/10 — Turtle);4h;Tekil Filtre: BTC düşüş >%20 → sadece long;0,994;0,994;0,994;1,6;1,6;1,6;52472;52472;52472
+vortex|4h|varyant1;Vortex Kesişimi (14);4h;Piyasa genişliği + Dolar hacmi ≥ medyan;0,934;0,934;0,934;1,583;1,583;1,583;50401;50401;50401
+sma|4h|single:t_st;SMA Kesişimi (10/30);4h;Tekil Filtre: Supertrend tarafı;1,255;1,255;1,255;1,581;1,581;1,581;51302;51302;51302
+voi|1d|single:m_roc_x;Hacim Osilatörü Sıfır Kesişimi (5,20);1d;Tekil Filtre: ROC tersi;2,577;2,577;2,577;1,576;1,576;1,576;20312;20312;20312
+aroon|4h|single:b_btc_dvol;Aroon Eşik Kesişimi (25);4h;Tekil Filtre: BTC dolar hacmi ≥ %50 dilim;1,139;1,139;1,139;1,573;1,573;1,573;55967;55967;55967
+aroon|4h|varyant2;Aroon Eşik Kesişimi (25);4h;Kendi momentumu (30g) + Supertrend tarafı;1,555;1,555;1,555;1,556;1,556;1,556;33499;33499;33499
+wma|4h|single:t_st;WMA Kesişimi (10/30);4h;Tekil Filtre: Supertrend tarafı;1,164;1,164;1,164;1,55;1,55;1,55;51930;51930;51930
+twiggs|4h|varyant1;Twiggs Money Flow Sıfır Kesişimi (21);4h;RVOL>1.5 + BTC düşüş >%25 → long yasak;1,258;1,258;1,258;1,548;1,548;1,548;57566;57566;57566
+hma|4h|temel;HMA(20) Fiyat Kesişimi;4h;Filtresiz;1,283;1,283;1,283;1,532;1,532;1,532;75480;75480;75480
+donchian|4h|single:t_ema200;Donchian Kırılımı (20/10 — Turtle);4h;Tekil Filtre: EMA200 tarafı;1,174;1,174;1,174;1,531;1,531;1,531;46343;46343;46343
+guppy|1h|varyant3;GMMA Kısa/Uzun Grup Kesişimi;1h;Piyasa genişliği + Hafta sonu yasağı;0,89;0,89;0,89;1,513;1,513;1,513;75818;75818;75818
+rvi|1d|varyant3;RVI Sinyal Kesişimi (10);1d;Piyasa hacmi ≥ %50 dilim;1,248;1,248;1,248;1,511;1,511;1,511;32255;32255;32255
+rvi|1d|varyant1;RVI Sinyal Kesişimi (10);1d;Piyasa genişliği + Hafta sonu yasağı;1,41;1,41;1,41;1,507;1,507;1,507;42066;42066;42066
+pvt|4h|varyant1;PVT + EMA(21) Kesişimi;4h;Hacim ortalamanın üstü + EMA200 tarafı;1,189;1,189;1,189;1,497;1,497;1,497;43453;43453;43453
+psar|4h|varyant1;Parabolic SAR Dönüşü;4h;Piyasa genişliği + Hafta sonu yasağı;1,009;1,009;1,009;1,494;1,494;1,494;68282;68282;68282
+macd|4h|varyant1;MACD Sinyal Kesişimi;4h;Piyasa genişliği + BTC düşüş >%20 → sadece long;0,997;0,997;0,997;1,49;1,49;1,49;58052;58052;58052
+ao|4h|varyant2;Awesome Oscillator Sıfır Kesişimi;4h;EMA200 tarafı + CMF pozitifliği;1,515;1,515;1,515;1,484;1,484;1,484;33780;33780;33780
+wma|4h|single:v_dollarvol;WMA Kesişimi (10/30);4h;Tekil Filtre: Dolar hacmi ≥ medyan;0,941;0,941;0,941;1,477;1,477;1,477;53823;53823;53823
+dpo|1d|single:g_weekend;DPO Sıfır Kesişimi (20);1d;Tekil Filtre: Hafta sonu yasağı;1,472;1,472;1,472;1,473;1,473;1,473;60534;60534;60534
+mprofile|1h|single:b_btc_volpct;POC Göçü Trendi (yaklaşım);1h;Tekil Filtre: BTC vol ≥ %50 dilim;0,879;0,879;0,879;1,47;1,47;1,47;62671;62671;62671
+trix|4h|varyant3;TRIX Sinyal Kesişimi (15);4h;Piyasa genişliği + RSI aşırı bölge yasağı;1,207;1,207;1,207;1,458;1,458;1,458;53623;53623;53623
+ribbon|1h|single:v_cmf;EMA Şeridi Hizalanması (13-89);1h;Tekil Filtre: CMF pozitifliği;1,432;1,432;1,432;1,447;1,447;1,447;69517;69517;69517
+guppy|1h|varyant2;GMMA Kısa/Uzun Grup Kesişimi;1h;Piyasa genişliği + ATR% ≥ %80 normal;0,974;0,974;0,974;1,443;1,443;1,443;73804;73804;73804
+twiggs|4h|varyant3;Twiggs Money Flow Sıfır Kesişimi (21);4h;RVOL>1.5 + Piyasa hacmi ≥ %50 dilim;1,152;1,152;1,152;1,441;1,441;1,441;42113;42113;42113
+aroon|4h|temel;Aroon Eşik Kesişimi (25);4h;Filtresiz;1,017;1,017;1,017;1,431;1,431;1,431;80397;80397;80397
+ribbon|1h|temel;EMA Şeridi Hizalanması (13-89);1h;Filtresiz;1,325;1,325;1,325;1,428;1,428;1,428;79203;79203;79203
+uo|15m|varyant1;Ultimate Oscillator Dönüşü;15m;ATR% ≥ %120 normal + RVOL>1.5;1,163;1,163;1,163;1,405;1,405;1,405;45242;45242;45242
+aroon|4h|single:f_own30;Aroon Eşik Kesişimi (25);4h;Tekil Filtre: Kendi momentumu (30g);1,388;1,388;1,388;1,399;1,399;1,399;43767;43767;43767
+vortex|4h|varyant2;Vortex Kesişimi (14);4h;Piyasa genişliği + BTC dolar hacmi ≥ %50 dilim;0,849;0,849;0,849;1,395;1,395;1,395;62346;62346;62346
+twiggs|4h|varyant2;Twiggs Money Flow Sıfır Kesişimi (21);4h;RVOL>1.5 + Hafta sonu yasağı;1,204;1,204;1,204;1,387;1,387;1,387;50823;50823;50823
+sma|4h|varyant3;SMA Kesişimi (10/30);4h;Supertrend tarafı + Kendi momentumu (30g);1,651;1,651;1,651;1,383;1,383;1,383;28287;28287;28287
+uo|15m|varyant2;Ultimate Oscillator Dönüşü;15m;ATR% ≥ %120 normal + Yalnız uzama anında;1,055;1,055;1,055;1,366;1,366;1,366;46026;46026;46026
+twiggs|4h|single:v_rvol15;Twiggs Money Flow Sıfır Kesişimi (21);4h;Tekil Filtre: RVOL>1.5;1,155;1,155;1,155;1,356;1,356;1,356;63019;63019;63019
+trix|4h|single:b_breadth;TRIX Sinyal Kesişimi (15);4h;Tekil Filtre: Piyasa genişliği;1,074;1,074;1,074;1,353;1,353;1,353;58756;58756;58756
+willr|4h|single:v_rvol15;Williams %R Dönüşü (14);4h;Tekil Filtre: RVOL>1.5;1,169;1,169;1,169;1,35;1,35;1,35;51727;51727;51727
+cci|4h|single:v_above;CCI Aşırılık Dönüşü (20);4h;Tekil Filtre: Hacim ortalamanın üstü;0,985;0,985;0,985;1,336;1,336;1,336;43164;43164;43164
+donchian|4h|temel;Donchian Kırılımı (20/10 — Turtle);4h;Filtresiz;0,944;0,944;0,944;1,336;1,336;1,336;59447;59447;59447
+trix|4h|varyant1;TRIX Sinyal Kesişimi (15);4h;Piyasa genişliği + Hacim osilatörü;1,335;1,335;1,335;1,332;1,332;1,332;33182;33182;33182
+supertrend|1h|varyant3;Supertrend Dönüşü (10, 3);1h;Hafta sonu yasağı + BTC 4h trendi;0,598;0,598;0,598;1,33;1,33;1,33;70801;70801;70801
+supertrend|1h|varyant1;Supertrend Dönüşü (10, 3);1h;Hafta sonu yasağı + Piyasa genişliği;0,819;0,819;0,819;1,322;1,322;1,322;72438;72438;72438
+uo|15m|varyant3;Ultimate Oscillator Dönüşü;15m;ATR% ≥ %120 normal + Hacim ortalamanın üstü;1,041;1,041;1,041;1,316;1,316;1,316;52103;52103;52103
+donchian|4h|single:f_own30;Donchian Kırılımı (20/10 — Turtle);4h;Tekil Filtre: Kendi momentumu (30g);1,165;1,165;1,165;1,307;1,307;1,307;40331;40331;40331
+voi|1d|single:b_btc_volpct;Hacim Osilatörü Sıfır Kesişimi (5,20);1d;Tekil Filtre: BTC vol ≥ %50 dilim;2,803;2,803;2,803;1,306;1,306;1,306;18828;18828;18828
+percentb|4h|single:v_rvol15;%B Aşırılık Dönüşü;4h;Tekil Filtre: RVOL>1.5;1,114;1,114;1,114;1,293;1,293;1,293;31720;31720;31720
+bb|4h|single:v_rvol15;Bollinger Ortalamaya Dönüş (20, 2);4h;Tekil Filtre: RVOL>1.5;1,113;1,113;1,113;1,291;1,291;1,291;31725;31725;31725
+cmf|4h|varyant1;Chaikin Para Akışı Sıfır Kesişimi (20);4h;RVOL>1.5;0,814;0,814;0,814;1,282;1,282;1,282;60139;60139;60139
+cmf|4h|varyant2;Chaikin Para Akışı Sıfır Kesişimi (20);4h;RVOL>1.5 + Hacim ortalamanın üstü;0,814;0,814;0,814;1,282;1,282;1,282;60139;60139;60139
+natr|4h|varyant1;EMA(50) Trendi + NATR Yüzde Stopu;4h;Hacim ortalamanın üstü + Hafta sonu yasağı;1,022;1,016;1,015;1,277;1,281;1,282;53529;53529;53529
+voi|1d|varyant2;Hacim Osilatörü Sıfır Kesişimi (5,20);1d;MACD tersi + ROC tersi;2,812;2,812;2,812;1,268;1,268;1,268;16063;16063;16063
+percentb|4h|varyant2;%B Aşırılık Dönüşü;4h;RVOL>1.5 + Piyasa hacmi ≥ %50 dilim;1,205;1,205;1,205;1,264;1,264;1,264;20902;20902;20902
+willr|4h|single:b_breadth;Williams %R Dönüşü (14);4h;Tekil Filtre: Piyasa genişliği;1,09;1,09;1,09;1,264;1,264;1,264;57194;57194;57194
+bb|4h|varyant2;Bollinger Ortalamaya Dönüş (20, 2);4h;RVOL>1.5 + Piyasa hacmi ≥ %50 dilim;1,205;1,205;1,205;1,261;1,261;1,261;20904;20904;20904
+dpo|1d|temel;DPO Sıfır Kesişimi (20);1d;Filtresiz;1,268;1,268;1,268;1,247;1,247;1,247;85697;85697;85697
+cci|4h|varyant1;CCI Aşırılık Dönüşü (20);4h;Piyasa genişliği + BTC vol ≥ %50 dilim;1,591;1,591;1,591;1,239;1,239;1,239;21554;21554;21554
+pvt|4h|single:v_above;PVT + EMA(21) Kesişimi;4h;Tekil Filtre: Hacim ortalamanın üstü;0,669;0,669;0,669;1,239;1,239;1,239;92592;92592;92592
+psar|4h|varyant2;Parabolic SAR Dönüşü;4h;Hafta sonu yasağı + Momentum(10) yönü;0,798;0,798;0,798;1,228;1,228;1,228;89236;89236;89236
+trix|4h|single:g_weekend;TRIX Sinyal Kesişimi (15);4h;Tekil Filtre: Hafta sonu yasağı;0,854;0,854;0,854;1,219;1,219;1,219;88357;88357;88357
+cci|4h|single:b_breadth;CCI Aşırılık Dönüşü (20);4h;Tekil Filtre: Piyasa genişliği;1,243;1,243;1,243;1,218;1,218;1,218;44076;44076;44076
+rvi|1d|single:b_breadth;RVI Sinyal Kesişimi (10);1d;Tekil Filtre: Piyasa genişliği;1,038;1,038;1,038;1,213;1,213;1,213;57738;57738;57738
+chaikinosc|4h|varyant1;Chaikin Oscillator Sıfır Kesişimi;4h;RVOL>1.5 + Hafta sonu yasağı;0,971;0,971;0,971;1,209;1,209;1,209;55127;55127;55127
+ao|4h|single:m_tsi;Awesome Oscillator Sıfır Kesişimi;4h;Tekil Filtre: TSI yönü;1,123;1,123;1,123;1,2;1,2;1,2;55201;55201;55201
+guppy|1h|single:b_breadth;GMMA Kısa/Uzun Grup Kesişimi;1h;Tekil Filtre: Piyasa genişliği;0,812;0,812;0,812;1,193;1,193;1,193;92237;92237;92237
+pmo|4h|varyant2;PMO Sinyal Kesişimi;4h;Piyasa genişliği + Ölü saatler (00-06 UTC);1,041;1,041;1,041;1,191;1,191;1,191;43292;43292;43292
+mprofile|1h|single:g_ussession;POC Göçü Trendi (yaklaşım);1h;Tekil Filtre: ABD seansı (13-21 UTC);0,776;0,776;0,776;1,19;1,19;1,19;65369;65369;65369
+sma|4h|temel;SMA Kesişimi (10/30);4h;Filtresiz;0,992;0,992;0,992;1,177;1,177;1,177;92580;92580;92580
+voi|1d|varyant3;Hacim Osilatörü Sıfır Kesişimi (5,20);1d;BTC vol ≥ %50 dilim + MFI aşırı bölge yasağı;2,848;2,848;2,848;1,165;1,165;1,165;17770;17770;17770
+pmo|4h|single:g_weekend;PMO Sinyal Kesişimi;4h;Tekil Filtre: Hafta sonu yasağı;0,807;0,807;0,807;1,164;1,164;1,164;100392;100392;100392
+guppy|1h|single:b_btc_volpct;GMMA Kısa/Uzun Grup Kesişimi;1h;Tekil Filtre: BTC vol ≥ %50 dilim;0,671;0,671;0,671;1,157;1,157;1,157;100679;100679;100679
+ao|4h|single:t_ema200;Awesome Oscillator Sıfır Kesişimi;4h;Tekil Filtre: EMA200 tarafı;1,195;1,195;1,195;1,149;1,149;1,149;52284;52284;52284
+natr|4h|single:v_above;EMA(50) Trendi + NATR Yüzde Stopu;4h;Tekil Filtre: Hacim ortalamanın üstü;0,82;0,817;0,816;1,145;1,153;1,154;65996;65996;65996
+psar|4h|varyant3;Parabolic SAR Dönüşü;4h;Piyasa genişliği + Momentum(10) yönü;0,817;0,817;0,817;1,131;1,131;1,131;62251;62251;62251
+pvt|4h|varyant2;PVT + EMA(21) Kesişimi;4h;Hacim ortalamanın üstü + Kendi momentumu (30g);1,114;1,114;1,114;1,122;1,122;1,122;43361;43361;43361
+voi|1d|single:m_macd_x;Hacim Osilatörü Sıfır Kesişimi (5,20);1d;Tekil Filtre: MACD tersi;2,635;2,635;2,635;1,117;1,117;1,117;20586;20586;20586
+willr|4h|single:v_above;Williams %R Dönüşü (14);4h;Tekil Filtre: Hacim ortalamanın üstü;1,024;1,024;1,024;1,116;1,116;1,116;67609;67609;67609
+macd|4h|varyant2;MACD Sinyal Kesişimi;4h;Piyasa genişliği + Hafta sonu yasağı;0,823;0,823;0,823;1,115;1,115;1,115;61499;61499;61499
+uo|15m|single:h_ext;Ultimate Oscillator Dönüşü;15m;Tekil Filtre: Yalnız uzama anında;0,686;0,686;0,686;1,112;1,112;1,112;89256;89256;89256
+pmo|4h|single:b_breadth;PMO Sinyal Kesişimi;4h;Tekil Filtre: Piyasa genişliği;0,97;0,97;0,97;1,11;1,11;1,11;64303;64303;64303
+voi|1d|single:v_mfi;Hacim Osilatörü Sıfır Kesişimi (5,20);1d;Tekil Filtre: MFI aşırı bölge yasağı;2,217;2,217;2,217;1,106;1,106;1,106;40534;40534;40534
+mprofile|1h|temel;POC Göçü Trendi (yaklaşım);1h;Filtresiz;0,725;0,725;0,725;1,104;1,104;1,104;104106;104106;104106
+pvt|4h|single:b_mktvol;PVT + EMA(21) Kesişimi;4h;Tekil Filtre: Piyasa hacmi ≥ %50 dilim;0,571;0,571;0,571;1,103;1,103;1,103;105555;105555;105555
+vortex|4h|varyant3;Vortex Kesişimi (14);4h;Piyasa genişliği + PSAR tarafı;0,79;0,79;0,79;1,086;1,086;1,086;77329;77329;77329
+uo|15m|single:e_atr_high;Ultimate Oscillator Dönüşü;15m;Tekil Filtre: ATR% ≥ %120 normal;0,816;0,816;0,816;1,082;1,082;1,082;75135;75135;75135
+psar|4h|single:b_breadth;Parabolic SAR Dönüşü;4h;Tekil Filtre: Piyasa genişliği;0,788;0,788;0,788;1,079;1,079;1,079;94319;94319;94319
+ad|4h|varyant1;A/D Çizgisi + EMA(21);4h;RVOL>1.5 + Hafta sonu yasağı;0,917;0,917;0,917;1,067;1,067;1,067;66453;66453;66453
+voi|1d|temel;Hacim Osilatörü Sıfır Kesişimi (5,20);1d;Filtresiz;2,162;2,162;2,162;1,052;1,052;1,052;42638;42638;42638
+ao|4h|single:v_cmf;Awesome Oscillator Sıfır Kesişimi;4h;Tekil Filtre: CMF pozitifliği;1,022;1,022;1,022;1,051;1,051;1,051;65370;65370;65370
+chaikinosc|4h|varyant2;Chaikin Oscillator Sıfır Kesişimi;4h;RVOL>1.5;0,836;0,836;0,836;1,051;1,051;1,051;68315;68315;68315
+chaikinosc|4h|varyant3;Chaikin Oscillator Sıfır Kesişimi;4h;RVOL>1.5 + Hacim ortalamanın üstü;0,836;0,836;0,836;1,051;1,051;1,051;68315;68315;68315
+histvol|1h|varyant1;Tarihsel Volatilite Düşüş Filtresi;1h;Piyasa genişliği + LinReg eğimi;0,657;0,657;0,657;1,051;1,051;1,051;79072;79072;79072
+cmf|4h|varyant3;Chaikin Para Akışı Sıfır Kesişimi (20);4h;Hacim ortalamanın üstü + Hafta sonu yasağı;0,722;0,722;0,722;1,04;1,04;1,04;70693;70693;70693
+supertrend|1h|varyant2;Supertrend Dönüşü (10, 3);1h;Piyasa genişliği + ATR% ≥ %80 normal;0,716;0,716;0,716;1,035;1,035;1,035;77458;77458;77458
+wma|4h|temel;WMA Kesişimi (10/30);4h;Filtresiz;0,819;0,819;0,819;1,002;1,002;1,002;114378;114378;114378
+ao|4h|temel;Awesome Oscillator Sıfır Kesişimi;4h;Filtresiz;0,847;0,847;0,847;0,998;0,998;0,998;103387;103387;103387
+ad|4h|varyant3;A/D Çizgisi + EMA(21);4h;RVOL>1.5;0,832;0,832;0,832;0,997;0,997;0,997;82076;82076;82076
+sma|4h|single:f_own30;SMA Kesişimi (10/30);4h;Tekil Filtre: Kendi momentumu (30g);1,305;1,305;1,305;0,994;0,994;0,994;45005;45005;45005
+guppy|1h|single:g_weekend;GMMA Kısa/Uzun Grup Kesişimi;1h;Tekil Filtre: Hafta sonu yasağı;0,709;0,709;0,709;0,991;0,991;0,991;146129;146129;146129
+histvol|1h|varyant2;Tarihsel Volatilite Düşüş Filtresi;1h;Piyasa genişliği + Supertrend tarafı;0,573;0,573;0,573;0,986;0,986;0,986;82235;82235;82235
+cci|4h|varyant3;CCI Aşırılık Dönüşü (20);4h;Piyasa genişliği + Hafta sonu yasağı;1,326;1,326;1,326;0,979;0,979;0,979;38122;38122;38122
+psar|4h|single:g_weekend;Parabolic SAR Dönüşü;4h;Tekil Filtre: Hafta sonu yasağı;0,702;0,702;0,702;0,978;0,978;0,978;147254;147254;147254
+wma|4h|single:f_own30;WMA Kesişimi (10/30);4h;Tekil Filtre: Kendi momentumu (30g);1,138;1,138;1,138;0,966;0,966;0,966;55528;55528;55528
+ad|4h|varyant2;A/D Çizgisi + EMA(21);4h;RVOL>1.5 + BTC düşüş >%25 → long yasak;0,862;0,862;0,862;0,963;0,963;0,963;75145;75145;75145
+macd|4h|varyant3;MACD Sinyal Kesişimi;4h;Hafta sonu yasağı + Hacim osilatörü;0,787;0,787;0,787;0,959;0,959;0,959;64656;64656;64656
+uo|15m|single:v_rvol15;Ultimate Oscillator Dönüşü;15m;Tekil Filtre: RVOL>1.5;0,709;0,709;0,709;0,956;0,956;0,956;98158;98158;98158
+cmo|4h|varyant2;CMO Sıfır Kesişimi (14);4h;BTC dolar hacmi ≥ %50 dilim + Piyasa genişliği;0,609;0,609;0,609;0,945;0,945;0,945;71993;71993;71993
+percentb|4h|single:v_above;%B Aşırılık Dönüşü;4h;Tekil Filtre: Hacim ortalamanın üstü;0,831;0,831;0,831;0,931;0,931;0,931;44774;44774;44774
+bb|4h|single:v_above;Bollinger Ortalamaya Dönüş (20, 2);4h;Tekil Filtre: Hacim ortalamanın üstü;0,831;0,831;0,831;0,93;0,93;0,93;44779;44779;44779
+cmf|4h|single:v_above;Chaikin Para Akışı Sıfır Kesişimi (20);4h;Tekil Filtre: Hacim ortalamanın üstü;0,636;0,636;0,636;0,922;0,922;0,922;87420;87420;87420
+pmo|4h|varyant3;PMO Sinyal Kesişimi;4h;Hafta sonu yasağı + Kendi momentumu (30g);0,936;0,936;0,936;0,917;0,917;0,917;49207;49207;49207
+rvi|1d|single:g_weekend;RVI Sinyal Kesişimi (10);1d;Tekil Filtre: Hafta sonu yasağı;0,901;0,901;0,901;0,909;0,909;0,909;83493;83493;83493
+natr|4h|single:g_weekend;EMA(50) Trendi + NATR Yüzde Stopu;4h;Tekil Filtre: Hafta sonu yasağı;0,747;0,756;0,754;0,906;0,907;0,908;141927;141927;141927
+mom|4h|varyant3;Momentum Sıfır Kesişimi (10);4h;Hacim ortalamanın üstü + ROC>0 tarafı;0,471;0,471;0,471;0,905;0,905;0,905;71158;71158;71158
+uo|15m|single:v_above;Ultimate Oscillator Dönüşü;15m;Tekil Filtre: Hacim ortalamanın üstü;0,631;0,631;0,631;0,898;0,898;0,898;116374;116374;116374
+trix|4h|single:v_volosc;TRIX Sinyal Kesişimi (15);4h;Tekil Filtre: Hacim osilatörü;0,978;0,978;0,978;0,897;0,897;0,897;64872;64872;64872
+ribbon|15m|varyant1;EMA Şeridi Hizalanması (13-89);15m;Yalnız uzama anında + Hafta sonu yasağı;0,524;0,524;0,524;0,897;0,897;0,897;84681;84681;84681
+macd|4h|single:g_weekend;MACD Sinyal Kesişimi;4h;Tekil Filtre: Hafta sonu yasağı;0,658;0,658;0,658;0,87;0,87;0,87;130874;130874;130874
+trix|4h|single:m_rsi_zone;TRIX Sinyal Kesişimi (15);4h;Tekil Filtre: RSI aşırı bölge yasağı;0,75;0,75;0,75;0,858;0,858;0,858;116403;116403;116403
+guppy|1h|single:e_atr_min;GMMA Kısa/Uzun Grup Kesişimi;1h;Tekil Filtre: ATR% ≥ %80 normal;0,637;0,637;0,637;0,858;0,858;0,858;140571;140571;140571
+supertrend|1h|single:b_btc_4h;Supertrend Dönüşü (10, 3);1h;Tekil Filtre: BTC 4h trendi;0,314;0,314;0,314;0,85;0,85;0,85;97387;97387;97387
+supertrend|1h|single:b_breadth;Supertrend Dönüşü (10, 3);1h;Tekil Filtre: Piyasa genişliği;0,541;0,541;0,541;0,833;0,833;0,833;100981;100981;100981
+cmo|4h|varyant3;CMO Sıfır Kesişimi (14);4h;Piyasa genişliği + PSAR tarafı;0,635;0,635;0,635;0,819;0,819;0,819;84088;84088;84088
+trix|4h|temel;TRIX Sinyal Kesişimi (15);4h;Filtresiz;0,698;0,698;0,698;0,807;0,807;0,807;123514;123514;123514
+vortex|4h|single:b_btc_dvol;Vortex Kesişimi (14);4h;Tekil Filtre: BTC dolar hacmi ≥ %50 dilim;0,524;0,524;0,524;0,807;0,807;0,807;127046;127046;127046
+vortex|4h|single:v_dollarvol;Vortex Kesişimi (14);4h;Tekil Filtre: Dolar hacmi ≥ medyan;0,478;0,478;0,478;0,804;0,804;0,804;107409;107409;107409
+psar|4h|single:m_mom;Parabolic SAR Dönüşü;4h;Tekil Filtre: Momentum(10) yönü;0,598;0,598;0,598;0,803;0,803;0,803;121338;121338;121338
+candle1|4h|varyant1;Pin Bar / Çekiç Dönüşü;4h;Piyasa genişliği + Ölü saatler (00-06 UTC);0,54;0,54;0,54;0,793;0,793;0,793;25179;25179;25179
+mom|4h|varyant1;Momentum Sıfır Kesişimi (10);4h;Piyasa genişliği + Hafta sonu yasağı;0,516;0,516;0,516;0,792;0,792;0,792;119818;119818;119818
+macd|4h|single:b_breadth;MACD Sinyal Kesişimi;4h;Tekil Filtre: Piyasa genişliği;0,71;0,71;0,71;0,786;0,786;0,786;85149;85149;85149
+mom|4h|single:v_above;Momentum Sıfır Kesişimi (10);4h;Tekil Filtre: Hacim ortalamanın üstü;0,406;0,406;0,406;0,783;0,783;0,783;84039;84039;84039
+chaikinosc|4h|single:v_above;Chaikin Oscillator Sıfır Kesişimi;4h;Tekil Filtre: Hacim ortalamanın üstü;0,668;0,668;0,668;0,777;0,777;0,777;101524;101524;101524
+ribbon|15m|varyant2;EMA Şeridi Hizalanması (13-89);15m;ATR% ≥ %120 normal + Hafta sonu yasağı;0,45;0,45;0,45;0,772;0,772;0,772;94166;94166;94166
+cmo|4h|varyant1;CMO Sıfır Kesişimi (14);4h;Hacim ortalamanın üstü + Momentum(10) yönü;0,602;0,602;0,602;0,771;0,771;0,771;59548;59548;59548
+vortex|4h|single:b_breadth;Vortex Kesişimi (14);4h;Tekil Filtre: Piyasa genişliği;0,589;0,589;0,589;0,757;0,757;0,757;120470;120470;120470
+uo|15m|temel;Ultimate Oscillator Dönüşü;15m;Filtresiz;0,488;0,488;0,488;0,752;0,752;0,752;164731;164731;164731
+cci|4h|temel;CCI Aşırılık Dönüşü (20);4h;Filtresiz;0,699;0,699;0,699;0,728;0,728;0,728;89608;89608;89608
+supertrend|1h|single:g_weekend;Supertrend Dönüşü (10, 3);1h;Tekil Filtre: Hafta sonu yasağı;0,504;0,504;0,504;0,724;0,724;0,724;158771;158771;158771
+candle1|4h|varyant3;Pin Bar / Çekiç Dönüşü;4h;BTC vol ≥ %50 dilim + Ölü saatler (00-06 UTC);0,453;0,453;0,453;0,717;0,717;0,717;24993;24993;24993
+percentb|4h|single:m_stoch;%B Aşırılık Dönüşü;4h;Tekil Filtre: Stokastik %K/%D;0,543;0,543;0,543;0,715;0,715;0,715;52088;52088;52088
+bb|4h|single:m_stoch;Bollinger Ortalamaya Dönüş (20, 2);4h;Tekil Filtre: Stokastik %K/%D;0,542;0,542;0,542;0,714;0,714;0,714;52091;52091;52091
+guppy|1h|temel;GMMA Kısa/Uzun Grup Kesişimi;1h;Filtresiz;0,557;0,557;0,557;0,71;0,71;0,71;176639;176639;176639
+pvt|4h|single:t_ema200;PVT + EMA(21) Kesişimi;4h;Tekil Filtre: EMA200 tarafı;0,591;0,591;0,591;0,709;0,709;0,709;93453;93453;93453
+percentb|4h|varyant1;%B Aşırılık Dönüşü;4h;BTC vol ≥ %50 dilim + Hacim ortalamanın üstü;1,352;1,352;1,352;0,703;0,703;0,703;20805;20805;20805
+mom|4h|varyant2;Momentum Sıfır Kesişimi (10);4h;Piyasa genişliği + ROC>0 tarafı;0,515;0,515;0,515;0,703;0,703;0,703;130322;130322;130322
+bb|4h|varyant1;Bollinger Ortalamaya Dönüş (20, 2);4h;BTC vol ≥ %50 dilim + Hacim ortalamanın üstü;1,351;1,351;1,351;0,7;0,7;0,7;20806;20806;20806
+natr|4h|temel;EMA(50) Trendi + NATR Yüzde Stopu;4h;Filtresiz;0,535;0,542;0,54;0,7;0,703;0,702;190254;190254;190254
+psar|4h|temel;Parabolic SAR Dönüşü;4h;Filtresiz;0,522;0,522;0,522;0,698;0,698;0,698;201575;201575;201575
+macd|4h|single:v_volosc;MACD Sinyal Kesişimi;4h;Tekil Filtre: Hacim osilatörü;0,702;0,702;0,702;0,695;0,695;0,695;89685;89685;89685
+liquidity|4h|single:m_stoch;Likidite Süpürme + Geri Alım;4h;Tekil Filtre: Stokastik %K/%D;0,319;0,318;0,312;0,694;0,693;0,679;68266;68276;68538
+candle1|4h|varyant2;Pin Bar / Çekiç Dönüşü;4h;BTC vol ≥ %50 dilim;0,527;0,527;0,527;0,693;0,693;0,693;35583;35583;35583
+pmo|4h|temel;PMO Sinyal Kesişimi;4h;Filtresiz;0,619;0,619;0,619;0,689;0,689;0,689;137600;137600;137600
+pmo|4h|single:g_deadhours;PMO Sinyal Kesişimi;4h;Tekil Filtre: Ölü saatler (00-06 UTC);0,671;0,671;0,671;0,684;0,684;0,684;92979;92979;92979
+willr|4h|temel;Williams %R Dönüşü (14);4h;Filtresiz;0,626;0,626;0,626;0,683;0,683;0,683;111418;111418;111418
+nvi|1h|varyant2;NVI + EMA(200) Trendi;1h;ATR% ≥ %120 normal + Dolar hacmi ≥ medyan;0,655;0,655;0,655;0,65;0,65;0,65;60859;60859;60859
+rvi|1d|temel;RVI Sinyal Kesişimi (10);1d;Filtresiz;0,627;0,627;0,627;0,648;0,648;0,648;116366;116366;116366
+twiggs|4h|single:b_btc_dd;Twiggs Money Flow Sıfır Kesişimi (21);4h;Tekil Filtre: BTC düşüş >%25 → long yasak;0,565;0,565;0,565;0,641;0,641;0,641;187618;187618;187618
+histvol|1h|single:b_breadth;Tarihsel Volatilite Düşüş Filtresi;1h;Tekil Filtre: Piyasa genişliği;0,371;0,371;0,371;0,623;0,623;0,623;176194;176194;176194
+pvt|4h|temel;PVT + EMA(21) Kesişimi;4h;Filtresiz;0,376;0,376;0,376;0,618;0,618;0,618;190214;190214;190214
+twiggs|4h|single:g_weekend;Twiggs Money Flow Sıfır Kesişimi (21);4h;Tekil Filtre: Hafta sonu yasağı;0,585;0,585;0,585;0,609;0,609;0,609;154299;154299;154299
+sma|1h|varyant2;SMA Kesişimi (10/30);1h;LinReg eğimi + Piyasa genişliği;0,567;0,567;0,567;0,608;0,608;0,608;75145;75145;75145
+candle1|4h|single:b_breadth;Pin Bar / Çekiç Dönüşü;4h;Tekil Filtre: Piyasa genişliği;0,404;0,404;0,404;0,601;0,601;0,601;34175;34175;34175
+nvi|1h|varyant1;NVI + EMA(200) Trendi;1h;Dolar hacmi ≥ medyan + RSI 50 tersi;0,671;0,671;0,671;0,595;0,595;0,595;58544;58544;58544
+twiggs|4h|single:b_mktvol;Twiggs Money Flow Sıfır Kesişimi (21);4h;Tekil Filtre: Piyasa hacmi ≥ %50 dilim;0,567;0,567;0,567;0,595;0,595;0,595;109004;109004;109004
+mtf|4h|varyant1;Çoklu Zaman Dilimi Trend + EMA(20) Tetiği;4h;Hacim ortalamanın üstü + BTC düşüş >%20 → sadece long;0,638;0,638;0,638;0,59;0,59;0,59;32179;32179;32179
+ribbon|15m|varyant3;EMA Şeridi Hizalanması (13-89);15m;Piyasa genişliği + ADX>20 + yön;0,461;0,461;0,461;0,586;0,586;0,586;122955;122955;122955
+cci|4h|single:g_weekend;CCI Aşırılık Dönüşü (20);4h;Tekil Filtre: Hafta sonu yasağı;0,788;0,788;0,788;0,584;0,584;0,584;79635;79635;79635
+nvi|1h|varyant3;NVI + EMA(200) Trendi;1h;ATR% ≥ %120 normal;0,602;0,602;0,602;0,58;0,58;0,58;73408;73408;73408
+histvol|1h|varyant3;Tarihsel Volatilite Düşüş Filtresi;1h;LinReg eğimi + MACD tersi;0,451;0,451;0,451;0,577;0,577;0,577;79881;79881;79881
+mom|4h|single:b_breadth;Momentum Sıfır Kesişimi (10);4h;Tekil Filtre: Piyasa genişliği;0,402;0,402;0,402;0,577;0,577;0,577;169723;169723;169723
+candle1|4h|single:g_deadhours;Pin Bar / Çekiç Dönüşü;4h;Tekil Filtre: Ölü saatler (00-06 UTC);0,24;0,24;0,24;0,576;0,576;0,576;60357;60357;60357
+ribbon|15m|single:e_atr_high;EMA Şeridi Hizalanması (13-89);15m;Tekil Filtre: ATR% ≥ %120 normal;0,329;0,329;0,329;0,573;0,573;0,573;109227;109227;109227
+supertrend|1h|single:e_atr_min;Supertrend Dönüşü (10, 3);1h;Tekil Filtre: ATR% ≥ %80 normal;0,372;0,372;0,372;0,572;0,572;0,572;166233;166233;166233
+cmo|4h|single:v_above;CMO Sıfır Kesişimi (14);4h;Tekil Filtre: Hacim ortalamanın üstü;0,437;0,437;0,437;0,569;0,569;0,569;75703;75703;75703
+rvi|1d|varyant2;RVI Sinyal Kesişimi (10);1d;Hafta sonu yasağı + Kendi momentumu (30g);1,135;1,135;1,135;0,567;0,567;0,567;41727;41727;41727
+mtf|4h|varyant2;Çoklu Zaman Dilimi Trend + EMA(20) Tetiği;4h;Momentum(10) yönü + BTC düşüş >%20 → sadece long;0,644;0,644;0,644;0,566;0,566;0,566;68145;68145;68145
+macd|4h|single:b_btc_dd_x;MACD Sinyal Kesişimi;4h;Tekil Filtre: BTC düşüş >%20 → sadece long;0,536;0,536;0,536;0,564;0,564;0,564;155258;155258;155258
+mom|4h|single:g_weekend;Momentum Sıfır Kesişimi (10);4h;Tekil Filtre: Hafta sonu yasağı;0,373;0,373;0,373;0,564;0,564;0,564;247660;247660;247660
+cmo|4h|single:b_btc_dvol;CMO Sıfır Kesişimi (14);4h;Tekil Filtre: BTC dolar hacmi ≥ %50 dilim;0,397;0,397;0,397;0,562;0,562;0,562;148814;148814;148814
+ribbon|15m|single:h_ext;EMA Şeridi Hizalanması (13-89);15m;Tekil Filtre: Yalnız uzama anında;0,35;0,35;0,35;0,551;0,551;0,551;112572;112572;112572
+liquidity|4h|varyant1;Likidite Süpürme + Geri Alım;4h;RVOL>1.5 + Piyasa genişliği;0,461;0,46;0,434;0,55;0,55;0,521;35613;35622;35962
+liquidity|4h|varyant2;Likidite Süpürme + Geri Alım;4h;RVOL>1.5 + Piyasa genişliği + Hacim ortalamanın üstü;0,461;0,46;0,434;0,55;0,55;0,521;35613;35622;35962
+vortex|4h|single:t_psar;Vortex Kesişimi (14);4h;Tekil Filtre: PSAR tarafı;0,46;0,46;0,46;0,544;0,544;0,544;165468;165468;165468
+liquidity|4h|varyant3;Likidite Süpürme + Geri Alım;4h;Stokastik %K/%D + Hafta sonu yasağı;0,444;0,444;0,427;0,544;0,544;0,535;51758;51765;51937
+twiggs|4h|temel;Twiggs Money Flow Sıfır Kesişimi (21);4h;Filtresiz;0,505;0,505;0,505;0,541;0,541;0,541;204370;204370;204370
+cmo|4h|single:b_breadth;CMO Sıfır Kesişimi (14);4h;Tekil Filtre: Piyasa genişliği;0,422;0,422;0,422;0,531;0,531;0,531;142969;142969;142969
+cci|4h|single:b_btc_volpct;CCI Aşırılık Dönüşü (20);4h;Tekil Filtre: BTC vol ≥ %50 dilim;0,868;0,868;0,868;0,53;0,53;0,53;47813;47813;47813
+macd|4h|temel;MACD Sinyal Kesişimi;4h;Filtresiz;0,472;0,472;0,472;0,523;0,523;0,523;182408;182408;182408
+cmf|4h|single:g_weekend;Chaikin Para Akışı Sıfır Kesişimi (20);4h;Tekil Filtre: Hafta sonu yasağı;0,43;0,43;0,43;0,515;0,515;0,515;185432;185432;185432
+mfi|15m|varyant2;MFI Aşırılık Dönüşü (14);15m;Yalnız uzama anında + ATR% ≥ %80 normal;0,274;0,274;0,274;0,515;0,515;0,515;95597;95597;95597
+sma|1h|varyant3;SMA Kesişimi (10/30);1h;EMA şeridi (13/21/34) + Hafta sonu yasağı;0,442;0,442;0,442;0,512;0,512;0,512;109152;109152;109152
+percentb|4h|single:b_mktvol;%B Aşırılık Dönüşü;4h;Tekil Filtre: Piyasa hacmi ≥ %50 dilim;0,543;0,543;0,543;0,509;0,509;0,509;49310;49310;49310
+bb|4h|single:b_mktvol;Bollinger Ortalamaya Dönüş (20, 2);4h;Tekil Filtre: Piyasa hacmi ≥ %50 dilim;0,545;0,545;0,545;0,508;0,508;0,508;49313;49313;49313
+percentb|4h|varyant3;%B Aşırılık Dönüşü;4h;BTC vol ≥ %50 dilim + Stokastik %K/%D;1,245;1,245;1,245;0,497;0,497;0,497;23786;23786;23786
+bb|4h|temel;Bollinger Ortalamaya Dönüş (20, 2);4h;Filtresiz;0,341;0,341;0,341;0,496;0,496;0,496;85895;85895;85895
+percentb|4h|temel;%B Aşırılık Dönüşü;4h;Filtresiz;0,34;0,34;0,34;0,496;0,496;0,496;85889;85889;85889
+bb|4h|varyant3;Bollinger Ortalamaya Dönüş (20, 2);4h;BTC vol ≥ %50 dilim + Stokastik %K/%D;1,245;1,245;1,245;0,494;0,494;0,494;23787;23787;23787
+liquidity|4h|single:b_breadth;Likidite Süpürme + Geri Alım;4h;Tekil Filtre: Piyasa genişliği;0,315;0,315;0,3;0,489;0,489;0,469;68156;68186;68567
+mcginley|4h|varyant1;McGinley Dinamik Eğrisi (14);4h;Momentum(10) yönü + EMA50 eğimi;0,385;0,385;0,385;0,486;0,486;0,486;87767;87767;87767
+mfi|15m|varyant3;MFI Aşırılık Dönüşü (14);15m;Yalnız uzama anında;0,26;0,26;0,26;0,484;0,484;0,484;103977;103977;103977
+supertrend|1h|temel;Supertrend Dönüşü (10, 3);1h;Filtresiz;0,279;0,279;0,279;0,479;0,479;0,479;216997;216997;216997
+ribbon|15m|single:b_breadth;EMA Şeridi Hizalanması (13-89);15m;Tekil Filtre: Piyasa genişliği;0,372;0,372;0,372;0,47;0,47;0,47;167927;167927;167927
+candle1|4h|temel;Pin Bar / Çekiç Dönüşü;4h;Filtresiz;0,19;0,19;0,19;0,468;0,468;0,468;83541;83541;83541
+mom|4h|single:m_roc;Momentum Sıfır Kesişimi (10);4h;Tekil Filtre: ROC>0 tarafı;0,32;0,32;0,32;0,466;0,466;0,466;270402;270402;270402
+chaikinosc|4h|single:g_weekend;Chaikin Oscillator Sıfır Kesişimi;4h;Tekil Filtre: Hafta sonu yasağı;0,505;0,505;0,505;0,462;0,462;0,462;195918;195918;195918
+histvol|1h|single:t_linreg;Tarihsel Volatilite Düşüş Filtresi;1h;Tekil Filtre: LinReg eğimi;0,328;0,328;0,328;0,455;0,455;0,455;180016;180016;180016
+sma|1h|varyant1;SMA Kesişimi (10/30);1h;EMA şeridi (13/21/34) + LinReg eğimi;0,516;0,516;0,516;0,442;0,442;0,442;75940;75940;75940
+pvt|4h|single:f_own30;PVT + EMA(21) Kesişimi;4h;Tekil Filtre: Kendi momentumu (30g);0,547;0,547;0,547;0,439;0,439;0,439;92153;92153;92153
+liquidity|4h|single:v_rvol15;Likidite Süpürme + Geri Alım;4h;Tekil Filtre: RVOL>1.5;0,3;0,3;0,274;0,439;0,439;0,403;76772;76788;77406
+vortex|4h|temel;Vortex Kesişimi (14);4h;Filtresiz;0,371;0,371;0,371;0,436;0,436;0,436;249867;249867;249867
+mcginley|4h|varyant2;McGinley Dinamik Eğrisi (14);4h;Piyasa genişliği + PSAR tarafı;0,427;0,427;0,427;0,433;0,433;0,433;81382;81382;81382
+mtf|4h|single:b_btc_dd_x;Çoklu Zaman Dilimi Trend + EMA(20) Tetiği;4h;Tekil Filtre: BTC düşüş >%20 → sadece long;0,46;0,46;0,46;0,432;0,432;0,432;112025;112025;112025
+ad|4h|single:g_weekend;A/D Çizgisi + EMA(21);4h;Tekil Filtre: Hafta sonu yasağı;0,403;0,403;0,403;0,432;0,432;0,432;228372;228372;228372
+ao|1h|varyant1;Awesome Oscillator Sıfır Kesişimi;1h;EMA şeridi (13/21/34) + Hafta sonu yasağı;0,335;0,335;0,335;0,432;0,432;0,432;109897;109897;109897
+cmf|4h|temel;Chaikin Para Akışı Sıfır Kesişimi (20);4h;Filtresiz;0,354;0,354;0,354;0,428;0,428;0,428;253620;253620;253620
+voi|4h|single:b_breadth;Hacim Osilatörü Sıfır Kesişimi (5,20);4h;Tekil Filtre: Piyasa genişliği;0,311;0,311;0,311;0,428;0,428;0,428;142487;142487;142487
+voi|4h|varyant2;Hacim Osilatörü Sıfır Kesişimi (5,20);4h;Piyasa genişliği + Stokastik %K/%D;0,415;0,415;0,415;0,416;0,416;0,416;71654;71654;71654
+mcginley|4h|varyant3;McGinley Dinamik Eğrisi (14);4h;Momentum(10) yönü + Hafta sonu yasağı;0,352;0,352;0,352;0,408;0,408;0,408;157201;157201;157201
+pivot|1h|varyant1;Klasik Pivot (PP/S1/R1) Sekmesi;1h;ATR% ≥ %120 normal + ROC tersi;0,531;0,531;0,531;0,406;0,406;0,406;54868;54868;54868
+mtf|4h|varyant3;Çoklu Zaman Dilimi Trend + EMA(20) Tetiği;4h;Hacim ortalamanın üstü + Hafta sonu yasağı;0,617;0,617;0,617;0,405;0,405;0,405;34053;34053;34053
+nvi|1h|single:v_dollarvol;NVI + EMA(200) Trendi;1h;Tekil Filtre: Dolar hacmi ≥ medyan;0,432;0,432;0,432;0,404;0,404;0,404;127729;127729;127729
+sma|1h|single:t_linreg;SMA Kesişimi (10/30);1h;Tekil Filtre: LinReg eğimi;0,34;0,34;0,34;0,401;0,401;0,401;163073;163073;163073
+cmo|4h|single:t_psar;CMO Sıfır Kesişimi (14);4h;Tekil Filtre: PSAR tarafı;0,353;0,353;0,353;0,398;0,398;0,398;179795;179795;179795
+cmo|4h|single:m_mom;CMO Sıfır Kesişimi (14);4h;Tekil Filtre: Momentum(10) yönü;0,364;0,364;0,364;0,397;0,397;0,397;204693;204693;204693
+mfi|15m|varyant1;MFI Aşırılık Dönüşü (14);15m;Hacim ortalamanın üstü + ATR% ≥ %120 normal;0,363;0,363;0,363;0,396;0,396;0,396;99446;99446;99446
+histvol|1h|single:t_st;Tarihsel Volatilite Düşüş Filtresi;1h;Tekil Filtre: Supertrend tarafı;0,271;0,271;0,271;0,396;0,396;0,396;176684;176684;176684
+ribbon|15m|single:g_weekend;EMA Şeridi Hizalanması (13-89);15m;Tekil Filtre: Hafta sonu yasağı;0,307;0,307;0,307;0,395;0,395;0,395;260298;260298;260298
+pivot|1h|varyant2;Klasik Pivot (PP/S1/R1) Sekmesi;1h;ATR% ≥ %120 normal;0,442;0,442;0,442;0,375;0,375;0,375;63710;63710;63710
+ao|1h|varyant2;Awesome Oscillator Sıfır Kesişimi;1h;Hafta sonu yasağı + TSI yönü;0,306;0,306;0,306;0,368;0,368;0,368;166173;166173;166173
+voi|4h|varyant1;Hacim Osilatörü Sıfır Kesişimi (5,20);4h;Piyasa genişliği + PSAR tarafı;0,383;0,383;0,383;0,367;0,367;0,367;80426;80426;80426
+pmo|4h|single:f_own30;PMO Sinyal Kesişimi;4h;Tekil Filtre: Kendi momentumu (30g);0,757;0,757;0,757;0,366;0,366;0,366;66792;66792;66792
+mom|4h|temel;Momentum Sıfır Kesişimi (10);4h;Filtresiz;0,245;0,245;0,245;0,364;0,364;0,364;351118;351118;351118
+mtf|4h|single:v_above;Çoklu Zaman Dilimi Trend + EMA(20) Tetiği;4h;Tekil Filtre: Hacim ortalamanın üstü;0,485;0,485;0,485;0,362;0,362;0,362;41995;41995;41995
+ad|4h|single:b_btc_dd;A/D Çizgisi + EMA(21);4h;Tekil Filtre: BTC düşüş >%25 → long yasak;0,342;0,342;0,342;0,362;0,362;0,362;281731;281731;281731
+ad|4h|temel;A/D Çizgisi + EMA(21);4h;Filtresiz;0,316;0,316;0,316;0,355;0,355;0,355;307119;307119;307119
+chaikinosc|4h|temel;Chaikin Oscillator Sıfır Kesişimi;4h;Filtresiz;0,373;0,373;0,373;0,353;0,353;0,353;267727;267727;267727
+liquidity|4h|single:v_above;Likidite Süpürme + Geri Alım;4h;Tekil Filtre: Hacim ortalamanın üstü;0,235;0,235;0,218;0,343;0,343;0,314;105146;105173;105846
+histvol|1h|single:m_macd_x;Tarihsel Volatilite Düşüş Filtresi;1h;Tekil Filtre: MACD tersi;0,269;0,269;0,269;0,339;0,339;0,339;166763;166763;166763
+sma|1h|single:g_weekend;SMA Kesişimi (10/30);1h;Tekil Filtre: Hafta sonu yasağı;0,286;0,286;0,286;0,322;0,322;0,322;267887;267887;267887
+nvi|1h|single:m_rsi50_x;NVI + EMA(200) Trendi;1h;Tekil Filtre: RSI 50 tersi;0,393;0,393;0,393;0,317;0,317;0,317;116704;116704;116704
+ribbon|15m|single:t_adx20;EMA Şeridi Hizalanması (13-89);15m;Tekil Filtre: ADX>20 + yön;0,258;0,258;0,258;0,315;0,315;0,315;249807;249807;249807
+truerange|4h|single:b_mktvol;True Range Patlaması;4h;Tekil Filtre: Piyasa hacmi ≥ %50 dilim;0,213;0,213;0,213;0,313;0,313;0,313;127745;127745;127745
+pivot|15m|varyant1;Klasik Pivot (PP/S1/R1) Sekmesi;15m;ATR% ≥ %120 normal + RVOL>1.5;0,229;0,229;0,229;0,31;0,31;0,31;102484;102484;102484
+mtf|4h|single:m_mom;Çoklu Zaman Dilimi Trend + EMA(20) Tetiği;4h;Tekil Filtre: Momentum(10) yönü;0,46;0,46;0,46;0,304;0,304;0,304;91727;91727;91727
+sma|1h|single:b_breadth;SMA Kesişimi (10/30);1h;Tekil Filtre: Piyasa genişliği;0,307;0,307;0,307;0,304;0,304;0,304;179089;179089;179089
+bb|1h|varyant1;Bollinger Ortalamaya Dönüş (20, 2);1h;ATR% ≥ %120 normal;0,23;0,23;0,23;0,304;0,304;0,304;92647;92647;92647
+percentb|1h|varyant1;%B Aşırılık Dönüşü;1h;ATR% ≥ %120 normal;0,229;0,229;0,229;0,304;0,304;0,304;92641;92641;92641
+pivot|15m|varyant2;Klasik Pivot (PP/S1/R1) Sekmesi;15m;ATR% ≥ %120 normal + Hacim ortalamanın üstü;0,215;0,215;0,215;0,3;0,3;0,3;117173;117173;117173
+histvol|1h|temel;Tarihsel Volatilite Düşüş Filtresi;1h;Filtresiz;0,198;0,198;0,198;0,291;0,291;0,291;352734;352734;352734
+rvi|1d|single:f_own30;RVI Sinyal Kesişimi (10);1d;Tekil Filtre: Kendi momentumu (30g);0,767;0,767;0,767;0,29;0,29;0,29;57668;57668;57668
+mtf|4h|single:g_weekend;Çoklu Zaman Dilimi Trend + EMA(20) Tetiği;4h;Tekil Filtre: Hafta sonu yasağı;0,413;0,413;0,413;0,289;0,289;0,289;110786;110786;110786
+cmo|4h|temel;CMO Sıfır Kesişimi (14);4h;Filtresiz;0,25;0,25;0,25;0,288;0,288;0,288;295420;295420;295420
+truerange|4h|varyant2;True Range Patlaması;4h;Piyasa hacmi ≥ %50 dilim + ROC>0 tarafı;0,292;0,292;0,292;0,286;0,286;0,286;98481;98481;98481
+voi|4h|single:m_stoch;Hacim Osilatörü Sıfır Kesişimi (5,20);4h;Tekil Filtre: Stokastik %K/%D;0,256;0,256;0,256;0,286;0,286;0,286;149131;149131;149131
+ao|1h|single:b_btc_volpct;Awesome Oscillator Sıfır Kesişimi;1h;Tekil Filtre: BTC vol ≥ %50 dilim;0,266;0,266;0,266;0,283;0,283;0,283;192900;192900;192900
+sma|1h|single:t_ribbon;SMA Kesişimi (10/30);1h;Tekil Filtre: EMA şeridi (13/21/34);0,333;0,333;0,333;0,278;0,278;0,278;150857;150857;150857
+liquidity|4h|temel;Likidite Süpürme + Geri Alım;4h;Filtresiz;0,128;0,128;0,116;0,273;0,273;0,252;161811;161863;162570
+truerange|4h|single:e_fng_mod;True Range Patlaması;4h;Tekil Filtre: F&G ılımlı bölge;0,187;0,187;0,187;0,272;0,272;0,272;124732;124732;124732
+truerange|4h|varyant3;True Range Patlaması;4h;Piyasa hacmi ≥ %50 dilim + Momentum(10) yönü;0,284;0,284;0,284;0,269;0,269;0,269;97310;97310;97310
+voi|4h|single:t_htf;Hacim Osilatörü Sıfır Kesişimi (5,20);4h;Tekil Filtre: Üst TF trend (×4);0,271;0,271;0,271;0,263;0,263;0,263;141211;141211;141211
+ribbon|15m|temel;EMA Şeridi Hizalanması (13-89);15m;Filtresiz;0,23;0,23;0,23;0,262;0,262;0,262;323110;323110;323110
+percentb|1h|varyant3;%B Aşırılık Dönüşü;1h;BTC 4h trendi + ABD seansı (13-21 UTC);0,201;0,201;0,201;0,262;0,262;0,262;88906;88906;88906
+bb|1h|varyant3;Bollinger Ortalamaya Dönüş (20, 2);1h;BTC 4h trendi + ABD seansı (13-21 UTC);0,201;0,201;0,201;0,262;0,262;0,262;88906;88906;88906
+truerange|4h|varyant1;True Range Patlaması;4h;BTC 7g getirisi + F&G ılımlı bölge;0,327;0,327;0,327;0,257;0,257;0,257;83608;83608;83608
+ao|1h|single:g_weekend;Awesome Oscillator Sıfır Kesişimi;1h;Tekil Filtre: Hafta sonu yasağı;0,214;0,214;0,214;0,255;0,255;0,255;302645;302645;302645
+percentb|1h|varyant2;%B Aşırılık Dönüşü;1h;BTC 7g getirisi + ABD seansı (13-21 UTC);0,253;0,253;0,253;0,254;0,254;0,254;80722;80722;80722
+bb|1h|varyant2;Bollinger Ortalamaya Dönüş (20, 2);1h;BTC 7g getirisi + ABD seansı (13-21 UTC);0,253;0,253;0,253;0,254;0,254;0,254;80723;80723;80723
+pivot|4h|varyant1;Klasik Pivot (PP/S1/R1) Sekmesi;4h;ATR% ≥ %120 normal;0,623;0,623;0,623;0,252;0,252;0,252;38449;38449;38449
+pivot|4h|varyant2;Klasik Pivot (PP/S1/R1) Sekmesi;4h;ATR% ≥ %120 normal + ATR% ≥ %80 normal;0,623;0,623;0,623;0,252;0,252;0,252;38449;38449;38449
+nvi|1h|temel;NVI + EMA(200) Trendi;1h;Filtresiz;0,294;0,294;0,294;0,252;0,252;0,252;263461;263461;263461
+pivot|15m|varyant3;Klasik Pivot (PP/S1/R1) Sekmesi;15m;ATR% ≥ %120 normal;0,166;0,166;0,166;0,252;0,252;0,252;147623;147623;147623
+voi|4h|temel;Hacim Osilatörü Sıfır Kesişimi (5,20);4h;Filtresiz;0,175;0,175;0,175;0,25;0,25;0,25;283682;283682;283682
+truerange|4h|temel;True Range Patlaması;4h;Filtresiz;0,159;0,159;0,159;0,248;0,248;0,248;174416;174416;174416
+mcginley|4h|single:b_breadth;McGinley Dinamik Eğrisi (14);4h;Tekil Filtre: Piyasa genişliği;0,218;0,218;0,218;0,227;0,227;0,227;169352;169352;169352
+truerange|4h|single:b_btc_ret7d;True Range Patlaması;4h;Tekil Filtre: BTC 7g getirisi;0,221;0,221;0,221;0,226;0,226;0,226;103087;103087;103087
+ao|1h|single:t_ribbon;Awesome Oscillator Sıfır Kesişimi;1h;Tekil Filtre: EMA şeridi (13/21/34);0,226;0,226;0,226;0,225;0,225;0,225;152202;152202;152202
+mfi|15m|single:e_atr_high;MFI Aşırılık Dönüşü (14);15m;Tekil Filtre: ATR% ≥ %120 normal;0,134;0,134;0,134;0,225;0,225;0,225;176649;176649;176649
+bb|1h|single:b_btc_ret7d;Bollinger Ortalamaya Dönüş (20, 2);1h;Tekil Filtre: BTC 7g getirisi;0,164;0,164;0,164;0,223;0,223;0,223;163618;163618;163618
+percentb|1h|single:b_btc_ret7d;%B Aşırılık Dönüşü;1h;Tekil Filtre: BTC 7g getirisi;0,163;0,163;0,163;0,223;0,223;0,223;163616;163616;163616
+mcginley|4h|single:f_ema50slope;McGinley Dinamik Eğrisi (14);4h;Tekil Filtre: EMA50 eğimi;0,18;0,18;0,18;0,222;0,222;0,222;145459;145459;145459
+mcginley|4h|single:g_weekend;McGinley Dinamik Eğrisi (14);4h;Tekil Filtre: Hafta sonu yasağı;0,189;0,189;0,189;0,221;0,221;0,221;257823;257823;257823
+percentb|1h|single:b_btc_4h;%B Aşırılık Dönüşü;1h;Tekil Filtre: BTC 4h trendi;0,117;0,117;0,117;0,22;0,22;0,22;172989;172989;172989
+bb|1h|single:b_btc_4h;Bollinger Ortalamaya Dönüş (20, 2);1h;Tekil Filtre: BTC 4h trendi;0,117;0,117;0,117;0,22;0,22;0,22;172991;172991;172991
+voi|4h|varyant3;Hacim Osilatörü Sıfır Kesişimi (5,20);4h;PSAR tarafı + Üst TF trend (×4);0,365;0,365;0,365;0,218;0,218;0,218;76252;76252;76252
+voi|4h|single:t_psar;Hacim Osilatörü Sıfır Kesişimi (5,20);4h;Tekil Filtre: PSAR tarafı;0,217;0,217;0,217;0,208;0,208;0,208;150201;150201;150201
+truerange|4h|single:m_roc;True Range Patlaması;4h;Tekil Filtre: ROC>0 tarafı;0,209;0,209;0,209;0,207;0,207;0,207;133330;133330;133330
+liquidity|4h|single:g_weekend;Likidite Süpürme + Geri Alım;4h;Tekil Filtre: Hafta sonu yasağı;0,192;0,193;0,181;0,202;0,203;0,183;127130;127172;127652
+truerange|4h|single:m_mom;True Range Patlaması;4h;Tekil Filtre: Momentum(10) yönü;0,206;0,206;0,206;0,19;0,19;0,19;131882;131882;131882
+mfi|15m|single:v_above;MFI Aşırılık Dönüşü (14);15m;Tekil Filtre: Hacim ortalamanın üstü;0,15;0,15;0,15;0,19;0,19;0,19;240734;240734;240734
+ao|1h|single:m_tsi;Awesome Oscillator Sıfır Kesişimi;1h;Tekil Filtre: TSI yönü;0,204;0,204;0,204;0,181;0,181;0,181;227225;227225;227225
+pivot|4h|single:v_above;Klasik Pivot (PP/S1/R1) Sekmesi;4h;Tekil Filtre: Hacim ortalamanın üstü;0,186;0,186;0,186;0,179;0,179;0,179;102758;102758;102758
+percentb|1h|single:g_ussession;%B Aşırılık Dönüşü;1h;Tekil Filtre: ABD seansı (13-21 UTC);0,095;0,095;0,095;0,174;0,174;0,174;182437;182437;182437
+bb|1h|single:g_ussession;Bollinger Ortalamaya Dönüş (20, 2);1h;Tekil Filtre: ABD seansı (13-21 UTC);0,095;0,095;0,095;0,174;0,174;0,174;182438;182438;182438
+sma|1h|temel;SMA Kesişimi (10/30);1h;Filtresiz;0,187;0,187;0,187;0,169;0,169;0,169;375386;375386;375386
+pivot|15m|single:v_rvol15;Klasik Pivot (PP/S1/R1) Sekmesi;15m;Tekil Filtre: RVOL>1.5;0,11;0,11;0,11;0,169;0,169;0,169;216896;216896;216896
+pivot|15m|single:v_above;Klasik Pivot (PP/S1/R1) Sekmesi;15m;Tekil Filtre: Hacim ortalamanın üstü;0,105;0,105;0,105;0,168;0,168;0,168;241208;241208;241208
+percentb|4h|single:b_btc_volpct;%B Aşırılık Dönüşü;4h;Tekil Filtre: BTC vol ≥ %50 dilim;0,889;0,889;0,889;0,167;0,167;0,167;41345;41345;41345
+bb|4h|single:b_btc_volpct;Bollinger Ortalamaya Dönüş (20, 2);4h;Tekil Filtre: BTC vol ≥ %50 dilim;0,889;0,889;0,889;0,166;0,166;0,166;41346;41346;41346
+mcginley|4h|single:m_mom;McGinley Dinamik Eğrisi (14);4h;Tekil Filtre: Momentum(10) yönü;0,185;0,185;0,185;0,164;0,164;0,164;214205;214205;214205
+pivot|15m|temel;Klasik Pivot (PP/S1/R1) Sekmesi;15m;Filtresiz;0,08;0,08;0,08;0,156;0,156;0,156;277083;277083;277083
+mtf|4h|temel;Çoklu Zaman Dilimi Trend + EMA(20) Tetiği;4h;Filtresiz;0,286;0,286;0,286;0,15;0,15;0,15;153890;153890;153890
+pivot|4h|single:e_atr_min;Klasik Pivot (PP/S1/R1) Sekmesi;4h;Tekil Filtre: ATR% ≥ %80 normal;0,17;0,17;0,17;0,143;0,143;0,143;134301;134301;134301
+mcginley|4h|single:t_psar;McGinley Dinamik Eğrisi (14);4h;Tekil Filtre: PSAR tarafı;0,183;0,183;0,183;0,142;0,142;0,142;178807;178807;178807
+pivot|1h|varyant3;Klasik Pivot (PP/S1/R1) Sekmesi;1h;ROC tersi;0,104;0,104;0,104;0,139;0,139;0,139;229903;229903;229903
+mfi|15m|single:e_atr_min;MFI Aşırılık Dönüşü (14);15m;Tekil Filtre: ATR% ≥ %80 normal;0,078;0,078;0,078;0,137;0,137;0,137;361196;361196;361196
+pivot|1h|temel;Klasik Pivot (PP/S1/R1) Sekmesi;1h;Filtresiz;0,092;0,092;0,092;0,136;0,136;0,136;245148;245148;245148
+ao|1h|temel;Awesome Oscillator Sıfır Kesişimi;1h;Filtresiz;0,127;0,127;0,127;0,129;0,129;0,129;421819;421819;421819
+pivot|4h|temel;Klasik Pivot (PP/S1/R1) Sekmesi;4h;Filtresiz;0,098;0,098;0,098;0,123;0,123;0,123;191934;191934;191934
+mfi|15m|temel;MFI Aşırılık Dönüşü (14);15m;Filtresiz;0,065;0,065;0,065;0,121;0,121;0,121;409827;409827;409827
+percentb|1h|temel;%B Aşırılık Dönüşü;1h;Filtresiz;0,055;0,055;0,055;0,076;0,076;0,076;351875;351875;351875
+bb|1h|temel;Bollinger Ortalamaya Dönüş (20, 2);1h;Filtresiz;0,055;0,055;0,055;0,076;0,076;0,076;351881;351881;351881
+ao|1h|varyant3;Awesome Oscillator Sıfır Kesişimi;1h;BTC vol ≥ %50 dilim + Kendi momentumu (30g);0,362;0,362;0,362;0,044;0,044;0,044;91815;91815;91815
+mcginley|4h|temel;McGinley Dinamik Eğrisi (14);4h;Filtresiz;0,065;0,065;0,065;0,039;0,039;0,039;352927;352927;352927
+pivot|4h|single:b_btc_volpct;Klasik Pivot (PP/S1/R1) Sekmesi;4h;Tekil Filtre: BTC vol ≥ %50 dilim;0,288;0,288;0,288;0,032;0,032;0,032;89889;89889;89889
+ao|1h|single:f_own30;Awesome Oscillator Sıfır Kesişimi;1h;Tekil Filtre: Kendi momentumu (30g);0,16;0,16;0,16;-0,016;-0,016;-0,016;203198;203198;203198

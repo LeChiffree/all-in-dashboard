@@ -3,6 +3,7 @@
 
 - BigPlan: out/pro_bundle_fixed.json (+ pro_bundle_fixed_strict.json)
 - Indikator Akademi: tools/dash/data/agg/*.bin (yeni koşu)
+- Book Signal: filter_layer/dashboard_data.json (yeni koşu)
 
 Mevcut alanlar "öncesi" olarak korunur; yanlarına *Fixed alanları eklenir.
 """
@@ -24,6 +25,9 @@ BP_FIXED = Path(r"D:\BigPlan\out\pro_bundle_fixed.json")
 BP_STRICT = Path(r"D:\BigPlan\out\pro_bundle_fixed_strict.json")
 IA_AGG = IA / "tools" / "dash" / "data" / "agg"
 IA_SCEN = IA / "tools" / "dash" / "data" / "scenarios.json"
+BS_DATA = Path(r"D:\Paper_ML_BSH\analysis\book_signal_review\backtest\filter_layer\dashboard_data.json")
+BS_STATS_FILE = BS_DATA.parent / "daily_stats.json"
+BS_STATS: dict[str, list] = {}
 
 GRID_START = dt.date(2022, 8, 1)
 DAY0 = dt.date(2022, 8, 1)
@@ -133,6 +137,44 @@ def bp_metrics(st: dict) -> dict:
         "winRatioFixed": st.get("winRatio"),
         "winHoldHFixed": st.get("winDurH"),
         "profitDaysFixed": pd_, "lossDaysFixed": ld,
+        "profitWeeksFixed": pw, "lossWeeksFixed": lw,
+        "profitMonthsFixed": pm, "lossMonthsFixed": lm,
+    }
+
+
+def bs_metrics(b: dict) -> dict:
+    """Book Signal filter_layer result → dashboard *Fixed alanları."""
+    stats = BS_STATS.get(f"{b.get('idx')}|{b.get('filter_id')}")
+    if stats:
+        prof_d, loss_d, pw, lw, pm, lm = stats
+    else:
+        # Yedek: gunluk seri yalnızca pozitif çiftler için tutuluyor.
+        daily = b.get("daily") or []
+        prof_d = sum(1 for x in daily if x[4] > 0)
+        loss_d = sum(1 for x in daily if x[4] < 0)
+        weeks: dict[str, float] = {}
+        months: dict[tuple[int, int], float] = {}
+        for day, _cnt, _pos, _neg, net in daily:
+            if not net:
+                continue
+            d = dt.datetime.utcfromtimestamp(day * 86400).date()
+            wk = (d - dt.timedelta(days=d.weekday())).isoformat()
+            weeks[wk] = weeks.get(wk, 0.0) + net
+            mo = (d.year, d.month)
+            months[mo] = months.get(mo, 0.0) + net
+        pw = sum(1 for v in weeks.values() if v > 0)
+        lw = sum(1 for v in weeks.values() if v < 0)
+        pm = sum(1 for v in months.values() if v > 0)
+        lm = sum(1 for v in months.values() if v < 0)
+    wins = int(b.get("wins_total") or 0)
+    losses = int(b.get("losses_total") or 0)
+    return {
+        "retAllFixed": round(float(b.get("avg_net") or 0) * 100, 4),
+        "ret2026Fixed": None if b.get("ret_2026") is None else round(float(b["ret_2026"]) * 100, 4),
+        "tradesFixed": int(b.get("n") or 0),
+        "winRatioFixed": round(wins / losses, 4) if losses > 0 else (float(wins) if wins else None),
+        "winHoldHFixed": b.get("win_hold_h"),
+        "profitDaysFixed": prof_d, "lossDaysFixed": loss_d,
         "profitWeeksFixed": pw, "lossWeeksFixed": lw,
         "profitMonthsFixed": pm, "lossMonthsFixed": lm,
     }
@@ -280,6 +322,14 @@ def main() -> None:
     bp_fixed = {s["key"]: s for s in json.loads(BP_FIXED.read_text(encoding="utf-8"))["states"]}
     bp_strict = {s["key"]: s for s in json.loads(BP_STRICT.read_text(encoding="utf-8"))["states"]}
 
+    # --- Book Signal ---
+    bs = {}
+    if BS_DATA.exists():
+        for r in json.loads(BS_DATA.read_text(encoding="utf-8"))["results"]:
+            bs[(str(r["sid"]), str(r["filter_id"]))] = r
+        if BS_STATS_FILE.exists():
+            BS_STATS.update(json.loads(BS_STATS_FILE.read_text(encoding="utf-8")))
+
     # --- Indikator Akademi ---
     scen = json.loads(IA_SCEN.read_text(encoding="utf-8"))
     nS = len(scen["symbols"])
@@ -297,7 +347,7 @@ def main() -> None:
         filt_cache[key] = d
         return d
 
-    changed_bp = changed_ia = 0
+    changed_bp = changed_ia = changed_bs = 0
     for row in rows:
         src = row.get("source")
         if src == "BigPlan":
@@ -324,8 +374,19 @@ def main() -> None:
             add_ratios(row, "Fixed")
             row["fixNote"] = "filtre maskesi giriş barı yerine önceki bar (feat(i-1))"
             changed_ia += 1
+        elif src == "Book Signal":
+            parts = str(row.get("detail", "")).split(" · ")
+            if len(parts) < 2:
+                continue
+            b = bs.get((parts[-2].strip(), parts[-1].strip()))
+            if not b:
+                continue
+            row.update(bs_metrics(b))
+            add_ratios(row, "Fixed")
+            row["fixNote"] = "short stop yön simetrisi + dedup anahtarı düzeltmesi"
+            changed_bs += 1
 
-    print(f"BigPlan satır: {changed_bp}, IA satır: {changed_ia}")
+    print(f"BigPlan satır: {changed_bp}, IA satır: {changed_ia}, Book Signal satır: {changed_bs}")
 
     if not args.write:
         return

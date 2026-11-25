@@ -283,6 +283,11 @@ def patch_html(rows: list[dict]) -> None:
     payload = json.dumps(rows, ensure_ascii=False, separators=(",", ":"))
     html = html[:start] + "const ROWS = " + payload + ";" + html[end:]
 
+    # META.generated'i güncel tut (sayfa altındaki "Oluşturma" bilgisi)
+    now = dt.datetime.now().strftime("%d.%m.%Y %H:%M")
+    html = re.sub(r'("generated":\s*")[^"]*(")', lambda m: m.group(1) + now + m.group(2),
+                  html, count=1)
+
     (DASH / "index.html").write_text(html, encoding="utf-8")
     print("yazıldı: index.html")
 

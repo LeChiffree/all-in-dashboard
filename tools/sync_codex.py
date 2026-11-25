@@ -146,6 +146,7 @@ def main() -> None:
     print("allinone.json / allinone.csv / Allinone.xlsx / index.html yazıldı")
 
     subprocess.run([sys.executable, "singular/build_summary.py"], cwd=DASH, check=True)
+    subprocess.run([sys.executable, "tools/auto_chosen.py"], cwd=DASH, check=True)
 
 
 if __name__ == "__main__":

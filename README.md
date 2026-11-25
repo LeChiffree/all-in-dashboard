@@ -19,6 +19,7 @@ Birden fazla trade backtest reposunun sonuçlarını tek tabloda birleştiren da
 | `allinone.csv` | `;` ayraçlı, virgül ondalıklı, UTF-8 BOM. |
 | `allinone.json` | Ham birleşik veri. |
 | `start.cmd` | Yerel HTTP sunucusunu başlatır. |
+| `tools/auto_chosen.py` | Chosen otomatik seçim kuralını uygular ve `index.html` içindeki `AUTO_CHOSEN` bloğunu yeniler. |
 
 ## Özellikler
 
@@ -26,6 +27,7 @@ Birden fazla trade backtest reposunun sonuçlarını tek tabloda birleştiren da
 - **Singular (S) sütunları:** her metrik sütununun hemen sağında, aynı coinde tek
   açık işlem kuralının sonucu; normal ve tekil değer yan yana karşılaştırılır.
 - **Chosen sekmesi:** satır başındaki `+` ile seçilen stratejiler; seçimler tarayıcıda `localStorage` ile saklanır.
+  İlk açılışta aşağıdaki kurala uyan satırlar **otomatik seçili** gelir; `Auto seç` butonu kuralı yeniden uygular.
 - **CSV indir:** Chosen listesini CSV olarak indirir.
 - **Sıralama:** sütun başlığına tıkla; tekrar tıkla yönü çevir.
 - **Min/max filtre:** başlığın altındaki filtre satırında metin araması ve sayısal sütunlar için min/max aralığı.
@@ -57,14 +59,27 @@ Toplam **65.220 satır**, **6 kaynak**, **309 filtre**:
 | 2026 Getiri % | İşlem başına ortalama net getiri (2026 dilimi). |
 | 2026 Getiri % (Düzeltilmiş) | Lookahead düzeltmeleri sonrası 2026 metriği. |
 | İşlem Sayısı | Toplam işlem sayısı. |
+| İşlem Sayısı (Düz.) | Düzeltilmiş koşunun toplam işlem sayısı (Paper ML'de boştur). |
 | Karlı/Zararlı İşlem | Karlı işlem sayısı / zararlı işlem sayısı. |
 | Karlı İşlem Ort. Süre (saat) | Karlı işlemlerin ortalama elde tutma süresi (saat). |
+| Karlı İşlem Ort. Süre (Düz.) | Düzeltilmiş koşuda karlı işlemlerin ortalama süresi (saat). |
 | Karlı Gün | Günlük net P/L > 0 olan gün sayısı. |
 | Karsız Gün | Günlük net P/L < 0 olan gün sayısı. |
 | Karlı Hafta | Pazartesi başlangıçlı haftanın toplam net P/L > 0 olan hafta sayısı. |
 | Karsız Hafta | Haftalık toplam net P/L < 0 olan hafta sayısı. |
 | Karlı Ay | Takvim ayının toplam net P/L > 0 olan ay sayısı. |
 | Karsız Ay | Aylık toplam net P/L < 0 olan ay sayısı. |
+
+## Düzeltilmiş değerler modu
+
+Üst çubuktaki **Düzeltilmiş değerler** anahtarı işaretlendiğinde tablo, sıralama,
+filtreler, istatistikler ve CSV indirmesi aynı satırların `*Fixed` alanlarını
+kullanır. Kapsam: All Getiri, 2026 Getiri, İşlem Sayısı, Karlı/Zararlı İşlem,
+Karlı İşlem Ort. Süre, Karlı/Karsız Gün-Hafta-Ay sayıları ve bunların oranları
+(`dayRatio`, `weekRatio`, `monthRatio` → `*Fixed`). Book Signal'de
+`winRatioFixed`, yeni koşunun `win_rate` değerinden `wr / (1 - wr)` ile türetilir.
+Veri yenilendikten sonra `python tools/apply_fixed.py --write` alanları ve
+`index.html` içindeki satırları birlikte günceller.
 
 ## Book Signal düzeltmesi (25.11.2026)
 
@@ -83,6 +98,39 @@ Notlar:
 - Düzeltme öncesi/sonrası ayrıntı: `_raporlar/all-in-dashboard-lookahead-denetimi-2026-11-24/BOOK-SIGNAL-DENETIMI.md`.
 - 191 spec'in 5'i yapısal olarak ölü (`ema(close,50) > ema(close,50)` totolojisi ve hiç tetiklenmeyen bir Heikin-Ashi deseni).
 - Dedup düzeltmesiyle ortaya çıkan **70 spec / 1.050 satır** dashboard'a eklenmedi; bu satırların düzeltme öncesi değeri yok (eski koşuda hiç çalışmamışlardı). Tamamı `book_signal_fixed.csv` içinde.
+
+## Chosen otomatik seçimi (25.11.2026)
+
+`Chosen` listesi, düzeltilmiş backtest sonuçlarına göre otomatik doldurulur. Kural:
+
+- Kaynak: **BigPlan, Book Signal, Indikator Akademi, Paper ML**
+- **Düzeltilmiş** All getiri > 0 (Paper ML'de lookahead düzeltmesi olmadığı için ham getiri kullanılır)
+- İşlem sayısı < **200.000**
+- Karlı işlem ortalama süresi < **240 saat**
+
+| Kaynak | Seçilen | Kaynak satır |
+|---|---:|---:|
+| BigPlan | 342 | 563 |
+| Book Signal | 224 | 1.738 |
+| Indikator Akademi | 4.120 | 17.870 |
+| Paper ML | 214 | 219 |
+| **Toplam** | **4.900** | 20.390 |
+
+Notlar:
+
+- BigPlan / Book Signal / Indikator Akademi satırlarında işlem sayısı ve süre de
+  düzeltilmiş koşudan (`tradesFixed`, `winHoldHFixed`) okunur; bu yüzden ham
+  `İşlem Sayısı` sütunundan farklı olabilir. Karşılaştırma için tabloya
+  `İşlem Sayısı (Düz.)` ve `Karlı İşlem Ort. Süre (Düz.)` sütunları eklendi.
+- Düzeltilmiş koşuda hiç işlem üretmeyen satırlarda `retAllFixed` boştur; bu satırlar seçilmez.
+- Liste `index.html` içindeki `AUTO_CHOSEN` bloğunda durur. Veri yenilendikten sonra:
+
+```bash
+python tools/auto_chosen.py
+```
+
+- Seçim `allinone_chosen_v2` anahtarıyla `localStorage`'da saklanır. Tarayıcıda kayıtlı
+  bir seçim varsa otomatik liste uygulanmaz; `Auto seç` butonuyla uygulanır.
 
 ## Filtre kapsamı
 
@@ -127,5 +175,6 @@ python tools/sync_codex.py
 
 Bu komut `allinone.json` içindeki Codex satırlarını `filter_normal.json` ile
 günceller, eksik Codex satırlarını ekler, `allinone.csv` / `Allinone.xlsx` /
-`index.html` çıktılarını yeniden üretir ve `singular/build_summary.py` çalıştırır.
+`index.html` çıktılarını yeniden üretir, `singular/build_summary.py` ve
+`tools/auto_chosen.py` betiklerini çalıştırır.
 

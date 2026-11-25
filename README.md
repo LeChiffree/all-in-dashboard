@@ -66,6 +66,24 @@ Toplam **65.220 satır**, **6 kaynak**, **309 filtre**:
 | Karlı Ay | Takvim ayının toplam net P/L > 0 olan ay sayısı. |
 | Karsız Ay | Aylık toplam net P/L < 0 olan ay sayısı. |
 
+## Book Signal düzeltmesi (25.11.2026)
+
+Book Signal kaynağında iki hata düzeltildi ve 525 sembol × 191 spec ile yeniden koşuldu:
+
+| Hata | Düzeltme |
+|---|---|
+| `stop_mode = signal_low` short tarafta girişin altına stop koyuyordu; trade sessizce reddediliyordu | Stop yön simetrisi (`signal_low` → short'ta `signal_high`) |
+| Spec tekilleştirme anahtarı var olmayan `stop` / `time` alanlarını kullanıyordu; 214 spec 120'ye çöküyordu | Anahtar `stop_atr`, `time_bars`, `stop_mode`, `exit_long/short`, `atr_n` üzerinden |
+
+Sonuç (1.738 ortak satır): 431 satır değişti, ortalama **+0,056 puan**, pozitif satır **366 → 420**, toplam işlem **+%27,8**.
+`stop_mode = atr` olan 1.168 satır birebir aynı kaldı; etki yalnız short stopu kullanan 570 satırda.
+
+Notlar:
+
+- Düzeltme öncesi/sonrası ayrıntı: `_raporlar/all-in-dashboard-lookahead-denetimi-2026-11-24/BOOK-SIGNAL-DENETIMI.md`.
+- 191 spec'in 5'i yapısal olarak ölü (`ema(close,50) > ema(close,50)` totolojisi ve hiç tetiklenmeyen bir Heikin-Ashi deseni).
+- Dedup düzeltmesiyle ortaya çıkan **70 spec / 1.050 satır** dashboard'a eklenmedi; bu satırların düzeltme öncesi değeri yok (eski koşuda hiç çalışmamışlardı). Tamamı `book_signal_fixed.csv` içinde.
+
 ## Filtre kapsamı
 
 - **BigPlan:** 184 filtre varyantı.

@@ -166,13 +166,19 @@ def bs_metrics(b: dict) -> dict:
         lw = sum(1 for v in weeks.values() if v < 0)
         pm = sum(1 for v in months.values() if v > 0)
         lm = sum(1 for v in months.values() if v < 0)
-    wins = int(b.get("wins_total") or 0)
-    losses = int(b.get("losses_total") or 0)
+    if "wins_total" in b:
+        wins = int(b["wins_total"] or 0)
+        losses = int(b["losses_total"] or 0)
+        win_ratio = round(wins / losses, 4) if losses > 0 else (float(wins) if wins else None)
+    else:
+        # Yeni koşuda wins_total/losses_total yok; win_rate (kârlı işlem oranı) var.
+        wr = b.get("win_rate")
+        win_ratio = round(float(wr) / (1.0 - float(wr)), 4) if wr not in (None, 1) else None
     return {
         "retAllFixed": round(float(b.get("avg_net") or 0) * 100, 4),
         "ret2026Fixed": None if b.get("ret_2026") is None else round(float(b["ret_2026"]) * 100, 4),
         "tradesFixed": int(b.get("n") or 0),
-        "winRatioFixed": round(wins / losses, 4) if losses > 0 else (float(wins) if wins else None),
+        "winRatioFixed": win_ratio,
         "winHoldHFixed": b.get("win_hold_h"),
         "profitDaysFixed": prof_d, "lossDaysFixed": loss_d,
         "profitWeeksFixed": pw, "lossWeeksFixed": lw,

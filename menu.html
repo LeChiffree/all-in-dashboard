@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Strateji Filtre Seçici</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a2e;--panel2:#0e1526;--border:#24314d;--text:#e7ecf7;--muted:#93a1bd;--accent:#5b8cff;--pos:#35d39a;--neg:#ff6b7d}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(1100px 480px at 10% -10%,rgba(91,140,255,.22),transparent 60%),var(--bg);color:var(--text);font-family:Inter,"Segoe UI",Arial,sans-serif}.wrap{max-width:1200px;margin:auto;padding:30px 20px 50px}.eyebrow{color:var(--accent);font-size:11px;font-weight:800;letter-spacing:.17em}.hero{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}.hero h1{margin:7px 0;font-size:clamp(28px,4vw,44px)}.hero p,.hint{color:var(--muted);line-height:1.55;margin:0}.back{color:#bcd2ff;text-decoration:none;border:1px solid var(--border);padding:9px 13px;border-radius:10px;white-space:nowrap}.panel{background:rgba(18,26,46,.9);border:1px solid var(--border);border-radius:18px;padding:20px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.field label{display:block;color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.08em;margin-bottom:7px}.field select{width:100%;background:var(--panel2);color:var(--text);border:1px solid var(--border);border-radius:11px;padding:12px;font:inherit;outline:none}.field select:focus{border-color:var(--accent)}.field select:disabled{opacity:.45}.hint{font-size:12px;margin-top:14px}.status{text-align:center;color:var(--muted);padding:42px 20px}.summary{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:24px 2px 10px;color:var(--muted);font-size:13px}.results{display:grid;gap:10px}.card{display:grid;grid-template-columns:minmax(240px,1.7fr) repeat(5,minmax(90px,.55fr));gap:12px;align-items:center;background:rgba(18,26,46,.72);border:1px solid var(--border);border-radius:14px;padding:15px 16px}.card.best{border-color:rgba(53,211,154,.58);background:rgba(53,211,154,.055)}.filter{line-height:1.4}.besttag{color:var(--pos);font-size:10px;font-weight:800;margin-top:5px}.metric small{display:block;color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.06em;margin-bottom:5px}.metric b{font-size:13px}.pos{color:var(--pos)}.neg{color:var(--neg)}.empty{text-align:center;color:var(--muted);border:1px dashed var(--border);border-radius:14px;padding:42px 20px}.loading{width:22px;height:22px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 12px}@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:850px){.hero{display:block}.back{display:inline-block;margin-top:12px}.grid{grid-template-columns:1fr}.card{grid-template-columns:1fr 1fr}.filter{grid-column:1/-1}}
+</style>
+</head>
+<body><main class="wrap">
+<header class="hero"><div><div class="eyebrow">ALL-IN DASHBOARD · MENÜLÜ UYGULAMA</div><h1>Strateji Filtre Seçici</h1><p>Strateji ve timeframe seç; uygun filtreleri güncel backtest sonuçlarıyla karşılaştır.</p></div><a class="back" href="./">Tüm tabloya geç →</a></header>
+<section class="panel"><div class="grid">
+<div class="field"><label for="source">1 · KAYNAK</label><select id="source" disabled><option>Veriler yükleniyor…</option></select></div>
+<div class="field"><label for="strategy">2 · STRATEJİ</label><select id="strategy" disabled><option>Önce kaynak seç</option></select></div>
+<div class="field"><label for="timeframe">3 · TIMEFRAME</label><select id="timeframe" disabled><option>Önce strateji seç</option></select></div>
+</div><p class="hint">Sonuçlar düzeltilmiş All getiriye göre sıralanır; düzeltme bulunmayan satırlarda ham değer kullanılır.</p></section>
+<div class="summary"><span id="summary"></span><span id="generated"></span></div>
+<section id="results" class="results"><div class="status"><div class="loading"></div>65.220 satır yükleniyor…</div></section>
+</main>
+<script>
+const $=id=>document.getElementById(id);let rows=[];
+const order={"5m":0,"15m":1,"1h":2,"4h":3,"1d":4,"1w":5};
+const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fixed=(r,f,k)=>Number.isFinite(Number(r[f]))?Number(r[f]):r[k];
+const pct=v=>{v=Number(v);if(!Number.isFinite(v))return"—";return `<span class="${v>0?'pos':v<0?'neg':''}">${v>0?'+':''}${v.toLocaleString('tr-TR',{maximumFractionDigits:4})}%</span>`};
+const num=v=>Number.isFinite(Number(v))?Number(v).toLocaleString('tr-TR'):"—";
+const ratio=v=>Number.isFinite(Number(v))?Number(v).toLocaleString('tr-TR',{maximumFractionDigits:2})+'x':"—";
+const hours=v=>Number.isFinite(Number(v))?Number(v).toLocaleString('tr-TR',{maximumFractionDigits:1})+' sa':"—";
+function options(el,placeholder,values){el.innerHTML=`<option value="">${placeholder}</option>`+values.map(v=>`<option value="${esc(v)}">${esc(v)}</option>`).join('');el.disabled=!values.length}
+function sourceChanged(){const source=$('source').value;const values=[...new Set(rows.filter(r=>r.source===source).map(r=>r.strategy))].sort((a,b)=>a.localeCompare(b,'tr'));options($('strategy'),'Strateji seç',values);options($('timeframe'),'Önce strateji seç',[]);render()}
+function strategyChanged(){const source=$('source').value,strategy=$('strategy').value;const values=[...new Set(rows.filter(r=>r.source===source&&r.strategy===strategy).map(r=>r.timeframe))].sort((a,b)=>(order[a]??99)-(order[b]??99));options($('timeframe'),'Timeframe seç',values);render()}
+function render(){const source=$('source').value,strategy=$('strategy').value,tf=$('timeframe').value;if(!source||!strategy||!tf){$('summary').textContent='Üç seçimi tamamla';$('results').innerHTML='<div class="empty">Filtre sonuçları burada görünecek.</div>';return}const found=rows.filter(r=>r.source===source&&r.strategy===strategy&&r.timeframe===tf).sort((a,b)=>(Number(fixed(b,'retAllFixed','retAll'))||-Infinity)-(Number(fixed(a,'retAllFixed','retAll'))||-Infinity));$('summary').textContent=`${found.length.toLocaleString('tr-TR')} filtre bulundu`;$('results').innerHTML=found.map((r,i)=>`<article class="card${i===0?' best':''}"><div class="filter"><b>${esc(r.filter)}</b>${i===0?'<div class="besttag">EN YÜKSEK DÜZELTİLMİŞ ALL GETİRİ</div>':''}</div><div class="metric"><small>ALL GETİRİ</small><b>${pct(fixed(r,'retAllFixed','retAll'))}</b></div><div class="metric"><small>2026 GETİRİ</small><b>${pct(fixed(r,'ret2026Fixed','ret2026'))}</b></div><div class="metric"><small>İŞLEM</small><b>${num(fixed(r,'tradesFixed','trades'))}</b></div><div class="metric"><small>K/Z ORANI</small><b>${ratio(fixed(r,'winRatioFixed','winRatio'))}</b></div><div class="metric"><small>KARLI SÜRE</small><b>${hours(fixed(r,'winHoldHFixed','winHoldH'))}</b></div></article>`).join('')||'<div class="empty">Sonuç bulunamadı.</div>'}
+$('source').addEventListener('change',sourceChanged);$('strategy').addEventListener('change',strategyChanged);$('timeframe').addEventListener('change',render);
+fetch('allinone.json').then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(data=>{rows=data.rows||[];$('generated').textContent='Güncelleme: '+new Date(data.generated).toLocaleString('tr-TR');const sources=[...new Set(rows.map(r=>r.source))].sort((a,b)=>a.localeCompare(b,'tr'));options($('source'),'Kaynak seç',sources);$('results').innerHTML='<div class="empty">Başlamak için kaynak seç.</div>';sourceChanged()}).catch(()=>{$('results').innerHTML='<div class="empty">Veriler yüklenemedi. Sayfayı yenileyip tekrar dene.</div>'});
+</script></body></html>

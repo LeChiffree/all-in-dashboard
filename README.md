@@ -23,6 +23,7 @@ Birden fazla trade backtest reposunun sonuçlarını tek tabloda birleştiren da
 
 ## Özellikler
 
+- **Menülü uygulama (`menu.html`):** kaynak → strateji → timeframe adımlarıyla ilgili filtreleri listeler ve düzeltilmiş All getiriye göre sıralar.
 - **Allinone sekmesi:** tüm strateji × filtre × timeframe satırları.
 - **Singular (S) sütunları:** her metrik sütununun hemen sağında, aynı coinde tek
   açık işlem kuralının sonucu; normal ve tekil değer yan yana karşılaştırılır.

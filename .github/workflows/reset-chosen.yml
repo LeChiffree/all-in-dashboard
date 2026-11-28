@@ -1,0 +1,31 @@
+name: Reset Chosen
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - tools/reset_chosen.py
+      - .github/workflows/reset-chosen.yml
+
+permissions:
+  contents: write
+
+jobs:
+  reset:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reset Chosen to empty v3 storage
+        run: python tools/reset_chosen.py
+      - name: Commit dashboard changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes required."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html picker.html README.md
+          git commit -m "feat: reset chosen selections"
+          git push

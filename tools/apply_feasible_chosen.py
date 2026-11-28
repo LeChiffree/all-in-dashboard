@@ -35,8 +35,8 @@ def main() -> None:
     )
     replace_if_needed(
         ROOT / "README.md",
-        """Seçim `allinone_chosen_v3` anahtarıyla `localStorage`'da saklanır. Yeni sürüm boş
-  listeyle başlar; `Auto seç` butonuyla otomatik kural ayrıca uygulanabilir.""",
+        """Seçim `allinone_chosen_v4` anahtarıyla `localStorage`'da saklanır. Yeni sürüm
+  fizibilite kuralıyla seçilen 85 satırla başlar; `Auto seç` aynı kuralı yeniden uygular.""",
         """Seçim `allinone_chosen_v4` anahtarıyla `localStorage`'da saklanır. Yeni sürüm
   fizibilite kuralıyla kategori bağımsız tekilleştirilen 64 satırla başlar; `Auto seç` aynı kuralı yeniden uygular.""",
     )

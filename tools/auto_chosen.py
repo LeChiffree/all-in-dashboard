@@ -6,7 +6,7 @@ Kural:
   - Duzeltilmis All getiri > 0
   - Karli islem ortalama suresi <= 230 saat
   - Hafta K/Z >= 1.5 ve gun K/Z >= 1
-  - Her kaynak + strateji + timeframe icin en yuksek duzeltilmis All getirili tek filtre
+  - Kategori fark etmeksizin her strateji + timeframe icin en yuksek duzeltilmis All getirili tek filtre
 
 Secilen satirlarin anahtarlari index.html icine `const AUTO_CHOSEN` olarak
 gomulur. Dashboard ilk acilista (localStorage'da secim yoksa) bu listeyi
@@ -35,7 +35,7 @@ MIN_DAY_RATIO = 1.0
 RULE_TEXT = (
     "Codex Bulut hariç | Düzeltilmiş All getiri > 0 | "
     "Karlı işlem ort. süre ≤ 230 saat | Hafta K/Z ≥ 1,5 | Gün K/Z ≥ 1 | "
-    "Her strateji + timeframe için en iyi tek filtre"
+    "Kategori bağımsız her strateji + timeframe için en iyi tek filtre"
 )
 
 MARKER_RE = re.compile(r"\n// >>> AUTO_CHOSEN.*?// <<< AUTO_CHOSEN", re.S)
@@ -83,7 +83,7 @@ def build_block(keys: list[str], by_source: dict[str, int], generated: str, eol:
         "maxHoldH": MAX_HOLD_H,
         "minWeekRatio": MIN_WEEK_RATIO,
         "minDayRatio": MIN_DAY_RATIO,
-        "groupBy": ["source", "strategy", "timeframe"],
+        "groupBy": ["strategy", "timeframe"],
     }
     lines = [
         "",
@@ -109,7 +109,7 @@ def main() -> int:
     for row in rows:
         if not passes(row):
             continue
-        group = (row["source"], row["strategy"], row["timeframe"])
+        group = (row["strategy"], row["timeframe"])
         if group not in best or rank(row) > rank(best[group]):
             best[group] = row
 

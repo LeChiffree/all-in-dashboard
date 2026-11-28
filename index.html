@@ -340,6 +340,9 @@
           <th data-k="trades" class="num">İşlem Sayısı<span class="arrow"></span></th>
           <th data-k="tradesFixed" class="num fix-col">İşlem Sayısı (Düz.)<span class="arrow"></span></th>
           <th data-k="sTrades" class="num sg-col">İşlem Sayısı (S)<span class="arrow"></span></th>
+          <th data-k="tradesPerDay" class="num">Gün Başına Ort. İşlem<span class="arrow"></span></th>
+          <th data-k="tradesPerDayFixed" class="num fix-col">Gün Başına Ort. İşlem (Düz.)<span class="arrow"></span></th>
+          <th data-k="sTradesPerDay" class="num sg-col">Gün Başına Ort. İşlem (S)<span class="arrow"></span></th>
           <th data-k="winRatio" class="num">Karlı/Zararlı İşlem<span class="arrow"></span></th>
           <th data-k="sWinRatio" class="num sg-col">Karlı/Zararlı İşlem (S)<span class="arrow"></span></th>
           <th data-k="winHoldH" class="num">Karlı İşlem Ort. Süre (saat)<span class="arrow"></span></th>
@@ -374,6 +377,9 @@
           <th></th>
           <th></th>
           <th><div class="range"><input data-tf="tradesMin" placeholder="min" inputmode="numeric"><span>–</span><input data-tf="tradesMax" placeholder="max" inputmode="numeric"></div></th>
+          <th></th>
+          <th></th>
+          <th></th>
           <th></th>
           <th></th>
           <th><div class="range"><input data-tf="winRatioMin" placeholder="min" inputmode="decimal"><span>–</span><input data-tf="winRatioMax" placeholder="max" inputmode="decimal"></div></th>
@@ -435,7 +441,7 @@ const META = {"generated": "25.11.2026 21:32", "row_count": 65220, "sources": ["
 
 // Duzeltilmis degerler: (Duz.) alanlari olan metrikler icin ikinci bir satir kumesi.
 // "Duzeltilmis degerler" kutusu isaretlenince tablo, siralama, filtreler ve CSV bu kumeyi kullanir.
-const FIX_KEYS = ["retAll", "ret2026", "trades", "winRatio", "winHoldH",
+const FIX_KEYS = ["retAll", "ret2026", "trades", "tradesPerDay", "winRatio", "winHoldH",
   "profitDays", "lossDays", "dayRatio", "profitWeeks", "lossWeeks", "weekRatio",
   "profitMonths", "lossMonths", "monthRatio"];
 const FIXED_ROWS = ROWS.map((r) => {
@@ -563,6 +569,29 @@ for (const row of ROWS) {
   row.monthRatio = periodRatio(row.profitMonths, row.lossMonths);
 }
 
+// Kombinasyon başına günlük işlem yoğunluğu. Gün kapsamı, backtestte P/L oluşan
+// kârlı ve karsız günlerin toplamıdır; veri olmayan veya sıfır günlük satırlar boş kalır.
+for (const row of ROWS) {
+  row.tradesPerDay = tradesPerDay(row.trades, row.profitDays, row.lossDays);
+  row.tradesPerDayFixed = tradesPerDay(
+    row.tradesFixed != null ? row.tradesFixed : row.trades,
+    row.profitDaysFixed != null ? row.profitDaysFixed : row.profitDays,
+    row.lossDaysFixed != null ? row.lossDaysFixed : row.lossDays
+  );
+  row.sTradesPerDay = tradesPerDay(row.sTrades, row.sProfitDays, row.sLossDays);
+}
+
+// Düzeltilmiş görünümü, Singular ve günlük işlem alanları eklendikten sonra yenile.
+FIXED_ROWS.length = 0;
+for (const row of ROWS) {
+  const fixedRow = Object.assign({}, row);
+  for (const key of FIX_KEYS) {
+    const value = row[key + "Fixed"];
+    if (value != null) fixedRow[key] = value;
+  }
+  FIXED_ROWS.push(fixedRow);
+}
+
 const rowByKey = new Map(ROWS.map((row) => [rowKey(row), row]));
 const AUTO_KEYS = typeof AUTO_CHOSEN === "undefined" ? [] : AUTO_CHOSEN;
 const AUTO_META = typeof AUTO_CHOSEN_META === "undefined" ? null : AUTO_CHOSEN_META;
@@ -649,6 +678,20 @@ function fmtRatio(value) {
   if (value === Infinity) return '<span class="pos">inf</span>';
   if (value == null || !Number.isFinite(Number(value))) return '<span class="muted">?</span>';
   return Number(value).toFixed(2) + "x";
+}
+
+function tradesPerDay(trades, profitDays, lossDays) {
+  const count = Number(trades);
+  const profit = Number(profitDays);
+  const loss = Number(lossDays);
+  const days = profit + loss;
+  if (!Number.isFinite(count) || !Number.isFinite(profit) || !Number.isFinite(loss) || days <= 0) return null;
+  return count / days;
+}
+
+function fmtDecimal(value) {
+  if (value == null || !Number.isFinite(Number(value))) return '<span class="muted">—</span>';
+  return Number(value).toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
 function fmtHours(value) {
@@ -831,7 +874,7 @@ function renderTable() {
 
   const tbody = $("tbody");
   if (!pageRows.length) {
-    tbody.innerHTML = '<tr><td colspan="34" class="empty">Bu filtrelerle satır bulunamadı.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="37" class="empty">Bu filtrelerle satır bulunamadı.</td></tr>';
   } else {
     tbody.innerHTML = pageRows.map((row) => {
       const key = rowKey(row);
@@ -854,6 +897,9 @@ function renderTable() {
         '<td class="num">' + fmtIntCell(row.trades) + "</td>" +
         '<td class="num fix-col">' + fmtIntCell(row.tradesFixed) + "</td>" +
         '<td class="num sg-col">' + fmtIntCell(row.sTrades) + "</td>" +
+        '<td class="num">' + fmtDecimal(row.tradesPerDay) + "</td>" +
+        '<td class="num fix-col">' + fmtDecimal(row.tradesPerDayFixed) + "</td>" +
+        '<td class="num sg-col">' + fmtDecimal(row.sTradesPerDay) + "</td>" +
         '<td class="num">' + fmtRatio(row.winRatio) + "</td>" +
         '<td class="num sg-col">' + fmtRatio(row.sWinRatio) + "</td>" +
         '<td class="num">' + fmtHours(row.winHoldH) + "</td>" +
@@ -894,6 +940,7 @@ function renderTable() {
     source: "Kaynak", strategy: "Strateji", filter: "Filtre", timeframe: "Timeframe",
     retAll: "All Getiri", retAllFixed: "All Getiri (Düzeltilmiş)",
     ret2026: "2026 Getiri", ret2026Fixed: "2026 Getiri (Düzeltilmiş)", trades: "İşlem",
+    tradesPerDay: "Gün Başına Ort. İşlem", tradesPerDayFixed: "Gün Başına Ort. İşlem (Düzeltilmiş)", sTradesPerDay: "Gün Başına Ort. İşlem (S)",
     winRatio: "Karlı/Zararlı İşlem", winHoldH: "Karlı İşlem Ort. Süre",
     tradesFixed: "İşlem Sayısı (Düzeltilmiş)", winHoldHFixed: "Karlı İşlem Ort. Süre (Düzeltilmiş)",
     profitDays: "Karlı Gün", lossDays: "Karsız Gün",
@@ -969,7 +1016,9 @@ function downloadChosenCsv() {
   const headers = ["Kaynak", "Strateji", "Filtre", "Timeframe",
     "All Getiri %", "All Getiri % (Düzeltilmiş)", "All Getiri % (S)",
     "2026 Getiri %", "2026 Getiri % (Düzeltilmiş)", "2026 Getiri % (S)",
-    "İşlem Sayısı", "İşlem Sayısı (Düz.)", "İşlem Sayısı (S)", "Karlı/Zararlı İşlem", "Karlı/Zararlı İşlem (S)",
+    "İşlem Sayısı", "İşlem Sayısı (Düz.)", "İşlem Sayısı (S)",
+    "Gün Başına Ort. İşlem", "Gün Başına Ort. İşlem (Düz.)", "Gün Başına Ort. İşlem (S)",
+    "Karlı/Zararlı İşlem", "Karlı/Zararlı İşlem (S)",
     "Karlı İşlem Ort. Süre (saat)", "Karlı İşlem Ort. Süre (Düz.)", "Karlı İşlem Ort. Süre (S)",
     "Karlı Gün", "Karlı Gün (S)", "Karsız Gün", "Karsız Gün (S)",
     "Karlı Hafta", "Karlı Hafta (S)", "Karsız Hafta", "Karsız Hafta (S)",
@@ -990,6 +1039,9 @@ function downloadChosenCsv() {
       row.trades,
       csvNum(row.tradesFixed),
       row.sTrades,
+      csvNum(row.tradesPerDay),
+      csvNum(row.tradesPerDayFixed),
+      csvNum(row.sTradesPerDay),
       csvNum(row.winRatio),
       csvNum(row.sWinRatio),
       csvNum(row.winHoldH),

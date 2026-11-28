@@ -31,6 +31,7 @@ Birden fazla trade backtest reposunun sonuçlarını tek tabloda birleştiren da
   İlk açılışta aşağıdaki kurala uyan satırlar **otomatik seçili** gelir; `Auto seç` butonu kuralı yeniden uygular.
 - **CSV indir:** Chosen listesini CSV olarak indirir.
 - **Sıralama:** sütun başlığına tıkla; tekrar tıkla yönü çevir.
+- **Gün başına ortalama işlem:** her kombinasyon için `İşlem Sayısı / (Karlı Gün + Karsız Gün)`; ham, düzeltilmiş ve Singular sonuçları ayrı gösterilir.
 - **Min/max filtre:** başlığın altındaki filtre satırında metin araması ve sayısal sütunlar için min/max aralığı.
 - **Filtreleri temizle / Sıfırla:** tablo filtrelerini veya tüm filtreleri temizler.
 

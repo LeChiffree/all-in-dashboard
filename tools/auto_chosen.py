@@ -2,11 +2,11 @@
 """Chosen listesini otomatik dolduran kurali index.html'e yazar.
 
 Kural:
-  - Kaynak: BigPlan, Book Signal, Indikator Akademi, Paper ML
-  - Duzeltilmis All getiri > 0 (Paper ML'de duzeltme yok, ham getiri kullanilir)
-  - Islem sayisi < 200.000
-  - Karli islem ortalama suresi < 240 saat
-  - Duzeltilmis kosusu olan kaynaklarda islem sayisi/sure de *Fixed alanlarindan okunur.
+  - Codex Bulut haric, yalnizca gercek duzeltilmis sonuclar
+  - Duzeltilmis All getiri > 0
+  - Karli islem ortalama suresi <= 230 saat
+  - Hafta K/Z >= 1.5 ve gun K/Z >= 1
+  - Her kaynak + strateji + timeframe icin en yuksek duzeltilmis All getirili tek filtre
 
 Secilen satirlarin anahtarlari index.html icine `const AUTO_CHOSEN` olarak
 gomulur. Dashboard ilk acilista (localStorage'da secim yoksa) bu listeyi
@@ -28,16 +28,14 @@ from pathlib import Path
 DASH = Path(__file__).resolve().parents[1]
 INDEX = DASH / "index.html"
 
-SOURCES = ["BigPlan", "Book Signal", "Indikator Akademi", "Paper ML"]
-# Bu kaynaklarin duzeltilmis kosusu var; islem sayisi ve sure de *Fixed alanlarindan
-# okunur. Paper ML'de lookahead duzeltmesi gerekmedigi icin *Fixed alanlari yoktur.
-FIXED_SOURCES = {"BigPlan", "Book Signal", "Indikator Akademi"}
-MAX_TRADES = 200_000
-MAX_HOLD_H = 240.0
+SOURCES = ["BigPlan", "Book Signal", "Indikator Akademi", "Paper ML", "V4 Short"]
+MAX_HOLD_H = 230.0
+MIN_WEEK_RATIO = 1.5
+MIN_DAY_RATIO = 1.0
 RULE_TEXT = (
-    "Kaynak: BigPlan · Book Signal · Indikator Akademi · Paper ML | "
-    "Düzeltilmiş All getiri > 0 | İşlem sayısı < 200.000 | "
-    "Karlı işlem ort. süre < 240 saat"
+    "Codex Bulut hariç | Düzeltilmiş All getiri > 0 | "
+    "Karlı işlem ort. süre ≤ 230 saat | Hafta K/Z ≥ 1,5 | Gün K/Z ≥ 1 | "
+    "Her strateji + timeframe için en iyi tek filtre"
 )
 
 MARKER_RE = re.compile(r"\n// >>> AUTO_CHOSEN.*?// <<< AUTO_CHOSEN", re.S)
@@ -49,19 +47,24 @@ def row_key(row: dict) -> str:
 
 
 def passes(row: dict) -> bool:
-    source = row.get("source")
-    if source not in SOURCES:
+    if row.get("source") not in SOURCES:
         return False
-    # Duzeltilmis kosusu olan kaynaklarda (retAllFixed / tradesFixed / winHoldHFixed)
-    # yalnizca duzeltilmis metrikler kullanilir; *Fixed null ise (duzeltilmis kosuda
-    # islem yok) satir secilmez. Paper ML'de duzeltme olmadigi icin ham metrikler.
-    suffix = "Fixed" if source in FIXED_SOURCES else ""
-    ret = row.get("retAll" + suffix)
-    trades = row.get("trades" + suffix)
-    hold = row.get("winHoldH" + suffix)
-    if ret is None or trades is None or hold is None:
+    values = [row.get(k) for k in ("retAllFixed", "winHoldHFixed", "weekRatioFixed", "dayRatioFixed")]
+    if any(v is None for v in values):
         return False
-    return ret > 0 and trades < MAX_TRADES and hold < MAX_HOLD_H
+    ret, hold, week_ratio, day_ratio = values
+    return ret > 0 and hold <= MAX_HOLD_H and week_ratio >= MIN_WEEK_RATIO and day_ratio >= MIN_DAY_RATIO
+
+
+def rank(row: dict) -> tuple:
+    """En iyi filtre: All getiri, hafta K/Z, gun K/Z; sonra daha kisa sure."""
+    return (
+        row["retAllFixed"],
+        row["weekRatioFixed"],
+        row["dayRatioFixed"],
+        -row["winHoldHFixed"],
+        row.get("tradesFixed") or 0,
+    )
 
 
 def load_rows(html: str) -> list[dict]:
@@ -77,8 +80,10 @@ def build_block(keys: list[str], by_source: dict[str, int], generated: str, eol:
         "count": len(keys),
         "bySource": by_source,
         "sources": SOURCES,
-        "maxTrades": MAX_TRADES,
         "maxHoldH": MAX_HOLD_H,
+        "minWeekRatio": MIN_WEEK_RATIO,
+        "minDayRatio": MIN_DAY_RATIO,
+        "groupBy": ["source", "strategy", "timeframe"],
     }
     lines = [
         "",
@@ -100,16 +105,18 @@ def main() -> int:
     eol = "\r\n" if "\r\n" in html else "\n"
     rows = load_rows(html)
 
-    keys: list[str] = []
-    by_source: Counter[str] = Counter()
-    seen: set[str] = set()
+    best: dict[tuple[str, str, str], dict] = {}
     for row in rows:
         if not passes(row):
             continue
+        group = (row["source"], row["strategy"], row["timeframe"])
+        if group not in best or rank(row) > rank(best[group]):
+            best[group] = row
+
+    keys: list[str] = []
+    by_source: Counter[str] = Counter()
+    for row in best.values():
         key = row_key(row)
-        if key in seen:
-            continue
-        seen.add(key)
         keys.append(key)
         by_source[row["source"]] += 1
 

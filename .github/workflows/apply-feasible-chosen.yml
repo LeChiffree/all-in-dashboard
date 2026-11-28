@@ -1,0 +1,34 @@
+name: Apply Feasible Chosen
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - tools/auto_chosen.py
+      - tools/apply_feasible_chosen.py
+      - .github/workflows/apply-feasible-chosen.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build feasible Chosen list
+        run: python tools/apply_feasible_chosen.py
+      - name: Verify selection count
+        run: python tools/auto_chosen.py --dry-run | grep "85 satir secildi"
+      - name: Commit dashboard changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes required."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html picker.html README.md
+          git commit -m "feat: select 85 feasible chosen combinations"
+          git push

@@ -13,6 +13,7 @@ Birden fazla trade backtest reposunun sonuçlarını tek tabloda birleştiren da
 | Dosya | Açıklama |
 |---|---|
 | `index.html` | Tek sayfa dashboard. `Allinone` ve `Chosen` sekmeleri; Allinone tablosunda tekil (S) sütunları. |
+| `picker.html` | Timeframe → kategori → strateji → filtre akışlı Chosen seçim uygulaması. |
 | `singular/summary.js` | Altı reponun tekil sonuçları; Allinone tablosundaki (S) sütunlarını doldurur. |
 | `singular/build_summary.py` | Repo payload'larını Allinone satırlarıyla eşleştirip `summary.js` üretir. |
 | `Allinone.xlsx` | Tek sheet: `Allinone`. Tüm satırlar ve metrikler. |
@@ -24,6 +25,7 @@ Birden fazla trade backtest reposunun sonuçlarını tek tabloda birleştiren da
 ## Özellikler
 
 - **Menülü uygulama (`menu.html`):** kaynak → strateji → timeframe adımlarıyla ilgili filtreleri listeler ve düzeltilmiş All getiriye göre sıralar.
+- **Chosen Picker (`picker.html`):** timeframe → kategori → strateji adımlarıyla filtrelerin tüm temel ham/düzeltilmiş metriklerini karşılaştırır; seçimi ana dashboard ile aynı kalıcı Chosen listesine yazar. Codex Bulut dahil değildir.
 - **Allinone sekmesi:** tüm strateji × filtre × timeframe satırları.
 - **Singular (S) sütunları:** her metrik sütununun hemen sağında, aynı coinde tek
   açık işlem kuralının sonucu; normal ve tekil değer yan yana karşılaştırılır.

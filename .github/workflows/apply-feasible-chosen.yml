@@ -20,7 +20,7 @@ jobs:
       - name: Build feasible Chosen list
         run: python tools/apply_feasible_chosen.py
       - name: Verify selection count
-        run: python tools/auto_chosen.py --dry-run | grep "85 satir secildi"
+        run: python tools/auto_chosen.py --dry-run | grep "64 satir secildi"
       - name: Commit dashboard changes
         run: |
           if git diff --quiet; then

@@ -30,7 +30,7 @@ Birden fazla trade backtest reposunun sonuçlarını tek tabloda birleştiren da
 - **Singular (S) sütunları:** her metrik sütununun hemen sağında, aynı coinde tek
   açık işlem kuralının sonucu; normal ve tekil değer yan yana karşılaştırılır.
 - **Chosen sekmesi:** satır başındaki `+` ile seçilen stratejiler; seçimler tarayıcıda `localStorage` ile saklanır.
-  Chosen ilk açılışta boş gelir; `Auto seç` butonu istenirse aşağıdaki kuralı uygular.
+  Chosen ilk açılışta aşağıdaki fizibilite kuralıyla tekilleştirilmiş listeyi getirir; `Auto seç` aynı kuralı yeniden uygular.
 - **CSV indir:** Chosen listesini CSV olarak indirir.
 - **Sıralama:** sütun başlığına tıkla; tekrar tıkla yönü çevir.
 - **Gün başına ortalama işlem:** her kombinasyon için `İşlem Sayısı / (Karlı Gün + Karsız Gün)`; ham, düzeltilmiş ve Singular sonuçları ayrı gösterilir.
@@ -133,8 +133,8 @@ Notlar:
 python tools/auto_chosen.py
 ```
 
-- Seçim `allinone_chosen_v3` anahtarıyla `localStorage`'da saklanır. Yeni sürüm boş
-  listeyle başlar; `Auto seç` butonuyla otomatik kural ayrıca uygulanabilir.
+- Seçim `allinone_chosen_v4` anahtarıyla `localStorage`'da saklanır. Yeni sürüm
+  fizibilite kuralıyla seçilen 85 satırla başlar; `Auto seç` aynı kuralı yeniden uygular.
 
 ## Filtre kapsamı
 

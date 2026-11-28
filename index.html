@@ -462,7 +462,7 @@ const AUTO_CHOSEN_META = {"generated":"25.11.2026 20:22","rule":"Kaynak: BigPlan
 
 
 const $ = (id) => document.getElementById(id);
-const STORAGE_KEY = "allinone_chosen_v2";
+const STORAGE_KEY = "allinone_chosen_v3";
 const state = {
   view: "main",
   q: "",
@@ -617,8 +617,8 @@ function loadChosen() {
     stored = null;
   }
   if (stored == null) {
-    // İlk açılış: kurala uyan satırlar otomatik seçili gelir.
-    chosen = new Set(validKeys(AUTO_KEYS));
+    // Yeni Chosen sürümü boş başlar; seçimler kullanıcı tarafından yapılır.
+    chosen = new Set();
     saveChosen();
     return;
   }

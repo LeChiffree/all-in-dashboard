@@ -45,6 +45,7 @@ const metric=(label,value,cls='')=>`<div class="metric"><small>${label}</small><
 
 function loadChosen(){try{const raw=localStorage.getItem(STORAGE_KEY);hasStoredChosen=raw!==null;const v=JSON.parse(raw||'[]');chosen=new Set(Array.isArray(v)?v:[])}catch{chosen=new Set()}updateChosenCount()}
 function saveChosen(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify([...chosen]))}catch{}updateChosenCount();showToast()}
+function dedupeChosenAcrossSources(){const best=new Map(),score=r=>[Number(r.retAllFixed),Number(r.weekRatioFixed),Number(r.dayRatioFixed),-Number(r.winHoldHFixed),Number(r.tradesFixed)||0],better=(a,b)=>{const x=score(a),y=score(b);for(let i=0;i<x.length;i++){if(x[i]!==y[i])return x[i]>y[i]}return false};chosen.forEach(k=>{const r=rows.find(x=>key(x)===k);if(!r)return;const group=[r.strategy,r.timeframe].join('||'),old=best.get(group);if(!old||better(r,old))best.set(group,r)});const normalized=new Set([...best.values()].map(key));if(normalized.size!==chosen.size){chosen=normalized;saveChosen()}}
 function updateChosenCount(){$('chosenCount').textContent=chosen.size.toLocaleString('tr-TR')}
 function showToast(){$('toast').classList.add('show');clearTimeout(showToast.t);showToast.t=setTimeout(()=>$('toast').classList.remove('show'),1300)}
 
@@ -88,8 +89,8 @@ function seedFeasibleChosen(){
   const eligible=rows.filter(r=>finite(r.retAllFixed)&&finite(r.winHoldHFixed)&&finite(r.weekRatioFixed)&&finite(r.dayRatioFixed)&&Number(r.retAllFixed)>0&&Number(r.winHoldHFixed)<=230&&Number(r.weekRatioFixed)>=1.5&&Number(r.dayRatioFixed)>=1),best=new Map();
   const score=r=>[Number(r.retAllFixed),Number(r.weekRatioFixed),Number(r.dayRatioFixed),-Number(r.winHoldHFixed),Number(r.tradesFixed)||0];
   const better=(a,b)=>{const x=score(a),y=score(b);for(let i=0;i<x.length;i++){if(x[i]!==y[i])return x[i]>y[i]}return false};
-  eligible.forEach(r=>{const group=[r.source,r.strategy,r.timeframe].join('||'),old=best.get(group);if(!old||better(r,old))best.set(group,r)});
+  eligible.forEach(r=>{const group=[r.strategy,r.timeframe].join('||'),old=best.get(group);if(!old||better(r,old))best.set(group,r)});
   chosen=new Set([...best.values()].map(key));saveChosen();
 }
-loadChosen();fetch('allinone.json').then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(data=>{const singular=(window.SINGULAR_DATA&&window.SINGULAR_DATA.byKey)||{};rows=(data.rows||[]).filter(r=>allowedSources.includes(r.source));rows.forEach(r=>{const match=singular[key(r)];if(match&&match.s)r.s=match.s});if(!hasStoredChosen)seedFeasibleChosen();showTimeframes()}).catch(e=>{$('choices').innerHTML='<div class="empty">Veriler yüklenemedi. Sayfayı yenileyip tekrar dene.</div>'});
+loadChosen();fetch('allinone.json').then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(data=>{const singular=(window.SINGULAR_DATA&&window.SINGULAR_DATA.byKey)||{};rows=(data.rows||[]).filter(r=>allowedSources.includes(r.source));rows.forEach(r=>{const match=singular[key(r)];if(match&&match.s)r.s=match.s});if(!hasStoredChosen)seedFeasibleChosen();else dedupeChosenAcrossSources();showTimeframes()}).catch(e=>{$('choices').innerHTML='<div class="empty">Veriler yüklenemedi. Sayfayı yenileyip tekrar dene.</div>'});
 </script></body></html>

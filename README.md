@@ -134,7 +134,7 @@ python tools/auto_chosen.py
 ```
 
 - Seçim `allinone_chosen_v4` anahtarıyla `localStorage`'da saklanır. Yeni sürüm
-  fizibilite kuralıyla seçilen 85 satırla başlar; `Auto seç` aynı kuralı yeniden uygular.
+  fizibilite kuralıyla kategori bağımsız tekilleştirilen 64 satırla başlar; `Auto seç` aynı kuralı yeniden uygular.
 
 ## Filtre kapsamı
 

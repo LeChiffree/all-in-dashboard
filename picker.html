@@ -33,7 +33,7 @@
 const $=id=>document.getElementById(id), STORAGE_KEY='allinone_chosen_v4';
 const allowedSources=['BigPlan','Book Signal','Indikator Akademi','Paper ML','V4 Short'];
 const tfOrder={'5m':0,'15m':1,'1h':2,'4h':3,'1d':4,'1w':5};
-let rows=[],chosen=new Set(),state={timeframe:'',source:'',strategy:'',stage:'tf'};
+let rows=[],chosen=new Set(),hasStoredChosen=false,state={timeframe:'',source:'',strategy:'',stage:'tf'};
 const key=r=>[r.source,r.strategy,r.filter,r.timeframe].join('||');
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const finite=v=>v!==null&&v!==''&&Number.isFinite(Number(v));
@@ -43,7 +43,7 @@ const fmt=(v,d=2)=>finite(v)?Number(v).toLocaleString('tr-TR',{maximumFractionDi
 const pct=v=>finite(v)?`<span class="${Number(v)>0?'pos':Number(v)<0?'neg':''}">${Number(v)>0?'+':''}${fmt(v,4)}%</span>`:'—';
 const metric=(label,value,cls='')=>`<div class="metric"><small>${label}</small><b class="${cls}">${value}</b></div>`;
 
-function loadChosen(){try{const v=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');chosen=new Set(Array.isArray(v)?v:[])}catch{chosen=new Set()}updateChosenCount()}
+function loadChosen(){try{const raw=localStorage.getItem(STORAGE_KEY);hasStoredChosen=raw!==null;const v=JSON.parse(raw||'[]');chosen=new Set(Array.isArray(v)?v:[])}catch{chosen=new Set()}updateChosenCount()}
 function saveChosen(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify([...chosen]))}catch{}updateChosenCount();showToast()}
 function updateChosenCount(){$('chosenCount').textContent=chosen.size.toLocaleString('tr-TR')}
 function showToast(){$('toast').classList.add('show');clearTimeout(showToast.t);showToast.t=setTimeout(()=>$('toast').classList.remove('show'),1300)}
@@ -84,5 +84,12 @@ function closeChosen(){$('chosenPanel').classList.add('hidden');$('selectionPane
 $('strategySearch').addEventListener('input',renderStrategies);$('sort').addEventListener('change',renderResults);$('showChosen').onclick=openChosen;$('closeChosen').onclick=closeChosen;
 document.querySelectorAll('.step').forEach(s=>s.onclick=()=>{const n=s.dataset.step;if(n==='tf'){$('selectionPanel').classList.remove('hidden');$('chosenPanel').classList.add('hidden');showTimeframes()}else if(n==='source'&&state.timeframe){$('selectionPanel').classList.remove('hidden');$('chosenPanel').classList.add('hidden');showSources(state.timeframe)}else if(n==='strategy'&&state.source){$('selectionPanel').classList.remove('hidden');$('chosenPanel').classList.add('hidden');showStrategies(state.source)}else if(n==='filters'&&state.strategy)showResults(state.strategy)});
 
-loadChosen();fetch('allinone.json').then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(data=>{const singular=(window.SINGULAR_DATA&&window.SINGULAR_DATA.byKey)||{};rows=(data.rows||[]).filter(r=>allowedSources.includes(r.source));rows.forEach(r=>{const match=singular[key(r)];if(match&&match.s)r.s=match.s});showTimeframes()}).catch(e=>{$('choices').innerHTML='<div class="empty">Veriler yüklenemedi. Sayfayı yenileyip tekrar dene.</div>'});
+function seedFeasibleChosen(){
+  const eligible=rows.filter(r=>finite(r.retAllFixed)&&finite(r.winHoldHFixed)&&finite(r.weekRatioFixed)&&finite(r.dayRatioFixed)&&Number(r.retAllFixed)>0&&Number(r.winHoldHFixed)<=230&&Number(r.weekRatioFixed)>=1.5&&Number(r.dayRatioFixed)>=1),best=new Map();
+  const score=r=>[Number(r.retAllFixed),Number(r.weekRatioFixed),Number(r.dayRatioFixed),-Number(r.winHoldHFixed),Number(r.tradesFixed)||0];
+  const better=(a,b)=>{const x=score(a),y=score(b);for(let i=0;i<x.length;i++){if(x[i]!==y[i])return x[i]>y[i]}return false};
+  eligible.forEach(r=>{const group=[r.source,r.strategy,r.timeframe].join('||'),old=best.get(group);if(!old||better(r,old))best.set(group,r)});
+  chosen=new Set([...best.values()].map(key));saveChosen();
+}
+loadChosen();fetch('allinone.json').then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(data=>{const singular=(window.SINGULAR_DATA&&window.SINGULAR_DATA.byKey)||{};rows=(data.rows||[]).filter(r=>allowedSources.includes(r.source));rows.forEach(r=>{const match=singular[key(r)];if(match&&match.s)r.s=match.s});if(!hasStoredChosen)seedFeasibleChosen();showTimeframes()}).catch(e=>{$('choices').innerHTML='<div class="empty">Veriler yüklenemedi. Sayfayı yenileyip tekrar dene.</div>'});
 </script></body></html>
